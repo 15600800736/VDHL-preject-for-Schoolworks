@@ -1,5 +1,5 @@
 Assembler report for SSP
-Tue Oct 18 22:56:50 2016
+Wed Oct 19 20:53:01 2016
 Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -10,7 +10,7 @@ Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: F:/VDHL preject-delete/game/SSP.pof
+  5. Assembler Device Options: F:/VDHL preject for Schoolworks/game/SSP.pof
   6. Assembler Messages
 
 
@@ -37,7 +37,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Oct 18 22:56:50 2016 ;
+; Assembler Status      ; Successful - Wed Oct 19 20:53:01 2016 ;
 ; Revision Name         ; SSP                                   ;
 ; Top-level Entity Name ; SSP                                   ;
 ; Family                ; MAX II                                ;
@@ -73,24 +73,24 @@ applicable agreement for further details.
 +-----------------------------------------------------------------------------+-----------+---------------+
 
 
-+-------------------------------------+
-; Assembler Generated Files           ;
-+-------------------------------------+
-; File Name                           ;
-+-------------------------------------+
-; F:/VDHL preject-delete/game/SSP.pof ;
-+-------------------------------------+
++----------------------------------------------+
+; Assembler Generated Files                    ;
++----------------------------------------------+
+; File Name                                    ;
++----------------------------------------------+
+; F:/VDHL preject for Schoolworks/game/SSP.pof ;
++----------------------------------------------+
 
 
-+---------------------------------------------------------------+
-; Assembler Device Options: F:/VDHL preject-delete/game/SSP.pof ;
-+----------------+----------------------------------------------+
-; Option         ; Setting                                      ;
-+----------------+----------------------------------------------+
-; Device         ; EPM570T144C5                                 ;
-; JTAG usercode  ; 0xFFFFFFFF                                   ;
-; Checksum       ; 0x00341E14                                   ;
-+----------------+----------------------------------------------+
++------------------------------------------------------------------------+
+; Assembler Device Options: F:/VDHL preject for Schoolworks/game/SSP.pof ;
++----------------+-------------------------------------------------------+
+; Option         ; Setting                                               ;
++----------------+-------------------------------------------------------+
+; Device         ; EPM570T144C5                                          ;
+; JTAG usercode  ; 0xFFFFFFFF                                            ;
+; Checksum       ; 0x0033D96D                                            ;
++----------------+-------------------------------------------------------+
 
 
 +--------------------+
@@ -99,14 +99,14 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Assembler
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Tue Oct 18 22:56:48 2016
+    Info: Processing started: Wed Oct 19 20:53:00 2016
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off SSP -c SSP
 Info: Writing out detailed assembly data for power analysis
 Info: Assembler is generating device programming files
 Info: Quartus II 64-Bit Assembler was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 231 megabytes
-    Info: Processing ended: Tue Oct 18 22:56:50 2016
-    Info: Elapsed time: 00:00:02
+    Info: Processing ended: Wed Oct 19 20:53:01 2016
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
 

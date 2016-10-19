@@ -1,5 +1,9 @@
-Analysis & Synthesis Status : Failed - Wed Oct 19 12:30:32 2016
+Analysis & Synthesis Status : Successful - Wed Oct 19 20:52:58 2016
 Quartus II 64-Bit Version : 9.0 Build 132 02/25/2009 SJ Full Version
 Revision Name : SSP
 Top-level Entity Name : SSP
 Family : MAX II
+Total logic elements : 30
+Total pins : 20
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
