@@ -1,8 +1,7 @@
 
 State Machine - |SSP|game_state
-Name game_state.over game_state.judge game_state.b game_state.a game_state.s0 
-game_state.s0 0 0 0 0 0 
-game_state.a 0 0 0 1 1 
-game_state.b 0 0 1 0 1 
-game_state.judge 0 1 0 0 1 
-game_state.over 1 0 0 0 1 
+Name game_state.b game_state.a game_state.s1 game_state.s0 
+game_state.s0 0 0 0 0 
+game_state.s1 0 0 1 1 
+game_state.a 0 1 0 1 
+game_state.b 1 0 0 1 

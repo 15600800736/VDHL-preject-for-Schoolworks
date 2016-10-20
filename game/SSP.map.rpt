@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SSP
-Wed Oct 19 20:52:58 2016
+Thu Oct 20 21:34:02 2016
 Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -10,13 +10,7 @@ Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Resource Usage Summary
-  6. Analysis & Synthesis Resource Utilization by Entity
-  7. State Machine - |SSP|game_state
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -42,15 +36,11 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Successful - Wed Oct 19 20:52:58 2016    ;
+; Analysis & Synthesis Status ; Failed - Thu Oct 20 21:34:02 2016        ;
 ; Quartus II 64-Bit Version   ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name               ; SSP                                      ;
 ; Top-level Entity Name       ; SSP                                      ;
 ; Family                      ; MAX II                                   ;
-; Total logic elements        ; 30                                       ;
-; Total pins                  ; 20                                       ;
-; Total virtual pins          ; 0                                        ;
-; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
 +-----------------------------+------------------------------------------+
 
 
@@ -118,108 +108,11 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                              ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                 ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------+
-; SSP.vhd                          ; yes             ; User VHDL File  ; F:/VDHL preject for Schoolworks/game/SSP.vhd ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------+
-
-
-+------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary          ;
-+---------------------------------------------+--------+
-; Resource                                    ; Usage  ;
-+---------------------------------------------+--------+
-; Total logic elements                        ; 30     ;
-;     -- Combinational with no register       ; 12     ;
-;     -- Register only                        ; 9      ;
-;     -- Combinational with a register        ; 9      ;
-;                                             ;        ;
-; Logic element usage by number of LUT inputs ;        ;
-;     -- 4 input functions                    ; 10     ;
-;     -- 3 input functions                    ; 7      ;
-;     -- 2 input functions                    ; 3      ;
-;     -- 1 input functions                    ; 1      ;
-;     -- 0 input functions                    ; 0      ;
-;                                             ;        ;
-; Logic elements by mode                      ;        ;
-;     -- normal mode                          ; 30     ;
-;     -- arithmetic mode                      ; 0      ;
-;     -- qfbk mode                            ; 0      ;
-;     -- register cascade mode                ; 0      ;
-;     -- synchronous clear/load mode          ; 0      ;
-;     -- asynchronous clear/load mode         ; 10     ;
-;                                             ;        ;
-; Total registers                             ; 18     ;
-; I/O pins                                    ; 20     ;
-; Maximum fan-out node                        ; clk_in ;
-; Maximum fan-out                             ; 18     ;
-; Total fan-out                               ; 125    ;
-; Average fan-out                             ; 2.50   ;
-+---------------------------------------------+--------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                  ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-; |SSP                       ; 30 (30)     ; 18           ; 0          ; 20   ; 0            ; 12 (12)      ; 9 (9)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |SSP                ; work         ;
-+----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+---------------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-Encoding Type:  One-Hot
-+-----------------------------------------------------------------------------------------------------+
-; State Machine - |SSP|game_state                                                                     ;
-+------------------+-----------------+------------------+--------------+--------------+---------------+
-; Name             ; game_state.over ; game_state.judge ; game_state.b ; game_state.a ; game_state.s0 ;
-+------------------+-----------------+------------------+--------------+--------------+---------------+
-; game_state.s0    ; 0               ; 0                ; 0            ; 0            ; 0             ;
-; game_state.a     ; 0               ; 0                ; 0            ; 1            ; 1             ;
-; game_state.b     ; 0               ; 0                ; 1            ; 0            ; 1             ;
-; game_state.judge ; 0               ; 1                ; 0            ; 0            ; 1             ;
-; game_state.over  ; 1               ; 0                ; 0            ; 0            ; 1             ;
-+------------------+-----------------+------------------+--------------+--------------+---------------+
-
-
-+------------------------------------------------------------+
-; Registers Removed During Synthesis                         ;
-+---------------------------------------+--------------------+
-; Register name                         ; Reason for Removal ;
-+---------------------------------------+--------------------+
-; game_state.over                       ; Lost fanout        ;
-; Total Number of Removed Registers = 1 ;                    ;
-+---------------------------------------+--------------------+
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 18    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 10    ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 10    ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                           ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
-; 7:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |SSP|a_score[1]            ;
-; 9:1                ; 2 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |SSP|b_score[1]            ;
-; 10:1               ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |SSP|result[0]~reg0        ;
-; 8:1                ; 5 bits    ; 25 LEs        ; 15 LEs               ; 10 LEs                 ; No         ; |SSP|Selector0             ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------+
++-----------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                        ;
++----------------------------------+-----------------+-----------+------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type ; File Name with Absolute Path ;
++----------------------------------+-----------------+-----------+------------------------------+
 
 
 +-------------------------------+
@@ -228,26 +121,32 @@ Encoding Type:  One-Hot
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Wed Oct 19 20:52:57 2016
+    Info: Processing started: Thu Oct 20 21:34:01 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SSP -c SSP
-Info: Found 4 design units, including 2 entities, in source file SSP.vhd
-    Info: Found design unit 1: frequency_division-behave
-    Info: Found design unit 2: SSP-behave
-    Info: Found entity 1: frequency_division
-    Info: Found entity 2: SSP
-Info: Elaborating entity "SSP" for the top level hierarchy
-Info: 1 registers lost all their fanouts during netlist optimizations. The first 1 are displayed below.
-    Info: Register "game_state.over" lost all its fanouts during netlist optimizations.
-Warning: Design contains 1 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "show"
-Info: Implemented 50 device resources after synthesis - the final resource count might be different
-    Info: Implemented 10 input pins
-    Info: Implemented 10 output pins
-    Info: Implemented 30 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 306 megabytes
-    Info: Processing ended: Wed Oct 19 20:52:58 2016
-    Info: Elapsed time: 00:00:01
-    Info: Total CPU time (on all processors): 00:00:01
+Error (10500): VHDL syntax error at SSP.vhd(172) near text "process";  expecting "begin", or a declaration statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 172
+Error (10500): VHDL syntax error at SSP.vhd(174) near text "range";  expecting ";", or "port", or "generic" File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 174
+Error (10500): VHDL syntax error at SSP.vhd(175) near text "then";  expecting "<=" File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 175
+Error (10500): VHDL syntax error at SSP.vhd(176) near text "=";  expecting "(", or an identifier, or  unary operator File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 176
+Error (10500): VHDL syntax error at SSP.vhd(179) near text "else";  expecting "end", or "(", or an identifier ("else" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 179
+Error (10500): VHDL syntax error at SSP.vhd(181) near text ":=";  expecting "(", or "'", or "." File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 181
+Error (10500): VHDL syntax error at SSP.vhd(182) near text ":=";  expecting "(", or "'", or "." File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 182
+Error (10500): VHDL syntax error at SSP.vhd(186) near text "case";  expecting "end", or "(", or an identifier ("case" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 186
+Error (10500): VHDL syntax error at SSP.vhd(188) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 188
+Error (10500): VHDL syntax error at SSP.vhd(189) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 189
+Error (10500): VHDL syntax error at SSP.vhd(190) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 190
+Error (10500): VHDL syntax error at SSP.vhd(191) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 191
+Error (10500): VHDL syntax error at SSP.vhd(192) near text "case";  expecting ";", or an identifier ("case" is a reserved keyword), or "architecture" File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 192
+Error (10500): VHDL syntax error at SSP.vhd(195) near text "case";  expecting "end", or "(", or an identifier ("case" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 195
+Error (10500): VHDL syntax error at SSP.vhd(197) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 197
+Error (10500): VHDL syntax error at SSP.vhd(198) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 198
+Error (10500): VHDL syntax error at SSP.vhd(199) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 199
+Error (10500): VHDL syntax error at SSP.vhd(200) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 200
+Error (10500): VHDL syntax error at SSP.vhd(201) near text "case";  expecting ";", or an identifier ("case" is a reserved keyword), or "architecture" File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 201
+Info: Found 0 design units, including 0 entities, in source file SSP.vhd
+Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 19 errors, 0 warnings
+    Error: Peak virtual memory: 298 megabytes
+    Error: Processing ended: Thu Oct 20 21:34:02 2016
+    Error: Elapsed time: 00:00:01
+    Error: Total CPU time (on all processors): 00:00:01
 
 

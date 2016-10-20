@@ -1,5 +1,5 @@
 Flow report for SSP
-Wed Oct 19 20:53:02 2016
+Thu Oct 20 21:34:02 2016
 Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -38,18 +38,14 @@ applicable agreement for further details.
 +----------------------------------------------------------------------+
 ; Flow Summary                                                         ;
 +---------------------------+------------------------------------------+
-; Flow Status               ; Successful - Wed Oct 19 20:53:02 2016    ;
+; Flow Status               ; Flow Failed - Thu Oct 20 21:34:02 2016   ;
 ; Quartus II 64-Bit Version ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name             ; SSP                                      ;
 ; Top-level Entity Name     ; SSP                                      ;
 ; Family                    ; MAX II                                   ;
 ; Device                    ; EPM570T144C5                             ;
 ; Timing Models             ; Final                                    ;
-; Met timing requirements   ; Yes                                      ;
-; Total logic elements      ; 29 / 570 ( 5 % )                         ;
-; Total pins                ; 20 / 116 ( 17 % )                        ;
-; Total virtual pins        ; 0                                        ;
-; UFM blocks                ; 0 / 1 ( 0 % )                            ;
+; Met timing requirements   ; N/A                                      ;
 +---------------------------+------------------------------------------+
 
 
@@ -58,7 +54,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 10/19/2016 20:52:57 ;
+; Start date & time ; 10/20/2016 21:34:02 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; SSP                 ;
 +-------------------+---------------------+
@@ -69,7 +65,7 @@ applicable agreement for further details.
 +---------------------------------------+-------------------------------+---------------+-------------+----------------+
 ; Assignment Name                       ; Value                         ; Default Value ; Entity Name ; Section Id     ;
 +---------------------------------------+-------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID                 ; 1095778622610.147688157704308 ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID                 ; 1095778622610.147697044206792 ; --            ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP                ; 85                            ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP                ; 0                             ; --            ; --          ; --             ;
 ; POWER_EXT_SUPPLY_VOLTAGE_TO_REGULATOR ; 3.3V                          ; --            ; --          ; --             ;
@@ -77,38 +73,29 @@ applicable agreement for further details.
 +---------------------------------------+-------------------------------+---------------+-------------+----------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Flow Elapsed Time                                                                                                           ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Module Name             ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis    ; 00:00:01     ; 1.0                     ; 306 MB              ; 00:00:01                           ;
-; Fitter                  ; 00:00:00     ; 1.0                     ; 312 MB              ; 00:00:00                           ;
-; Assembler               ; 00:00:01     ; 1.0                     ; 231 MB              ; 00:00:01                           ;
-; Classic Timing Analyzer ; 00:00:00     ; 1.0                     ; 205 MB              ; 00:00:00                           ;
-; Total                   ; 00:00:02     ; --                      ; --                  ; 00:00:02                           ;
-+-------------------------+--------------+-------------------------+---------------------+------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:01     ; 1.0                     ; 298 MB              ; 00:00:01                           ;
+; Total                ; 00:00:01     ; --                      ; --                  ; 00:00:01                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                          ;
-+-------------------------+------------------+---------------+------------+----------------+
-; Module Name             ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
-+-------------------------+------------------+---------------+------------+----------------+
-; Analysis & Synthesis    ; fdh-PC           ; Windows Vista ; 6.1        ; x86_64         ;
-; Fitter                  ; fdh-PC           ; Windows Vista ; 6.1        ; x86_64         ;
-; Assembler               ; fdh-PC           ; Windows Vista ; 6.1        ; x86_64         ;
-; Classic Timing Analyzer ; fdh-PC           ; Windows Vista ; 6.1        ; x86_64         ;
-+-------------------------+------------------+---------------+------------+----------------+
++---------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                       ;
++----------------------+------------------+---------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name       ; OS Version ; Processor type ;
++----------------------+------------------+---------------+------------+----------------+
+; Analysis & Synthesis ; fdh-PC           ; Windows Vista ; 6.1        ; x86_64         ;
++----------------------+------------------+---------------+------------+----------------+
 
 
 ------------
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off SSP -c SSP
-quartus_fit --read_settings_files=off --write_settings_files=off SSP -c SSP
-quartus_asm --read_settings_files=off --write_settings_files=off SSP -c SSP
-quartus_tan --read_settings_files=off --write_settings_files=off SSP -c SSP
 
 
 

@@ -1,5 +1,5 @@
 Classic Timing Analyzer report for SSP
-Wed Oct 19 20:53:02 2016
+Thu Oct 20 15:51:30 2016
 Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -38,17 +38,17 @@ applicable agreement for further details.
 
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Timing Analyzer Summary                                                                                                                                                 ;
-+------------------------------+-------+---------------+----------------------------------+----------------------+-----------------+------------+----------+--------------+
-; Type                         ; Slack ; Required Time ; Actual Time                      ; From                 ; To              ; From Clock ; To Clock ; Failed Paths ;
-+------------------------------+-------+---------------+----------------------------------+----------------------+-----------------+------------+----------+--------------+
-; Worst-case tsu               ; N/A   ; None          ; 6.483 ns                         ; a_select_in[1]       ; result[0]~reg0  ; --         ; clk_in   ; 0            ;
-; Worst-case tco               ; N/A   ; None          ; 9.691 ns                         ; b_select_out[0]~reg0 ; b_select_out[0] ; clk_in     ; --       ; 0            ;
-; Worst-case th                ; N/A   ; None          ; -1.374 ns                        ; a_select_in[0]       ; result[0]~reg0  ; --         ; clk_in   ; 0            ;
-; Clock Setup: 'clk_in'        ; N/A   ; None          ; 167.59 MHz ( period = 5.967 ns ) ; a_score[1]           ; result[0]~reg0  ; clk_in     ; clk_in   ; 0            ;
-; Total number of failed paths ;       ;               ;                                  ;                      ;                 ;            ;          ; 0            ;
-+------------------------------+-------+---------------+----------------------------------+----------------------+-----------------+------------+----------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Timing Analyzer Summary                                                                                                                                               ;
++------------------------------+-------+---------------+----------------------------------+---------------------+----------------+------------+----------+--------------+
+; Type                         ; Slack ; Required Time ; Actual Time                      ; From                ; To             ; From Clock ; To Clock ; Failed Paths ;
++------------------------------+-------+---------------+----------------------------------+---------------------+----------------+------------+----------+--------------+
+; Worst-case tsu               ; N/A   ; None          ; 6.025 ns                         ; b_select_in[1]      ; a_score[1]     ; --         ; clk_in   ; 0            ;
+; Worst-case tco               ; N/A   ; None          ; 10.075 ns                        ; a_score_out[0]~reg0 ; a_score_out[0] ; clk_in     ; --       ; 0            ;
+; Worst-case th                ; N/A   ; None          ; -1.151 ns                        ; start               ; game_state.s0  ; --         ; clk_in   ; 0            ;
+; Clock Setup: 'clk_in'        ; N/A   ; None          ; 167.00 MHz ( period = 5.988 ns ) ; game_state.b        ; result[0]~reg0 ; clk_in     ; clk_in   ; 0            ;
+; Total number of failed paths ;       ;               ;                                  ;                     ;                ;            ;          ; 0            ;
++------------------------------+-------+---------------+----------------------------------+---------------------+----------------+------------+----------+--------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------+
@@ -109,192 +109,220 @@ applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Clock Setup: 'clk_in'                                                                                                                                                                                        ;
-+-------+------------------------------------------------+------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; Slack ; Actual fmax (period)                           ; From             ; To                   ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
-+-------+------------------------------------------------+------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
-; N/A   ; 167.59 MHz ( period = 5.967 ns )               ; a_score[1]       ; result[1]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 5.258 ns                ;
-; N/A   ; 167.59 MHz ( period = 5.967 ns )               ; a_score[1]       ; result[0]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 5.258 ns                ;
-; N/A   ; 168.75 MHz ( period = 5.926 ns )               ; game_state.judge ; result[1]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 5.217 ns                ;
-; N/A   ; 168.75 MHz ( period = 5.926 ns )               ; game_state.judge ; result[0]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 5.217 ns                ;
-; N/A   ; 171.64 MHz ( period = 5.826 ns )               ; a_score[0]       ; result[1]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 5.117 ns                ;
-; N/A   ; 171.64 MHz ( period = 5.826 ns )               ; a_score[0]       ; result[0]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 5.117 ns                ;
-; N/A   ; 173.82 MHz ( period = 5.753 ns )               ; b_score[0]       ; result[1]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 5.044 ns                ;
-; N/A   ; 173.82 MHz ( period = 5.753 ns )               ; b_score[0]       ; result[0]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 5.044 ns                ;
-; N/A   ; 184.33 MHz ( period = 5.425 ns )               ; b_score[1]       ; result[1]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 4.716 ns                ;
-; N/A   ; 184.33 MHz ( period = 5.425 ns )               ; b_score[1]       ; result[0]~reg0       ; clk_in     ; clk_in   ; None                        ; None                      ; 4.716 ns                ;
-; N/A   ; 198.33 MHz ( period = 5.042 ns )               ; game_state.b     ; b_select_out[0]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 4.333 ns                ;
-; N/A   ; 198.33 MHz ( period = 5.042 ns )               ; game_state.b     ; b_select_out[1]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 4.333 ns                ;
-; N/A   ; 221.98 MHz ( period = 4.505 ns )               ; game_state.b     ; game_state.a         ; clk_in     ; clk_in   ; None                        ; None                      ; 3.796 ns                ;
-; N/A   ; 229.20 MHz ( period = 4.363 ns )               ; game_state.judge ; game_state.b         ; clk_in     ; clk_in   ; None                        ; None                      ; 3.654 ns                ;
-; N/A   ; 232.67 MHz ( period = 4.298 ns )               ; game_state.judge ; b_score[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.589 ns                ;
-; N/A   ; 232.83 MHz ( period = 4.295 ns )               ; game_state.judge ; b_score[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.586 ns                ;
-; N/A   ; 233.05 MHz ( period = 4.291 ns )               ; game_state.judge ; a_score[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.582 ns                ;
-; N/A   ; 233.15 MHz ( period = 4.289 ns )               ; game_state.judge ; a_score[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.580 ns                ;
-; N/A   ; 239.23 MHz ( period = 4.180 ns )               ; game_state.a     ; game_state.a         ; clk_in     ; clk_in   ; None                        ; None                      ; 3.471 ns                ;
-; N/A   ; 240.04 MHz ( period = 4.166 ns )               ; game_state.b     ; game_state.judge     ; clk_in     ; clk_in   ; None                        ; None                      ; 3.457 ns                ;
-; N/A   ; 244.26 MHz ( period = 4.094 ns )               ; game_state.judge ; a_score_out[0]~reg0  ; clk_in     ; clk_in   ; None                        ; None                      ; 3.385 ns                ;
-; N/A   ; 244.26 MHz ( period = 4.094 ns )               ; game_state.judge ; a_score_out[1]~reg0  ; clk_in     ; clk_in   ; None                        ; None                      ; 3.385 ns                ;
-; N/A   ; 244.26 MHz ( period = 4.094 ns )               ; game_state.judge ; b_score_out[0]~reg0  ; clk_in     ; clk_in   ; None                        ; None                      ; 3.385 ns                ;
-; N/A   ; 244.26 MHz ( period = 4.094 ns )               ; game_state.judge ; b_score_out[1]~reg0  ; clk_in     ; clk_in   ; None                        ; None                      ; 3.385 ns                ;
-; N/A   ; 247.65 MHz ( period = 4.038 ns )               ; game_state.b     ; game_state.b         ; clk_in     ; clk_in   ; None                        ; None                      ; 3.329 ns                ;
-; N/A   ; 249.63 MHz ( period = 4.006 ns )               ; a_score[1]       ; a_score_out[1]~reg0  ; clk_in     ; clk_in   ; None                        ; None                      ; 3.297 ns                ;
-; N/A   ; 250.31 MHz ( period = 3.995 ns )               ; game_state.s0    ; game_state.a         ; clk_in     ; clk_in   ; None                        ; None                      ; 3.286 ns                ;
-; N/A   ; 252.59 MHz ( period = 3.959 ns )               ; a_score[1]       ; a_score[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.250 ns                ;
-; N/A   ; 257.93 MHz ( period = 3.877 ns )               ; a_score[0]       ; a_score_out[0]~reg0  ; clk_in     ; clk_in   ; None                        ; None                      ; 3.168 ns                ;
-; N/A   ; 258.80 MHz ( period = 3.864 ns )               ; b_score[1]       ; b_score_out[1]~reg0  ; clk_in     ; clk_in   ; None                        ; None                      ; 3.155 ns                ;
-; N/A   ; 261.78 MHz ( period = 3.820 ns )               ; game_state.a     ; a_select_out[0]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 3.111 ns                ;
-; N/A   ; 261.78 MHz ( period = 3.820 ns )               ; game_state.a     ; a_select_out[1]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 3.111 ns                ;
-; N/A   ; 263.57 MHz ( period = 3.794 ns )               ; game_state.a     ; game_state.b         ; clk_in     ; clk_in   ; None                        ; None                      ; 3.085 ns                ;
-; N/A   ; 267.59 MHz ( period = 3.737 ns )               ; b_score[0]       ; b_score[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 3.028 ns                ;
-; N/A   ; 269.98 MHz ( period = 3.704 ns )               ; game_state.judge ; game_state.a         ; clk_in     ; clk_in   ; None                        ; None                      ; 2.995 ns                ;
-; N/A   ; 269.98 MHz ( period = 3.704 ns )               ; game_state.judge ; game_state.s0        ; clk_in     ; clk_in   ; None                        ; None                      ; 2.995 ns                ;
-; N/A   ; 276.17 MHz ( period = 3.621 ns )               ; b_score[0]       ; b_score_out[0]~reg0  ; clk_in     ; clk_in   ; None                        ; None                      ; 2.912 ns                ;
-; N/A   ; 280.27 MHz ( period = 3.568 ns )               ; game_state.b     ; game_state.s0        ; clk_in     ; clk_in   ; None                        ; None                      ; 2.859 ns                ;
-; N/A   ; 283.45 MHz ( period = 3.528 ns )               ; game_state.s0    ; game_state.b         ; clk_in     ; clk_in   ; None                        ; None                      ; 2.819 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; game_state.a     ; game_state.s0        ; clk_in     ; clk_in   ; None                        ; None                      ; 2.534 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; game_state.s0    ; game_state.s0        ; clk_in     ; clk_in   ; None                        ; None                      ; 2.095 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; b_score[0]       ; b_score[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 2.086 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; a_score[0]       ; a_score[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 2.015 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; a_score[0]       ; a_score[0]           ; clk_in     ; clk_in   ; None                        ; None                      ; 2.014 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; game_state.judge ; game_state.judge     ; clk_in     ; clk_in   ; None                        ; None                      ; 1.971 ns                ;
-; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; b_score[1]       ; b_score[1]           ; clk_in     ; clk_in   ; None                        ; None                      ; 1.536 ns                ;
-+-------+------------------------------------------------+------------------+----------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clock Setup: 'clk_in'                                                                                                                                                                                    ;
++-------+------------------------------------------------+---------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; Slack ; Actual fmax (period)                           ; From          ; To                  ; From Clock ; To Clock ; Required Setup Relationship ; Required Longest P2P Time ; Actual Longest P2P Time ;
++-------+------------------------------------------------+---------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
+; N/A   ; 167.00 MHz ( period = 5.988 ns )               ; game_state.b  ; result[1]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 5.279 ns                ;
+; N/A   ; 167.00 MHz ( period = 5.988 ns )               ; game_state.b  ; result[0]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 5.279 ns                ;
+; N/A   ; 170.07 MHz ( period = 5.880 ns )               ; a_score[0]    ; a_score[1]          ; clk_in     ; clk_in   ; None                        ; None                      ; 5.171 ns                ;
+; N/A   ; 174.89 MHz ( period = 5.718 ns )               ; game_state.b  ; game_state.b        ; clk_in     ; clk_in   ; None                        ; None                      ; 5.009 ns                ;
+; N/A   ; 179.28 MHz ( period = 5.578 ns )               ; b_score[0]    ; result[1]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 4.869 ns                ;
+; N/A   ; 179.28 MHz ( period = 5.578 ns )               ; b_score[0]    ; result[0]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 4.869 ns                ;
+; N/A   ; 182.18 MHz ( period = 5.489 ns )               ; b_score[1]    ; b_score[1]          ; clk_in     ; clk_in   ; None                        ; None                      ; 4.780 ns                ;
+; N/A   ; 183.49 MHz ( period = 5.450 ns )               ; a_score[1]    ; a_score[1]          ; clk_in     ; clk_in   ; None                        ; None                      ; 4.741 ns                ;
+; N/A   ; 185.84 MHz ( period = 5.381 ns )               ; a_score[0]    ; result[1]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 4.672 ns                ;
+; N/A   ; 185.84 MHz ( period = 5.381 ns )               ; a_score[0]    ; result[0]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 4.672 ns                ;
+; N/A   ; 188.29 MHz ( period = 5.311 ns )               ; b_score[0]    ; b_score[1]          ; clk_in     ; clk_in   ; None                        ; None                      ; 4.602 ns                ;
+; N/A   ; 189.43 MHz ( period = 5.279 ns )               ; b_score[0]    ; b_score[0]          ; clk_in     ; clk_in   ; None                        ; None                      ; 4.570 ns                ;
+; N/A   ; 190.55 MHz ( period = 5.248 ns )               ; game_state.b  ; game_state.a        ; clk_in     ; clk_in   ; None                        ; None                      ; 4.539 ns                ;
+; N/A   ; 190.62 MHz ( period = 5.246 ns )               ; game_state.b  ; a_score[0]          ; clk_in     ; clk_in   ; None                        ; None                      ; 4.537 ns                ;
+; N/A   ; 190.62 MHz ( period = 5.246 ns )               ; game_state.b  ; a_score_out[0]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 4.537 ns                ;
+; N/A   ; 190.62 MHz ( period = 5.246 ns )               ; game_state.b  ; a_score[1]          ; clk_in     ; clk_in   ; None                        ; None                      ; 4.537 ns                ;
+; N/A   ; 190.62 MHz ( period = 5.246 ns )               ; game_state.b  ; b_score[0]          ; clk_in     ; clk_in   ; None                        ; None                      ; 4.537 ns                ;
+; N/A   ; 190.62 MHz ( period = 5.246 ns )               ; game_state.b  ; b_score[1]          ; clk_in     ; clk_in   ; None                        ; None                      ; 4.537 ns                ;
+; N/A   ; 190.84 MHz ( period = 5.240 ns )               ; game_state.b  ; game_state.s1       ; clk_in     ; clk_in   ; None                        ; None                      ; 4.531 ns                ;
+; N/A   ; 194.97 MHz ( period = 5.129 ns )               ; game_state.a  ; game_state.b        ; clk_in     ; clk_in   ; None                        ; None                      ; 4.420 ns                ;
+; N/A   ; 217.96 MHz ( period = 4.588 ns )               ; b_score[0]    ; b_score_out[0]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 3.879 ns                ;
+; N/A   ; 220.75 MHz ( period = 4.530 ns )               ; game_state.b  ; b_score_out[0]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 3.821 ns                ;
+; N/A   ; 221.39 MHz ( period = 4.517 ns )               ; b_score[1]    ; result[1]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 3.808 ns                ;
+; N/A   ; 221.39 MHz ( period = 4.517 ns )               ; b_score[1]    ; result[0]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 3.808 ns                ;
+; N/A   ; 238.15 MHz ( period = 4.199 ns )               ; game_state.s1 ; game_state.b        ; clk_in     ; clk_in   ; None                        ; None                      ; 3.490 ns                ;
+; N/A   ; 238.38 MHz ( period = 4.195 ns )               ; game_state.b  ; a_score_out[1]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 3.486 ns                ;
+; N/A   ; 238.38 MHz ( period = 4.195 ns )               ; game_state.b  ; b_score_out[1]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 3.486 ns                ;
+; N/A   ; 240.04 MHz ( period = 4.166 ns )               ; a_score[1]    ; result[1]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 3.457 ns                ;
+; N/A   ; 240.04 MHz ( period = 4.166 ns )               ; a_score[1]    ; result[0]~reg0      ; clk_in     ; clk_in   ; None                        ; None                      ; 3.457 ns                ;
+; N/A   ; 245.46 MHz ( period = 4.074 ns )               ; game_state.s1 ; game_state.a        ; clk_in     ; clk_in   ; None                        ; None                      ; 3.365 ns                ;
+; N/A   ; 245.82 MHz ( period = 4.068 ns )               ; game_state.a  ; game_state.a        ; clk_in     ; clk_in   ; None                        ; None                      ; 3.359 ns                ;
+; N/A   ; 246.31 MHz ( period = 4.060 ns )               ; game_state.a  ; game_state.s1       ; clk_in     ; clk_in   ; None                        ; None                      ; 3.351 ns                ;
+; N/A   ; 247.77 MHz ( period = 4.036 ns )               ; game_state.a  ; game_state.s0       ; clk_in     ; clk_in   ; None                        ; None                      ; 3.327 ns                ;
+; N/A   ; 248.94 MHz ( period = 4.017 ns )               ; game_state.s0 ; game_state.b        ; clk_in     ; clk_in   ; None                        ; None                      ; 3.308 ns                ;
+; N/A   ; 251.95 MHz ( period = 3.969 ns )               ; a_score[0]    ; a_score_out[1]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 3.260 ns                ;
+; N/A   ; 265.32 MHz ( period = 3.769 ns )               ; b_score[1]    ; b_score_out[1]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 3.060 ns                ;
+; N/A   ; 268.74 MHz ( period = 3.721 ns )               ; game_state.s1 ; game_state.s1       ; clk_in     ; clk_in   ; None                        ; None                      ; 3.012 ns                ;
+; N/A   ; 270.49 MHz ( period = 3.697 ns )               ; game_state.s1 ; game_state.s0       ; clk_in     ; clk_in   ; None                        ; None                      ; 2.988 ns                ;
+; N/A   ; 278.55 MHz ( period = 3.590 ns )               ; game_state.b  ; game_state.s0       ; clk_in     ; clk_in   ; None                        ; None                      ; 2.881 ns                ;
+; N/A   ; 280.66 MHz ( period = 3.563 ns )               ; a_score[1]    ; a_score_out[1]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 2.854 ns                ;
+; N/A   ; 280.66 MHz ( period = 3.563 ns )               ; b_score[0]    ; b_score_out[1]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 2.854 ns                ;
+; N/A   ; 281.93 MHz ( period = 3.547 ns )               ; game_state.s0 ; game_state.a        ; clk_in     ; clk_in   ; None                        ; None                      ; 2.838 ns                ;
+; N/A   ; 282.57 MHz ( period = 3.539 ns )               ; game_state.s0 ; game_state.s1       ; clk_in     ; clk_in   ; None                        ; None                      ; 2.830 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; a_score[0]    ; a_score[0]          ; clk_in     ; clk_in   ; None                        ; None                      ; 2.440 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; game_state.s0 ; game_state.s0       ; clk_in     ; clk_in   ; None                        ; None                      ; 1.782 ns                ;
+; N/A   ; Restricted to 304.04 MHz ( period = 3.289 ns ) ; a_score[0]    ; a_score_out[0]~reg0 ; clk_in     ; clk_in   ; None                        ; None                      ; 1.509 ns                ;
++-------+------------------------------------------------+---------------+---------------------+------------+----------+-----------------------------+---------------------------+-------------------------+
 
 
-+--------------------------------------------------------------------------------------+
-; tsu                                                                                  ;
-+-------+--------------+------------+----------------+----------------------+----------+
-; Slack ; Required tsu ; Actual tsu ; From           ; To                   ; To Clock ;
-+-------+--------------+------------+----------------+----------------------+----------+
-; N/A   ; None         ; 6.483 ns   ; a_select_in[1] ; result[1]~reg0       ; clk_in   ;
-; N/A   ; None         ; 6.483 ns   ; a_select_in[1] ; result[0]~reg0       ; clk_in   ;
-; N/A   ; None         ; 6.340 ns   ; b_select_in[0] ; result[1]~reg0       ; clk_in   ;
-; N/A   ; None         ; 6.340 ns   ; b_select_in[0] ; result[0]~reg0       ; clk_in   ;
-; N/A   ; None         ; 6.053 ns   ; a_select_in[0] ; result[1]~reg0       ; clk_in   ;
-; N/A   ; None         ; 6.053 ns   ; a_select_in[0] ; result[0]~reg0       ; clk_in   ;
-; N/A   ; None         ; 6.016 ns   ; b_select_in[1] ; result[1]~reg0       ; clk_in   ;
-; N/A   ; None         ; 6.016 ns   ; b_select_in[1] ; result[0]~reg0       ; clk_in   ;
-; N/A   ; None         ; 5.295 ns   ; a_select_in[1] ; b_score[1]           ; clk_in   ;
-; N/A   ; None         ; 5.199 ns   ; b_select_in[0] ; b_score[1]           ; clk_in   ;
-; N/A   ; None         ; 4.777 ns   ; a_select_in[1] ; b_score[0]           ; clk_in   ;
-; N/A   ; None         ; 4.681 ns   ; b_select_in[0] ; b_score[0]           ; clk_in   ;
-; N/A   ; None         ; 4.669 ns   ; b_select_in[1] ; b_score[1]           ; clk_in   ;
-; N/A   ; None         ; 4.600 ns   ; a_select_in[0] ; b_score[1]           ; clk_in   ;
-; N/A   ; None         ; 4.166 ns   ; a_ok           ; game_state.a         ; clk_in   ;
-; N/A   ; None         ; 4.151 ns   ; b_select_in[1] ; b_score[0]           ; clk_in   ;
-; N/A   ; None         ; 4.082 ns   ; a_select_in[0] ; b_score[0]           ; clk_in   ;
-; N/A   ; None         ; 3.893 ns   ; b_ok           ; b_select_out[0]~reg0 ; clk_in   ;
-; N/A   ; None         ; 3.893 ns   ; b_ok           ; b_select_out[1]~reg0 ; clk_in   ;
-; N/A   ; None         ; 3.868 ns   ; b_ok           ; game_state.a         ; clk_in   ;
-; N/A   ; None         ; 3.699 ns   ; a_ok           ; game_state.b         ; clk_in   ;
-; N/A   ; None         ; 3.461 ns   ; a_select_in[1] ; a_score[1]           ; clk_in   ;
-; N/A   ; None         ; 3.460 ns   ; a_select_in[1] ; a_score[0]           ; clk_in   ;
-; N/A   ; None         ; 3.401 ns   ; b_ok           ; game_state.b         ; clk_in   ;
-; N/A   ; None         ; 3.375 ns   ; ready          ; game_state.a         ; clk_in   ;
-; N/A   ; None         ; 3.318 ns   ; b_select_in[0] ; a_score[1]           ; clk_in   ;
-; N/A   ; None         ; 3.317 ns   ; b_select_in[0] ; a_score[0]           ; clk_in   ;
-; N/A   ; None         ; 3.273 ns   ; reset          ; b_select_out[0]~reg0 ; clk_in   ;
-; N/A   ; None         ; 3.273 ns   ; reset          ; b_select_out[1]~reg0 ; clk_in   ;
-; N/A   ; None         ; 3.229 ns   ; a_ok           ; game_state.s0        ; clk_in   ;
-; N/A   ; None         ; 3.163 ns   ; a_ok           ; a_select_out[0]~reg0 ; clk_in   ;
-; N/A   ; None         ; 3.163 ns   ; a_ok           ; a_select_out[1]~reg0 ; clk_in   ;
-; N/A   ; None         ; 3.031 ns   ; ready          ; game_state.s0        ; clk_in   ;
-; N/A   ; None         ; 3.031 ns   ; a_select_in[0] ; a_score[1]           ; clk_in   ;
-; N/A   ; None         ; 3.030 ns   ; a_select_in[0] ; a_score[0]           ; clk_in   ;
-; N/A   ; None         ; 3.013 ns   ; reset          ; a_score_out[0]~reg0  ; clk_in   ;
-; N/A   ; None         ; 3.013 ns   ; reset          ; a_score_out[1]~reg0  ; clk_in   ;
-; N/A   ; None         ; 3.013 ns   ; reset          ; b_score_out[0]~reg0  ; clk_in   ;
-; N/A   ; None         ; 3.013 ns   ; reset          ; b_score_out[1]~reg0  ; clk_in   ;
-; N/A   ; None         ; 2.994 ns   ; b_select_in[1] ; a_score[1]           ; clk_in   ;
-; N/A   ; None         ; 2.993 ns   ; b_select_in[1] ; a_score[0]           ; clk_in   ;
-; N/A   ; None         ; 2.931 ns   ; b_ok           ; game_state.s0        ; clk_in   ;
-; N/A   ; None         ; 2.908 ns   ; ready          ; game_state.b         ; clk_in   ;
-; N/A   ; None         ; 2.899 ns   ; reset          ; a_select_out[0]~reg0 ; clk_in   ;
-; N/A   ; None         ; 2.899 ns   ; reset          ; a_select_out[1]~reg0 ; clk_in   ;
-; N/A   ; None         ; 2.637 ns   ; b_select_in[0] ; b_select_out[0]~reg0 ; clk_in   ;
-; N/A   ; None         ; 2.286 ns   ; a_select_in[0] ; a_select_out[0]~reg0 ; clk_in   ;
-; N/A   ; None         ; 2.183 ns   ; a_select_in[1] ; a_select_out[1]~reg0 ; clk_in   ;
-; N/A   ; None         ; 2.053 ns   ; b_ok           ; game_state.judge     ; clk_in   ;
-; N/A   ; None         ; 2.038 ns   ; b_select_in[1] ; b_select_out[1]~reg0 ; clk_in   ;
-+-------+--------------+------------+----------------+----------------------+----------+
++-------------------------------------------------------------------------------------+
+; tsu                                                                                 ;
++-------+--------------+------------+----------------+---------------------+----------+
+; Slack ; Required tsu ; Actual tsu ; From           ; To                  ; To Clock ;
++-------+--------------+------------+----------------+---------------------+----------+
+; N/A   ; None         ; 6.025 ns   ; b_select_in[1] ; a_score[1]          ; clk_in   ;
+; N/A   ; None         ; 5.687 ns   ; a_select_in[1] ; a_score[1]          ; clk_in   ;
+; N/A   ; None         ; 5.639 ns   ; a_select_in[0] ; a_score[1]          ; clk_in   ;
+; N/A   ; None         ; 5.624 ns   ; b_select_in[0] ; a_score[1]          ; clk_in   ;
+; N/A   ; None         ; 5.593 ns   ; b_select_in[1] ; b_score[0]          ; clk_in   ;
+; N/A   ; None         ; 5.424 ns   ; b_select_in[0] ; result[1]~reg0      ; clk_in   ;
+; N/A   ; None         ; 5.424 ns   ; b_select_in[0] ; result[0]~reg0      ; clk_in   ;
+; N/A   ; None         ; 5.411 ns   ; b_select_in[1] ; b_score[1]          ; clk_in   ;
+; N/A   ; None         ; 5.378 ns   ; b_select_in[1] ; result[1]~reg0      ; clk_in   ;
+; N/A   ; None         ; 5.378 ns   ; b_select_in[1] ; result[0]~reg0      ; clk_in   ;
+; N/A   ; None         ; 5.355 ns   ; b_ok           ; game_state.b        ; clk_in   ;
+; N/A   ; None         ; 5.300 ns   ; b_ok           ; result[1]~reg0      ; clk_in   ;
+; N/A   ; None         ; 5.300 ns   ; b_ok           ; result[0]~reg0      ; clk_in   ;
+; N/A   ; None         ; 5.085 ns   ; a_select_in[1] ; b_score[0]          ; clk_in   ;
+; N/A   ; None         ; 5.044 ns   ; a_select_in[1] ; result[1]~reg0      ; clk_in   ;
+; N/A   ; None         ; 5.044 ns   ; a_select_in[1] ; result[0]~reg0      ; clk_in   ;
+; N/A   ; None         ; 4.919 ns   ; a_select_in[0] ; b_score[0]          ; clk_in   ;
+; N/A   ; None         ; 4.903 ns   ; a_select_in[1] ; b_score[1]          ; clk_in   ;
+; N/A   ; None         ; 4.902 ns   ; b_select_in[1] ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 4.885 ns   ; b_ok           ; game_state.a        ; clk_in   ;
+; N/A   ; None         ; 4.883 ns   ; b_ok           ; a_score[0]          ; clk_in   ;
+; N/A   ; None         ; 4.883 ns   ; b_ok           ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 4.883 ns   ; b_ok           ; a_score[1]          ; clk_in   ;
+; N/A   ; None         ; 4.883 ns   ; b_ok           ; b_score[0]          ; clk_in   ;
+; N/A   ; None         ; 4.883 ns   ; b_ok           ; b_score[1]          ; clk_in   ;
+; N/A   ; None         ; 4.877 ns   ; b_ok           ; game_state.s1       ; clk_in   ;
+; N/A   ; None         ; 4.855 ns   ; a_select_in[0] ; result[1]~reg0      ; clk_in   ;
+; N/A   ; None         ; 4.855 ns   ; a_select_in[0] ; result[0]~reg0      ; clk_in   ;
+; N/A   ; None         ; 4.737 ns   ; a_select_in[0] ; b_score[1]          ; clk_in   ;
+; N/A   ; None         ; 4.689 ns   ; b_select_in[0] ; b_score[0]          ; clk_in   ;
+; N/A   ; None         ; 4.507 ns   ; b_select_in[0] ; b_score[1]          ; clk_in   ;
+; N/A   ; None         ; 4.489 ns   ; a_ok           ; game_state.b        ; clk_in   ;
+; N/A   ; None         ; 4.451 ns   ; b_select_in[1] ; a_score[0]          ; clk_in   ;
+; N/A   ; None         ; 4.394 ns   ; a_select_in[1] ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 4.236 ns   ; b_select_in[1] ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 4.228 ns   ; a_select_in[0] ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 4.167 ns   ; b_ok           ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 4.113 ns   ; a_select_in[1] ; a_score[0]          ; clk_in   ;
+; N/A   ; None         ; 4.065 ns   ; a_select_in[0] ; a_score[0]          ; clk_in   ;
+; N/A   ; None         ; 4.050 ns   ; b_select_in[0] ; a_score[0]          ; clk_in   ;
+; N/A   ; None         ; 4.019 ns   ; a_ok           ; game_state.a        ; clk_in   ;
+; N/A   ; None         ; 4.011 ns   ; a_ok           ; game_state.s1       ; clk_in   ;
+; N/A   ; None         ; 3.998 ns   ; b_select_in[0] ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.987 ns   ; a_ok           ; game_state.s0       ; clk_in   ;
+; N/A   ; None         ; 3.898 ns   ; a_select_in[1] ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.852 ns   ; ready          ; game_state.b        ; clk_in   ;
+; N/A   ; None         ; 3.850 ns   ; a_select_in[0] ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.835 ns   ; b_select_in[0] ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.832 ns   ; b_ok           ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.832 ns   ; b_ok           ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.761 ns   ; b_select_in[1] ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.724 ns   ; ready          ; game_state.a        ; clk_in   ;
+; N/A   ; None         ; 3.422 ns   ; b_select_in[1] ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.374 ns   ; ready          ; game_state.s1       ; clk_in   ;
+; N/A   ; None         ; 3.350 ns   ; ready          ; game_state.s0       ; clk_in   ;
+; N/A   ; None         ; 3.253 ns   ; a_select_in[1] ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.227 ns   ; b_ok           ; game_state.s0       ; clk_in   ;
+; N/A   ; None         ; 3.173 ns   ; start          ; game_state.b        ; clk_in   ;
+; N/A   ; None         ; 3.087 ns   ; a_select_in[0] ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.084 ns   ; a_select_in[1] ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.036 ns   ; a_select_in[0] ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 3.021 ns   ; b_select_in[0] ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A   ; None         ; 2.857 ns   ; b_select_in[0] ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A   ; None         ; 2.703 ns   ; start          ; game_state.a        ; clk_in   ;
+; N/A   ; None         ; 2.695 ns   ; start          ; game_state.s1       ; clk_in   ;
+; N/A   ; None         ; 1.705 ns   ; start          ; game_state.s0       ; clk_in   ;
++-------+--------------+------------+----------------+---------------------+----------+
 
 
-+-----------------------------------------------------------------------------------------+
-; tco                                                                                     ;
-+-------+--------------+------------+----------------------+-----------------+------------+
-; Slack ; Required tco ; Actual tco ; From                 ; To              ; From Clock ;
-+-------+--------------+------------+----------------------+-----------------+------------+
-; N/A   ; None         ; 9.691 ns   ; b_select_out[0]~reg0 ; b_select_out[0] ; clk_in     ;
-; N/A   ; None         ; 9.437 ns   ; b_select_out[1]~reg0 ; b_select_out[1] ; clk_in     ;
-; N/A   ; None         ; 8.909 ns   ; a_score_out[1]~reg0  ; a_score_out[1]  ; clk_in     ;
-; N/A   ; None         ; 8.876 ns   ; a_score_out[0]~reg0  ; a_score_out[0]  ; clk_in     ;
-; N/A   ; None         ; 8.840 ns   ; b_score_out[0]~reg0  ; b_score_out[0]  ; clk_in     ;
-; N/A   ; None         ; 8.404 ns   ; b_score_out[1]~reg0  ; b_score_out[1]  ; clk_in     ;
-; N/A   ; None         ; 8.373 ns   ; result[1]~reg0       ; result[1]       ; clk_in     ;
-; N/A   ; None         ; 8.355 ns   ; a_select_out[1]~reg0 ; a_select_out[1] ; clk_in     ;
-; N/A   ; None         ; 8.322 ns   ; a_select_out[0]~reg0 ; a_select_out[0] ; clk_in     ;
-; N/A   ; None         ; 7.160 ns   ; result[0]~reg0       ; result[0]       ; clk_in     ;
-+-------+--------------+------------+----------------------+-----------------+------------+
++---------------------------------------------------------------------------------------+
+; tco                                                                                   ;
++-------+--------------+------------+---------------------+----------------+------------+
+; Slack ; Required tco ; Actual tco ; From                ; To             ; From Clock ;
++-------+--------------+------------+---------------------+----------------+------------+
+; N/A   ; None         ; 10.075 ns  ; a_score_out[0]~reg0 ; a_score_out[0] ; clk_in     ;
+; N/A   ; None         ; 8.789 ns   ; result[1]~reg0      ; result[1]      ; clk_in     ;
+; N/A   ; None         ; 8.667 ns   ; result[0]~reg0      ; result[0]      ; clk_in     ;
+; N/A   ; None         ; 8.543 ns   ; a_score_out[1]~reg0 ; a_score_out[1] ; clk_in     ;
+; N/A   ; None         ; 8.536 ns   ; b_score_out[0]~reg0 ; b_score_out[0] ; clk_in     ;
+; N/A   ; None         ; 8.470 ns   ; b_score_out[1]~reg0 ; b_score_out[1] ; clk_in     ;
++-------+--------------+------------+---------------------+----------------+------------+
 
 
-+--------------------------------------------------------------------------------------------+
-; th                                                                                         ;
-+---------------+-------------+-----------+----------------+----------------------+----------+
-; Minimum Slack ; Required th ; Actual th ; From           ; To                   ; To Clock ;
-+---------------+-------------+-----------+----------------+----------------------+----------+
-; N/A           ; None        ; -1.374 ns ; a_select_in[0] ; result[0]~reg0       ; clk_in   ;
-; N/A           ; None        ; -1.391 ns ; b_select_in[1] ; result[0]~reg0       ; clk_in   ;
-; N/A           ; None        ; -1.484 ns ; b_select_in[1] ; b_select_out[1]~reg0 ; clk_in   ;
-; N/A           ; None        ; -1.499 ns ; b_ok           ; game_state.judge     ; clk_in   ;
-; N/A           ; None        ; -1.629 ns ; a_select_in[1] ; a_select_out[1]~reg0 ; clk_in   ;
-; N/A           ; None        ; -1.688 ns ; b_select_in[0] ; result[0]~reg0       ; clk_in   ;
-; N/A           ; None        ; -1.732 ns ; a_select_in[0] ; a_select_out[0]~reg0 ; clk_in   ;
-; N/A           ; None        ; -1.927 ns ; a_select_in[1] ; result[0]~reg0       ; clk_in   ;
-; N/A           ; None        ; -2.083 ns ; b_select_in[0] ; b_select_out[0]~reg0 ; clk_in   ;
-; N/A           ; None        ; -2.345 ns ; reset          ; a_select_out[0]~reg0 ; clk_in   ;
-; N/A           ; None        ; -2.345 ns ; reset          ; a_select_out[1]~reg0 ; clk_in   ;
-; N/A           ; None        ; -2.354 ns ; ready          ; game_state.b         ; clk_in   ;
-; N/A           ; None        ; -2.377 ns ; b_ok           ; game_state.s0        ; clk_in   ;
-; N/A           ; None        ; -2.423 ns ; b_select_in[1] ; result[1]~reg0       ; clk_in   ;
-; N/A           ; None        ; -2.439 ns ; b_select_in[1] ; a_score[0]           ; clk_in   ;
-; N/A           ; None        ; -2.440 ns ; b_select_in[1] ; a_score[1]           ; clk_in   ;
-; N/A           ; None        ; -2.458 ns ; a_select_in[0] ; result[1]~reg0       ; clk_in   ;
-; N/A           ; None        ; -2.459 ns ; reset          ; a_score_out[0]~reg0  ; clk_in   ;
-; N/A           ; None        ; -2.459 ns ; reset          ; a_score_out[1]~reg0  ; clk_in   ;
-; N/A           ; None        ; -2.459 ns ; reset          ; b_score_out[0]~reg0  ; clk_in   ;
-; N/A           ; None        ; -2.459 ns ; reset          ; b_score_out[1]~reg0  ; clk_in   ;
-; N/A           ; None        ; -2.476 ns ; a_select_in[0] ; a_score[0]           ; clk_in   ;
-; N/A           ; None        ; -2.477 ns ; ready          ; game_state.s0        ; clk_in   ;
-; N/A           ; None        ; -2.477 ns ; a_select_in[0] ; a_score[1]           ; clk_in   ;
-; N/A           ; None        ; -2.609 ns ; a_ok           ; a_select_out[0]~reg0 ; clk_in   ;
-; N/A           ; None        ; -2.609 ns ; a_ok           ; a_select_out[1]~reg0 ; clk_in   ;
-; N/A           ; None        ; -2.675 ns ; a_ok           ; game_state.s0        ; clk_in   ;
-; N/A           ; None        ; -2.719 ns ; reset          ; b_select_out[0]~reg0 ; clk_in   ;
-; N/A           ; None        ; -2.719 ns ; reset          ; b_select_out[1]~reg0 ; clk_in   ;
-; N/A           ; None        ; -2.748 ns ; b_select_in[0] ; result[1]~reg0       ; clk_in   ;
-; N/A           ; None        ; -2.763 ns ; b_select_in[0] ; a_score[0]           ; clk_in   ;
-; N/A           ; None        ; -2.764 ns ; b_select_in[0] ; a_score[1]           ; clk_in   ;
-; N/A           ; None        ; -2.821 ns ; ready          ; game_state.a         ; clk_in   ;
-; N/A           ; None        ; -2.847 ns ; b_ok           ; game_state.b         ; clk_in   ;
-; N/A           ; None        ; -2.889 ns ; a_select_in[1] ; result[1]~reg0       ; clk_in   ;
-; N/A           ; None        ; -2.890 ns ; a_ok           ; game_state.b         ; clk_in   ;
-; N/A           ; None        ; -2.906 ns ; a_select_in[1] ; a_score[0]           ; clk_in   ;
-; N/A           ; None        ; -2.907 ns ; a_select_in[1] ; a_score[1]           ; clk_in   ;
-; N/A           ; None        ; -2.953 ns ; b_ok           ; game_state.a         ; clk_in   ;
-; N/A           ; None        ; -3.251 ns ; a_ok           ; game_state.a         ; clk_in   ;
-; N/A           ; None        ; -3.339 ns ; b_ok           ; b_select_out[0]~reg0 ; clk_in   ;
-; N/A           ; None        ; -3.339 ns ; b_ok           ; b_select_out[1]~reg0 ; clk_in   ;
-; N/A           ; None        ; -3.528 ns ; a_select_in[0] ; b_score[0]           ; clk_in   ;
-; N/A           ; None        ; -3.597 ns ; b_select_in[1] ; b_score[0]           ; clk_in   ;
-; N/A           ; None        ; -4.046 ns ; a_select_in[0] ; b_score[1]           ; clk_in   ;
-; N/A           ; None        ; -4.115 ns ; b_select_in[1] ; b_score[1]           ; clk_in   ;
-; N/A           ; None        ; -4.127 ns ; b_select_in[0] ; b_score[0]           ; clk_in   ;
-; N/A           ; None        ; -4.223 ns ; a_select_in[1] ; b_score[0]           ; clk_in   ;
-; N/A           ; None        ; -4.645 ns ; b_select_in[0] ; b_score[1]           ; clk_in   ;
-; N/A           ; None        ; -4.741 ns ; a_select_in[1] ; b_score[1]           ; clk_in   ;
-+---------------+-------------+-----------+----------------+----------------------+----------+
++-------------------------------------------------------------------------------------------+
+; th                                                                                        ;
++---------------+-------------+-----------+----------------+---------------------+----------+
+; Minimum Slack ; Required th ; Actual th ; From           ; To                  ; To Clock ;
++---------------+-------------+-----------+----------------+---------------------+----------+
+; N/A           ; None        ; -1.151 ns ; start          ; game_state.s0       ; clk_in   ;
+; N/A           ; None        ; -1.161 ns ; a_select_in[0] ; result[0]~reg0      ; clk_in   ;
+; N/A           ; None        ; -1.553 ns ; b_ok           ; game_state.b        ; clk_in   ;
+; N/A           ; None        ; -1.651 ns ; b_select_in[1] ; result[0]~reg0      ; clk_in   ;
+; N/A           ; None        ; -1.679 ns ; a_select_in[1] ; result[0]~reg0      ; clk_in   ;
+; N/A           ; None        ; -2.141 ns ; start          ; game_state.s1       ; clk_in   ;
+; N/A           ; None        ; -2.149 ns ; start          ; game_state.a        ; clk_in   ;
+; N/A           ; None        ; -2.303 ns ; b_select_in[0] ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -2.439 ns ; b_select_in[0] ; result[0]~reg0      ; clk_in   ;
+; N/A           ; None        ; -2.467 ns ; b_select_in[0] ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -2.472 ns ; a_select_in[0] ; result[1]~reg0      ; clk_in   ;
+; N/A           ; None        ; -2.482 ns ; a_select_in[0] ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -2.530 ns ; a_select_in[1] ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -2.533 ns ; a_select_in[0] ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -2.585 ns ; ready          ; game_state.s1       ; clk_in   ;
+; N/A           ; None        ; -2.609 ns ; a_ok           ; game_state.b        ; clk_in   ;
+; N/A           ; None        ; -2.619 ns ; start          ; game_state.b        ; clk_in   ;
+; N/A           ; None        ; -2.673 ns ; b_ok           ; game_state.s0       ; clk_in   ;
+; N/A           ; None        ; -2.699 ns ; a_select_in[1] ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -2.796 ns ; ready          ; game_state.s0       ; clk_in   ;
+; N/A           ; None        ; -2.828 ns ; ready          ; game_state.a        ; clk_in   ;
+; N/A           ; None        ; -2.840 ns ; b_select_in[1] ; result[1]~reg0      ; clk_in   ;
+; N/A           ; None        ; -2.868 ns ; b_select_in[1] ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -2.966 ns ; a_select_in[1] ; result[1]~reg0      ; clk_in   ;
+; N/A           ; None        ; -3.207 ns ; b_select_in[1] ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.222 ns ; a_ok           ; game_state.s1       ; clk_in   ;
+; N/A           ; None        ; -3.241 ns ; b_ok           ; game_state.a        ; clk_in   ;
+; N/A           ; None        ; -3.278 ns ; b_ok           ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.278 ns ; b_ok           ; b_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.281 ns ; b_select_in[0] ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.296 ns ; a_select_in[0] ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.298 ns ; ready          ; game_state.b        ; clk_in   ;
+; N/A           ; None        ; -3.344 ns ; a_select_in[1] ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.433 ns ; a_ok           ; game_state.s0       ; clk_in   ;
+; N/A           ; None        ; -3.444 ns ; b_select_in[0] ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.465 ns ; a_ok           ; game_state.a        ; clk_in   ;
+; N/A           ; None        ; -3.493 ns ; b_ok           ; game_state.s1       ; clk_in   ;
+; N/A           ; None        ; -3.496 ns ; b_select_in[0] ; a_score[0]          ; clk_in   ;
+; N/A           ; None        ; -3.511 ns ; a_select_in[0] ; a_score[0]          ; clk_in   ;
+; N/A           ; None        ; -3.559 ns ; a_select_in[1] ; a_score[0]          ; clk_in   ;
+; N/A           ; None        ; -3.613 ns ; b_ok           ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.674 ns ; a_select_in[0] ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.682 ns ; b_select_in[1] ; a_score_out[1]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.698 ns ; b_select_in[0] ; result[1]~reg0      ; clk_in   ;
+; N/A           ; None        ; -3.840 ns ; a_select_in[1] ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -3.897 ns ; b_select_in[1] ; a_score[0]          ; clk_in   ;
+; N/A           ; None        ; -3.953 ns ; b_select_in[0] ; b_score[1]          ; clk_in   ;
+; N/A           ; None        ; -4.135 ns ; b_select_in[0] ; b_score[0]          ; clk_in   ;
+; N/A           ; None        ; -4.183 ns ; a_select_in[0] ; b_score[1]          ; clk_in   ;
+; N/A           ; None        ; -4.235 ns ; b_ok           ; result[1]~reg0      ; clk_in   ;
+; N/A           ; None        ; -4.235 ns ; b_ok           ; result[0]~reg0      ; clk_in   ;
+; N/A           ; None        ; -4.329 ns ; b_ok           ; a_score[0]          ; clk_in   ;
+; N/A           ; None        ; -4.329 ns ; b_ok           ; a_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -4.329 ns ; b_ok           ; a_score[1]          ; clk_in   ;
+; N/A           ; None        ; -4.329 ns ; b_ok           ; b_score[0]          ; clk_in   ;
+; N/A           ; None        ; -4.329 ns ; b_ok           ; b_score[1]          ; clk_in   ;
+; N/A           ; None        ; -4.348 ns ; b_select_in[1] ; b_score_out[0]~reg0 ; clk_in   ;
+; N/A           ; None        ; -4.349 ns ; a_select_in[1] ; b_score[1]          ; clk_in   ;
+; N/A           ; None        ; -4.365 ns ; a_select_in[0] ; b_score[0]          ; clk_in   ;
+; N/A           ; None        ; -4.531 ns ; a_select_in[1] ; b_score[0]          ; clk_in   ;
+; N/A           ; None        ; -4.857 ns ; b_select_in[1] ; b_score[1]          ; clk_in   ;
+; N/A           ; None        ; -5.039 ns ; b_select_in[1] ; b_score[0]          ; clk_in   ;
+; N/A           ; None        ; -5.070 ns ; b_select_in[0] ; a_score[1]          ; clk_in   ;
+; N/A           ; None        ; -5.085 ns ; a_select_in[0] ; a_score[1]          ; clk_in   ;
+; N/A           ; None        ; -5.133 ns ; a_select_in[1] ; a_score[1]          ; clk_in   ;
+; N/A           ; None        ; -5.471 ns ; b_select_in[1] ; a_score[1]          ; clk_in   ;
++---------------+-------------+-----------+----------------+---------------------+----------+
 
 
 +--------------------------+
@@ -303,76 +331,75 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Classic Timing Analyzer
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Wed Oct 19 20:53:02 2016
+    Info: Processing started: Thu Oct 20 15:51:30 2016
 Info: Command: quartus_tan --read_settings_files=off --write_settings_files=off SSP -c SSP
 Info: Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info: Started post-fitting delay annotation
 Info: Delay annotation completed successfully
 Warning: Found pins functioning as undefined clocks and/or memory enables
     Info: Assuming node "clk_in" is an undefined clock
-Info: Clock "clk_in" has Internal fmax of 167.59 MHz between source register "a_score[1]" and destination register "result[1]~reg0" (period= 5.967 ns)
-    Info: + Longest register to register delay is 5.258 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X4_Y7_N8; Fanout = 3; REG Node = 'a_score[1]'
-        Info: 2: + IC(0.927 ns) + CELL(0.914 ns) = 1.841 ns; Loc. = LC_X4_Y7_N0; Fanout = 1; COMB Node = 'result[0]~26'
-        Info: 3: + IC(0.744 ns) + CELL(0.740 ns) = 3.325 ns; Loc. = LC_X4_Y7_N7; Fanout = 2; COMB Node = 'result[0]~29'
-        Info: 4: + IC(0.690 ns) + CELL(1.243 ns) = 5.258 ns; Loc. = LC_X4_Y7_N6; Fanout = 1; REG Node = 'result[1]~reg0'
-        Info: Total cell delay = 2.897 ns ( 55.10 % )
-        Info: Total interconnect delay = 2.361 ns ( 44.90 % )
+Info: Clock "clk_in" has Internal fmax of 167.0 MHz between source register "game_state.b" and destination register "result[1]~reg0" (period= 5.988 ns)
+    Info: + Longest register to register delay is 5.279 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X3_Y5_N6; Fanout = 4; REG Node = 'game_state.b'
+        Info: 2: + IC(1.866 ns) + CELL(0.200 ns) = 2.066 ns; Loc. = LC_X3_Y4_N7; Fanout = 1; COMB Node = 'result[0]~29'
+        Info: 3: + IC(0.776 ns) + CELL(0.511 ns) = 3.353 ns; Loc. = LC_X3_Y4_N5; Fanout = 2; COMB Node = 'result[0]~30'
+        Info: 4: + IC(0.683 ns) + CELL(1.243 ns) = 5.279 ns; Loc. = LC_X3_Y4_N8; Fanout = 1; REG Node = 'result[1]~reg0'
+        Info: Total cell delay = 1.954 ns ( 37.01 % )
+        Info: Total interconnect delay = 3.325 ns ( 62.99 % )
     Info: - Smallest clock skew is 0.000 ns
         Info: + Shortest clock path from clock "clk_in" to destination register is 3.681 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 18; CLK Node = 'clk_in'
-            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N6; Fanout = 1; REG Node = 'result[1]~reg0'
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X3_Y4_N8; Fanout = 1; REG Node = 'result[1]~reg0'
             Info: Total cell delay = 2.081 ns ( 56.53 % )
             Info: Total interconnect delay = 1.600 ns ( 43.47 % )
         Info: - Longest clock path from clock "clk_in" to source register is 3.681 ns
-            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 18; CLK Node = 'clk_in'
-            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N8; Fanout = 3; REG Node = 'a_score[1]'
+            Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+            Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X3_Y5_N6; Fanout = 4; REG Node = 'game_state.b'
             Info: Total cell delay = 2.081 ns ( 56.53 % )
             Info: Total interconnect delay = 1.600 ns ( 43.47 % )
     Info: + Micro clock to output delay of source is 0.376 ns
     Info: + Micro setup delay of destination is 0.333 ns
-Info: tsu for register "result[1]~reg0" (data pin = "a_select_in[1]", clock pin = "clk_in") is 6.483 ns
-    Info: + Longest pin to register delay is 9.831 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_72; Fanout = 5; PIN Node = 'a_select_in[1]'
-        Info: 2: + IC(4.107 ns) + CELL(0.200 ns) = 5.439 ns; Loc. = LC_X4_Y7_N3; Fanout = 3; COMB Node = 'result[0]~25'
-        Info: 3: + IC(0.775 ns) + CELL(0.200 ns) = 6.414 ns; Loc. = LC_X4_Y7_N0; Fanout = 1; COMB Node = 'result[0]~26'
-        Info: 4: + IC(0.744 ns) + CELL(0.740 ns) = 7.898 ns; Loc. = LC_X4_Y7_N7; Fanout = 2; COMB Node = 'result[0]~29'
-        Info: 5: + IC(0.690 ns) + CELL(1.243 ns) = 9.831 ns; Loc. = LC_X4_Y7_N6; Fanout = 1; REG Node = 'result[1]~reg0'
-        Info: Total cell delay = 3.515 ns ( 35.75 % )
-        Info: Total interconnect delay = 6.316 ns ( 64.25 % )
+Info: tsu for register "a_score[1]" (data pin = "b_select_in[1]", clock pin = "clk_in") is 6.025 ns
+    Info: + Longest pin to register delay is 9.373 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_108; Fanout = 5; PIN Node = 'b_select_in[1]'
+        Info: 2: + IC(3.844 ns) + CELL(0.200 ns) = 5.176 ns; Loc. = LC_X3_Y4_N0; Fanout = 5; COMB Node = 'a_score~14'
+        Info: 3: + IC(1.817 ns) + CELL(0.200 ns) = 7.193 ns; Loc. = LC_X3_Y5_N5; Fanout = 1; COMB Node = 'a_score~16'
+        Info: 4: + IC(1.900 ns) + CELL(0.280 ns) = 9.373 ns; Loc. = LC_X3_Y4_N1; Fanout = 3; REG Node = 'a_score[1]'
+        Info: Total cell delay = 1.812 ns ( 19.33 % )
+        Info: Total interconnect delay = 7.561 ns ( 80.67 % )
     Info: + Micro setup delay of destination is 0.333 ns
     Info: - Shortest clock path from clock "clk_in" to destination register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 18; CLK Node = 'clk_in'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N6; Fanout = 1; REG Node = 'result[1]~reg0'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X3_Y4_N1; Fanout = 3; REG Node = 'a_score[1]'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
-Info: tco from clock "clk_in" to destination pin "b_select_out[0]" through register "b_select_out[0]~reg0" is 9.691 ns
+Info: tco from clock "clk_in" to destination pin "a_score_out[0]" through register "a_score_out[0]~reg0" is 10.075 ns
     Info: + Longest clock path from clock "clk_in" to source register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 18; CLK Node = 'clk_in'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X7_Y6_N6; Fanout = 1; REG Node = 'b_select_out[0]~reg0'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X3_Y4_N9; Fanout = 1; REG Node = 'a_score_out[0]~reg0'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
     Info: + Micro clock to output delay of source is 0.376 ns
-    Info: + Longest register to pin delay is 5.634 ns
-        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X7_Y6_N6; Fanout = 1; REG Node = 'b_select_out[0]~reg0'
-        Info: 2: + IC(3.312 ns) + CELL(2.322 ns) = 5.634 ns; Loc. = PIN_86; Fanout = 0; PIN Node = 'b_select_out[0]'
-        Info: Total cell delay = 2.322 ns ( 41.21 % )
-        Info: Total interconnect delay = 3.312 ns ( 58.79 % )
-Info: th for register "result[0]~reg0" (data pin = "a_select_in[0]", clock pin = "clk_in") is -1.374 ns
+    Info: + Longest register to pin delay is 6.018 ns
+        Info: 1: + IC(0.000 ns) + CELL(0.000 ns) = 0.000 ns; Loc. = LC_X3_Y4_N9; Fanout = 1; REG Node = 'a_score_out[0]~reg0'
+        Info: 2: + IC(3.696 ns) + CELL(2.322 ns) = 6.018 ns; Loc. = PIN_105; Fanout = 0; PIN Node = 'a_score_out[0]'
+        Info: Total cell delay = 2.322 ns ( 38.58 % )
+        Info: Total interconnect delay = 3.696 ns ( 61.42 % )
+Info: th for register "game_state.s0" (data pin = "start", clock pin = "clk_in") is -1.151 ns
     Info: + Longest clock path from clock "clk_in" to destination register is 3.681 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 18; CLK Node = 'clk_in'
-        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X4_Y7_N2; Fanout = 1; REG Node = 'result[0]~reg0'
+        Info: 1: + IC(0.000 ns) + CELL(1.163 ns) = 1.163 ns; Loc. = PIN_18; Fanout = 14; CLK Node = 'clk_in'
+        Info: 2: + IC(1.600 ns) + CELL(0.918 ns) = 3.681 ns; Loc. = LC_X3_Y5_N4; Fanout = 2; REG Node = 'game_state.s0'
         Info: Total cell delay = 2.081 ns ( 56.53 % )
         Info: Total interconnect delay = 1.600 ns ( 43.47 % )
     Info: + Micro hold delay of destination is 0.221 ns
-    Info: - Shortest pin to register delay is 5.276 ns
-        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_14; Fanout = 5; PIN Node = 'a_select_in[0]'
-        Info: 2: + IC(2.961 ns) + CELL(1.183 ns) = 5.276 ns; Loc. = LC_X4_Y7_N2; Fanout = 1; REG Node = 'result[0]~reg0'
-        Info: Total cell delay = 2.315 ns ( 43.88 % )
-        Info: Total interconnect delay = 2.961 ns ( 56.12 % )
+    Info: - Shortest pin to register delay is 5.053 ns
+        Info: 1: + IC(0.000 ns) + CELL(1.132 ns) = 1.132 ns; Loc. = PIN_139; Fanout = 2; PIN Node = 'start'
+        Info: 2: + IC(2.738 ns) + CELL(1.183 ns) = 5.053 ns; Loc. = LC_X3_Y5_N4; Fanout = 2; REG Node = 'game_state.s0'
+        Info: Total cell delay = 2.315 ns ( 45.81 % )
+        Info: Total interconnect delay = 2.738 ns ( 54.19 % )
 Info: Quartus II 64-Bit Classic Timing Analyzer was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 223 megabytes
-    Info: Processing ended: Wed Oct 19 20:53:02 2016
+    Info: Processing ended: Thu Oct 20 15:51:30 2016
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
