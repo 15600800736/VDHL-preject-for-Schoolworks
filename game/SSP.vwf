@@ -25,7 +25,7 @@ HEADER
 	VERSION = 1;
 	TIME_UNIT = ns;
 	DATA_OFFSET = 0.0;
-	DATA_DURATION = 100000.0;
+	DATA_DURATION = 1000000.0;
 	SIMULATION_TIME = 0.0;
 	GRID_PHASE = 0.0;
 	GRID_PERIOD = 10.0;
@@ -479,7 +479,7 @@ TRANSITION_LIST("clk_in")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 200;
+			REPEAT = 2000;
 			LEVEL 0 FOR 250.0;
 			LEVEL 1 FOR 250.0;
 		}
@@ -492,6 +492,22 @@ TRANSITION_LIST("col_in[3]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 6400.0;
+		NODE
+		{
+			REPEAT = 9;
+			LEVEL 1 FOR 3200.0;
+			LEVEL 0 FOR 960.0;
+			LEVEL 1 FOR 3040.0;
+			LEVEL 0 FOR 960.0;
+			LEVEL 1 FOR 2560.0;
+			LEVEL 0 FOR 480.0;
+			LEVEL 1 FOR 2560.0;
+			LEVEL 0 FOR 960.0;
+			LEVEL 1 FOR 2880.0;
+			LEVEL 0 FOR 7040.0;
+			LEVEL 1 FOR 4160.0;
+			LEVEL 0 FOR 71200.0;
+		}
 		LEVEL 1 FOR 3200.0;
 		LEVEL 0 FOR 960.0;
 		LEVEL 1 FOR 3040.0;
@@ -513,6 +529,20 @@ TRANSITION_LIST("col_in[2]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3040.0;
+		NODE
+		{
+			REPEAT = 9;
+			LEVEL 1 FOR 2720.0;
+			LEVEL 0 FOR 8800.0;
+			LEVEL 1 FOR 2560.0;
+			LEVEL 0 FOR 480.0;
+			LEVEL 1 FOR 2560.0;
+			LEVEL 0 FOR 960.0;
+			LEVEL 1 FOR 2880.0;
+			LEVEL 0 FOR 7040.0;
+			LEVEL 1 FOR 4160.0;
+			LEVEL 0 FOR 67840.0;
+		}
 		LEVEL 1 FOR 2720.0;
 		LEVEL 0 FOR 8800.0;
 		LEVEL 1 FOR 2560.0;
@@ -532,6 +562,20 @@ TRANSITION_LIST("col_in[1]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3040.0;
+		NODE
+		{
+			REPEAT = 9;
+			LEVEL 1 FOR 2720.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 3200.0;
+			LEVEL 0 FOR 960.0;
+			LEVEL 1 FOR 3040.0;
+			LEVEL 0 FOR 960.0;
+			LEVEL 1 FOR 2560.0;
+			LEVEL 0 FOR 4000.0;
+			LEVEL 1 FOR 2880.0;
+			LEVEL 0 FOR 79040.0;
+		}
 		LEVEL 1 FOR 2720.0;
 		LEVEL 0 FOR 640.0;
 		LEVEL 1 FOR 3200.0;
@@ -551,6 +595,20 @@ TRANSITION_LIST("col_in[0]")
 	{
 		REPEAT = 1;
 		LEVEL 0 FOR 3040.0;
+		NODE
+		{
+			REPEAT = 9;
+			LEVEL 1 FOR 2720.0;
+			LEVEL 0 FOR 640.0;
+			LEVEL 1 FOR 3200.0;
+			LEVEL 0 FOR 960.0;
+			LEVEL 1 FOR 3040.0;
+			LEVEL 0 FOR 4000.0;
+			LEVEL 1 FOR 2560.0;
+			LEVEL 0 FOR 10880.0;
+			LEVEL 1 FOR 4160.0;
+			LEVEL 0 FOR 67840.0;
+		}
 		LEVEL 1 FOR 2720.0;
 		LEVEL 0 FOR 640.0;
 		LEVEL 1 FOR 3200.0;
@@ -573,11 +631,12 @@ TRANSITION_LIST("col_matrix[7]")
 		LEVEL 1 FOR 1280.0;
 		NODE
 		{
-			REPEAT = 38;
+			REPEAT = 389;
 			LEVEL 0 FOR 1280.0;
 			LEVEL 1 FOR 1280.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 320.0;
 	}
 }
 
@@ -590,11 +649,11 @@ TRANSITION_LIST("col_matrix[6]")
 		LEVEL 1 FOR 640.0;
 		NODE
 		{
-			REPEAT = 77;
+			REPEAT = 780;
 			LEVEL 0 FOR 640.0;
 			LEVEL 1 FOR 640.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 320.0;
 	}
 }
 
@@ -607,11 +666,11 @@ TRANSITION_LIST("col_matrix[5]")
 		LEVEL 1 FOR 320.0;
 		NODE
 		{
-			REPEAT = 155;
+			REPEAT = 1561;
 			LEVEL 0 FOR 320.0;
 			LEVEL 1 FOR 320.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 320.0;
 	}
 }
 
@@ -624,11 +683,10 @@ TRANSITION_LIST("col_matrix[4]")
 		LEVEL 1 FOR 160.0;
 		NODE
 		{
-			REPEAT = 311;
+			REPEAT = 3124;
 			LEVEL 0 FOR 160.0;
 			LEVEL 1 FOR 160.0;
 		}
-		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -641,7 +699,7 @@ TRANSITION_LIST("col_matrix[3]")
 		LEVEL 1 FOR 80.0;
 		NODE
 		{
-			REPEAT = 624;
+			REPEAT = 6249;
 			LEVEL 0 FOR 80.0;
 			LEVEL 1 FOR 80.0;
 		}
@@ -659,7 +717,7 @@ TRANSITION_LIST("col_matrix[2]")
 		LEVEL 1 FOR 40.0;
 		NODE
 		{
-			REPEAT = 1248;
+			REPEAT = 12498;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
@@ -681,7 +739,7 @@ TRANSITION_LIST("col_matrix[1]")
 		LEVEL 1 FOR 20.0;
 		NODE
 		{
-			REPEAT = 2498;
+			REPEAT = 24998;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
@@ -707,7 +765,7 @@ TRANSITION_LIST("col_matrix[0]")
 		LEVEL 1 FOR 10.0;
 		NODE
 		{
-			REPEAT = 4997;
+			REPEAT = 49997;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -723,11 +781,11 @@ TRANSITION_LIST("digitron_cat[5]")
 		LEVEL 1 FOR 320.0;
 		NODE
 		{
-			REPEAT = 155;
+			REPEAT = 1561;
 			LEVEL 0 FOR 320.0;
 			LEVEL 1 FOR 320.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 320.0;
 	}
 }
 
@@ -740,11 +798,10 @@ TRANSITION_LIST("digitron_cat[4]")
 		LEVEL 1 FOR 160.0;
 		NODE
 		{
-			REPEAT = 311;
+			REPEAT = 3124;
 			LEVEL 0 FOR 160.0;
 			LEVEL 1 FOR 160.0;
 		}
-		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -757,7 +814,7 @@ TRANSITION_LIST("digitron_cat[3]")
 		LEVEL 1 FOR 80.0;
 		NODE
 		{
-			REPEAT = 624;
+			REPEAT = 6249;
 			LEVEL 0 FOR 80.0;
 			LEVEL 1 FOR 80.0;
 		}
@@ -775,7 +832,7 @@ TRANSITION_LIST("digitron_cat[2]")
 		LEVEL 1 FOR 40.0;
 		NODE
 		{
-			REPEAT = 1248;
+			REPEAT = 12498;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
@@ -797,7 +854,7 @@ TRANSITION_LIST("digitron_cat[1]")
 		LEVEL 1 FOR 20.0;
 		NODE
 		{
-			REPEAT = 2498;
+			REPEAT = 24998;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
@@ -823,7 +880,7 @@ TRANSITION_LIST("digitron_cat[0]")
 		LEVEL 1 FOR 10.0;
 		NODE
 		{
-			REPEAT = 4997;
+			REPEAT = 49997;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -839,11 +896,11 @@ TRANSITION_LIST("digitron_show[6]")
 		LEVEL 1 FOR 640.0;
 		NODE
 		{
-			REPEAT = 77;
+			REPEAT = 780;
 			LEVEL 0 FOR 640.0;
 			LEVEL 1 FOR 640.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 320.0;
 	}
 }
 
@@ -856,11 +913,11 @@ TRANSITION_LIST("digitron_show[5]")
 		LEVEL 1 FOR 320.0;
 		NODE
 		{
-			REPEAT = 155;
+			REPEAT = 1561;
 			LEVEL 0 FOR 320.0;
 			LEVEL 1 FOR 320.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 320.0;
 	}
 }
 
@@ -873,11 +930,10 @@ TRANSITION_LIST("digitron_show[4]")
 		LEVEL 1 FOR 160.0;
 		NODE
 		{
-			REPEAT = 311;
+			REPEAT = 3124;
 			LEVEL 0 FOR 160.0;
 			LEVEL 1 FOR 160.0;
 		}
-		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -890,7 +946,7 @@ TRANSITION_LIST("digitron_show[3]")
 		LEVEL 1 FOR 80.0;
 		NODE
 		{
-			REPEAT = 624;
+			REPEAT = 6249;
 			LEVEL 0 FOR 80.0;
 			LEVEL 1 FOR 80.0;
 		}
@@ -908,7 +964,7 @@ TRANSITION_LIST("digitron_show[2]")
 		LEVEL 1 FOR 40.0;
 		NODE
 		{
-			REPEAT = 1248;
+			REPEAT = 12498;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
@@ -930,7 +986,7 @@ TRANSITION_LIST("digitron_show[1]")
 		LEVEL 1 FOR 20.0;
 		NODE
 		{
-			REPEAT = 2498;
+			REPEAT = 24998;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
@@ -956,7 +1012,7 @@ TRANSITION_LIST("digitron_show[0]")
 		LEVEL 1 FOR 10.0;
 		NODE
 		{
-			REPEAT = 4997;
+			REPEAT = 49997;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -970,11 +1026,12 @@ TRANSITION_LIST("row_matrix[7]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 39;
+			REPEAT = 390;
 			LEVEL 0 FOR 1280.0;
 			LEVEL 1 FOR 1280.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 1280.0;
+		LEVEL 1 FOR 320.0;
 	}
 }
 
@@ -985,11 +1042,11 @@ TRANSITION_LIST("row_matrix[6]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 78;
+			REPEAT = 781;
 			LEVEL 0 FOR 640.0;
 			LEVEL 1 FOR 640.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 320.0;
 	}
 }
 
@@ -1000,11 +1057,11 @@ TRANSITION_LIST("row_matrix[5]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 156;
+			REPEAT = 1562;
 			LEVEL 0 FOR 320.0;
 			LEVEL 1 FOR 320.0;
 		}
-		LEVEL 0 FOR 160.0;
+		LEVEL 0 FOR 320.0;
 	}
 }
 
@@ -1015,11 +1072,10 @@ TRANSITION_LIST("row_matrix[4]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 312;
+			REPEAT = 3125;
 			LEVEL 0 FOR 160.0;
 			LEVEL 1 FOR 160.0;
 		}
-		LEVEL 0 FOR 160.0;
 	}
 }
 
@@ -1030,7 +1086,7 @@ TRANSITION_LIST("row_matrix[3]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 625;
+			REPEAT = 6250;
 			LEVEL 0 FOR 80.0;
 			LEVEL 1 FOR 80.0;
 		}
@@ -1044,7 +1100,7 @@ TRANSITION_LIST("row_matrix[2]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 1250;
+			REPEAT = 12500;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
@@ -1058,7 +1114,7 @@ TRANSITION_LIST("row_matrix[1]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 2500;
+			REPEAT = 25000;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
@@ -1072,7 +1128,7 @@ TRANSITION_LIST("row_matrix[0]")
 		REPEAT = 1;
 		NODE
 		{
-			REPEAT = 5000;
+			REPEAT = 50000;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}
@@ -1096,7 +1152,7 @@ TRANSITION_LIST("row_out[3]")
 		LEVEL 1 FOR 80.0;
 		NODE
 		{
-			REPEAT = 474;
+			REPEAT = 6099;
 			LEVEL 0 FOR 80.0;
 			LEVEL 1 FOR 80.0;
 		}
@@ -1122,7 +1178,7 @@ TRANSITION_LIST("row_out[2]")
 		LEVEL 1 FOR 40.0;
 		NODE
 		{
-			REPEAT = 949;
+			REPEAT = 12199;
 			LEVEL 0 FOR 40.0;
 			LEVEL 1 FOR 40.0;
 		}
@@ -1152,7 +1208,7 @@ TRANSITION_LIST("row_out[1]")
 		LEVEL 1 FOR 20.0;
 		NODE
 		{
-			REPEAT = 1899;
+			REPEAT = 24399;
 			LEVEL 0 FOR 20.0;
 			LEVEL 1 FOR 20.0;
 		}
@@ -1186,7 +1242,7 @@ TRANSITION_LIST("row_out[0]")
 		LEVEL 1 FOR 10.0;
 		NODE
 		{
-			REPEAT = 3799;
+			REPEAT = 48799;
 			LEVEL 0 FOR 10.0;
 			LEVEL 1 FOR 10.0;
 		}

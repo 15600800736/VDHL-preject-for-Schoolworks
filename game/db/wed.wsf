@@ -112,10 +112,10 @@ VECTOR("F:/VDHL preject-delete/game/SSP.vwf")
 VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 {
 	ZOOM{
-		ZBEGIN = 14993856;
-		ZEND = 21241296;
+		ZBEGIN = 14993814;
+		ZEND = 39983510;
 		NUMERATOR = 1570;
-		DENOMINATOR = 6247440;
+		DENOMINATOR = 24989696;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -483,10 +483,10 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 19818432;
-		ZEND = 41838912;
+		ZBEGIN = 600000000;
+		ZEND = 700000000;
 		NUMERATOR = 1365;
-		DENOMINATOR = 22020480;
+		DENOMINATOR = 100000000;
 		TOP_INDEX = 0;
 	}
 	CLOCK{

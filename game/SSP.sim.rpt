@@ -1,5 +1,5 @@
 Simulator report for SSP
-Thu Oct 27 11:20:17 2016
+Thu Oct 27 13:04:13 2016
 Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -44,10 +44,10 @@ applicable agreement for further details.
 ; Type                        ; Value        ;
 +-----------------------------+--------------+
 ; Simulation Start Time       ; 0 ps         ;
-; Simulation End Time         ; 100.0 us     ;
+; Simulation End Time         ; 1.0 ms       ;
 ; Simulation Netlist Size     ; 151 nodes    ;
-; Simulation Coverage         ;      53.80 % ;
-; Total Number of Transitions ; 2772         ;
+; Simulation Coverage         ;      81.65 % ;
+; Total Number of Transitions ; 27933        ;
 ; Simulation Breakpoints      ; 0            ;
 ; Family                      ; MAX II       ;
 ; Device                      ; EPM570T144C5 ;
@@ -94,13 +94,13 @@ Please use Quartus II 64-Bit to view the waveform report data.
 +-----------------------------------------------------+--------------+
 ; Type                                                ; Value        ;
 +-----------------------------------------------------+--------------+
-; Total coverage as a percentage                      ;      53.80 % ;
+; Total coverage as a percentage                      ;      81.65 % ;
 ; Total nodes checked                                 ; 151          ;
 ; Total output ports checked                          ; 158          ;
-; Total output ports with complete 1/0-value coverage ; 85           ;
-; Total output ports with no 1/0-value coverage       ; 51           ;
-; Total output ports with no 1-value coverage         ; 51           ;
-; Total output ports with no 0-value coverage         ; 73           ;
+; Total output ports with complete 1/0-value coverage ; 129          ;
+; Total output ports with no 1/0-value coverage       ; 28           ;
+; Total output ports with no 1-value coverage         ; 28           ;
+; Total output ports with no 0-value coverage         ; 29           ;
 +-----------------------------------------------------+--------------+
 
 
@@ -116,6 +116,10 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SSP|digitron:U3|digitron_cat_d[4]         ; |SSP|digitron:U3|digitron_cat_d[4]            ; regout           ;
 ; |SSP|digitron:U3|digitron_cat_d[5]         ; |SSP|digitron:U3|digitron_cat_d[5]            ; regout           ;
 ; |SSP|digitron:U3|digitron_show_d[0]        ; |SSP|digitron:U3|digitron_show_d[0]           ; regout           ;
+; |SSP|digitron:U3|digitron_show_d[1]        ; |SSP|digitron:U3|digitron_show_d[1]           ; regout           ;
+; |SSP|digitron:U3|digitron_show_d[2]        ; |SSP|digitron:U3|digitron_show_d[2]           ; regout           ;
+; |SSP|digitron:U3|digitron_show_d[3]        ; |SSP|digitron:U3|digitron_show_d[3]           ; regout           ;
+; |SSP|digitron:U3|digitron_show_d[4]        ; |SSP|digitron:U3|digitron_show_d[4]           ; regout           ;
 ; |SSP|matrix:U4|row_out_m[2]                ; |SSP|matrix:U4|row_out_m[2]                   ; regout           ;
 ; |SSP|matrix:U4|row_out_m[3]                ; |SSP|matrix:U4|row_out_m[3]                   ; regout           ;
 ; |SSP|matrix:U4|row_out_m[4]                ; |SSP|matrix:U4|row_out_m[4]                   ; regout           ;
@@ -128,12 +132,19 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SSP|digitron:U3|counter_d~2               ; |SSP|digitron:U3|counter_d~2                  ; combout          ;
 ; |SSP|digitron:U3|counter_d                 ; |SSP|digitron:U3|counter_d                    ; regout           ;
 ; |SSP|digitron:U3|digitron_cat_d[4]~20      ; |SSP|digitron:U3|digitron_cat_d[4]~20         ; combout          ;
+; |SSP|digitron:U3|digitron_show_d~27        ; |SSP|digitron:U3|digitron_show_d~27           ; combout          ;
+; |SSP|digitron:U3|digitron_show_d~30        ; |SSP|digitron:U3|digitron_show_d~30           ; combout          ;
+; |SSP|prevent_shake:U6|ready_out_p          ; |SSP|prevent_shake:U6|ready_out_p             ; regout           ;
 ; |SSP|control:U2|result_c[0]                ; |SSP|matrix:U4|col_out_m~68                   ; combout          ;
 ; |SSP|matrix:U4|counter_m[1]                ; |SSP|matrix:U4|counter_m[1]                   ; regout           ;
 ; |SSP|matrix:U4|counter_m[0]                ; |SSP|matrix:U4|counter_m[0]                   ; regout           ;
+; |SSP|matrix:U4|col_out_m~69                ; |SSP|matrix:U4|col_out_m~69                   ; combout          ;
 ; |SSP|matrix:U4|Mux0~0                      ; |SSP|matrix:U4|Mux0~0                         ; combout          ;
 ; |SSP|matrix:U4|col_out_m~71                ; |SSP|matrix:U4|col_out_m~71                   ; combout          ;
+; |SSP|matrix:U4|col_out_m~72                ; |SSP|matrix:U4|col_out_m~72                   ; combout          ;
 ; |SSP|matrix:U4|Mux16~1                     ; |SSP|matrix:U4|Mux16~1                        ; combout          ;
+; |SSP|prevent_shake:U6|show_out_p           ; |SSP|matrix:U4|col_out_m~76                   ; combout          ;
+; |SSP|prevent_shake:U6|show_out_p           ; |SSP|prevent_shake:U6|show_out_p              ; regout           ;
 ; |SSP|matrix:U4|Mux15~1                     ; |SSP|matrix:U4|Mux15~1                        ; combout          ;
 ; |SSP|matrix:U4|col_out_m~78                ; |SSP|matrix:U4|col_out_m~78                   ; combout          ;
 ; |SSP|frequency_division:U5|Q_f             ; |SSP|frequency_division:U5|Q_f                ; regout           ;
@@ -145,7 +156,11 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SSP|prevent_shake:U6|b_select_out_p[1]    ; |SSP|control:U2|result_c[0]~27                ; combout          ;
 ; |SSP|prevent_shake:U6|b_select_out_p[1]    ; |SSP|prevent_shake:U6|b_select_out_p[1]       ; regout           ;
 ; |SSP|prevent_shake:U6|b_select_out_p[0]    ; |SSP|control:U2|result_c[0]~29                ; combout          ;
+; |SSP|prevent_shake:U6|b_ok_out_p           ; |SSP|prevent_shake:U6|b_ok_out_p              ; regout           ;
+; |SSP|control:U2|b_score_out_c[1]~2         ; |SSP|control:U2|b_score_out_c[1]~2            ; combout          ;
 ; |SSP|prevent_shake:U6|a_select_out_p[1]    ; |SSP|control:U2|a_score_out_c[1]~2            ; combout          ;
+; |SSP|prevent_shake:U6|a_select_out_p[1]    ; |SSP|prevent_shake:U6|a_select_out_p[1]       ; regout           ;
+; |SSP|prevent_shake:U6|ready_in_p_tmp       ; |SSP|prevent_shake:U6|ready_in_p_tmp          ; regout           ;
 ; |SSP|prevent_shake:U6|counter_p[0]         ; |SSP|prevent_shake:U6|counter_p[0]~13         ; cout0            ;
 ; |SSP|prevent_shake:U6|counter_p[0]         ; |SSP|prevent_shake:U6|counter_p[0]~13COUT1_31 ; cout1            ;
 ; |SSP|prevent_shake:U6|counter_p[1]         ; |SSP|prevent_shake:U6|counter_p[1]~15         ; cout0            ;
@@ -153,29 +168,46 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SSP|prevent_shake:U6|Equal0~0             ; |SSP|prevent_shake:U6|Equal0~0                ; combout          ;
 ; |SSP|prevent_shake:U6|Equal0~1             ; |SSP|prevent_shake:U6|Equal0~1                ; combout          ;
 ; |SSP|prevent_shake:U6|start_in_p_tmp       ; |SSP|prevent_shake:U6|start_in_p_tmp          ; regout           ;
+; |SSP|prevent_shake:U6|show_in_p_tmp        ; |SSP|prevent_shake:U6|show_in_p_tmp           ; regout           ;
 ; |SSP|prevent_shake:U6|a_select_in_p_tmp[0] ; |SSP|prevent_shake:U6|a_select_in_p_tmp[0]    ; regout           ;
 ; |SSP|frequency_division:U5|counter_f[2]    ; |SSP|frequency_division:U5|counter_f[2]       ; regout           ;
 ; |SSP|frequency_division:U5|counter_f[0]    ; |SSP|frequency_division:U5|counter_f[0]       ; regout           ;
 ; |SSP|frequency_division:U5|Equal0~0        ; |SSP|frequency_division:U5|Equal0~0           ; combout          ;
+; |SSP|prevent_shake:U6|b_ok_in_p_tmp        ; |SSP|prevent_shake:U6|b_ok_in_p_tmp           ; regout           ;
+; |SSP|control:U2|game_state_c[0]            ; |SSP|control:U2|game_state_c[0]               ; regout           ;
+; |SSP|prevent_shake:U6|a_ok_out_p           ; |SSP|prevent_shake:U6|a_ok_out_p              ; regout           ;
 ; |SSP|button:U1|show_out_b                  ; |SSP|prevent_shake:U6|process_0~11            ; combout          ;
+; |SSP|button:U1|show_out_b                  ; |SSP|button:U1|show_out_b                     ; regout           ;
 ; |SSP|button:U1|a_select_out_b[0]           ; |SSP|button:U1|a_select_out_b[0]              ; regout           ;
 ; |SSP|button:U1|start_out_b                 ; |SSP|prevent_shake:U6|process_0~12            ; combout          ;
 ; |SSP|button:U1|start_out_b                 ; |SSP|button:U1|start_out_b                    ; regout           ;
+; |SSP|prevent_shake:U6|a_ok_in_p_tmp        ; |SSP|prevent_shake:U6|a_ok_in_p_tmp           ; regout           ;
+; |SSP|button:U1|a_ok_out_b                  ; |SSP|button:U1|a_ok_out_b                     ; regout           ;
+; |SSP|prevent_shake:U6|b_select_in_p_tmp[0] ; |SSP|prevent_shake:U6|process_0~13            ; combout          ;
+; |SSP|button:U1|b_ok_out_b                  ; |SSP|button:U1|b_ok_out_b                     ; regout           ;
+; |SSP|prevent_shake:U6|a_select_in_p_tmp[1] ; |SSP|prevent_shake:U6|process_0~14            ; combout          ;
+; |SSP|prevent_shake:U6|a_select_in_p_tmp[1] ; |SSP|prevent_shake:U6|a_select_in_p_tmp[1]    ; regout           ;
 ; |SSP|prevent_shake:U6|process_0~15         ; |SSP|prevent_shake:U6|process_0~15            ; combout          ;
 ; |SSP|prevent_shake:U6|b_select_in_p_tmp[1] ; |SSP|prevent_shake:U6|b_select_in_p_tmp[0]~2  ; combout          ;
 ; |SSP|prevent_shake:U6|b_select_in_p_tmp[1] ; |SSP|prevent_shake:U6|b_select_in_p_tmp[1]    ; regout           ;
 ; |SSP|prevent_shake:U6|counter_p[3]~24      ; |SSP|prevent_shake:U6|counter_p[3]~24         ; combout          ;
+; |SSP|prevent_shake:U6|start_out_p          ; |SSP|control:U2|game_state_c[0]~7             ; combout          ;
 ; |SSP|prevent_shake:U6|start_out_p          ; |SSP|prevent_shake:U6|start_out_p             ; regout           ;
 ; |SSP|button:U1|ready_out_b                 ; |SSP|button:U1|Equal2~0                       ; combout          ;
+; |SSP|button:U1|ready_out_b                 ; |SSP|button:U1|ready_out_b                    ; regout           ;
 ; |SSP|button:U1|a_select_out_b~11           ; |SSP|button:U1|a_select_out_b~11              ; combout          ;
 ; |SSP|button:U1|a_select_out_b~12           ; |SSP|button:U1|a_select_out_b~12              ; combout          ;
+; |SSP|button:U1|a_ok_out_b~7                ; |SSP|button:U1|a_ok_out_b~7                   ; combout          ;
 ; |SSP|button:U1|Equal4~0                    ; |SSP|button:U1|Equal4~0                       ; combout          ;
 ; |SSP|button:U1|a_ok_out_b~8                ; |SSP|button:U1|a_ok_out_b~8                   ; combout          ;
 ; |SSP|button:U1|b_select_out_b~12           ; |SSP|button:U1|b_select_out_b~12              ; combout          ;
+; |SSP|button:U1|b_ok_out_b~7                ; |SSP|button:U1|b_ok_out_b~7                   ; combout          ;
 ; |SSP|button:U1|b_ok_out_b~8                ; |SSP|button:U1|b_ok_out_b~8                   ; combout          ;
+; |SSP|button:U1|a_select_out_b~13           ; |SSP|button:U1|a_select_out_b~13              ; combout          ;
 ; |SSP|button:U1|a_select_out_b~14           ; |SSP|button:U1|a_select_out_b~14              ; combout          ;
 ; |SSP|button:U1|b_select_out_b~13           ; |SSP|button:U1|b_select_out_b~13              ; combout          ;
 ; |SSP|button:U1|b_select_out_b~14           ; |SSP|button:U1|b_select_out_b~14              ; combout          ;
+; |SSP|matrix:U4|row_out_m[2]~63             ; |SSP|matrix:U4|row_out_m[2]~63                ; combout          ;
 ; |SSP|clk_in                                ; |SSP|clk_in~corein                            ; combout          ;
 ; |SSP|col_in[0]                             ; |SSP|col_in[0]~corein                         ; combout          ;
 ; |SSP|col_in[1]                             ; |SSP|col_in[1]~corein                         ; combout          ;
@@ -184,16 +216,28 @@ The following table displays output ports that toggle between 1 and 0 during sim
 ; |SSP|row_out[1]                            ; |SSP|row_out[1]                               ; padio            ;
 ; |SSP|row_out[2]                            ; |SSP|row_out[2]                               ; padio            ;
 ; |SSP|row_out[3]                            ; |SSP|row_out[3]                               ; padio            ;
+; |SSP|digitron_cat[0]                       ; |SSP|digitron_cat[0]                          ; padio            ;
+; |SSP|digitron_cat[1]                       ; |SSP|digitron_cat[1]                          ; padio            ;
+; |SSP|digitron_cat[2]                       ; |SSP|digitron_cat[2]                          ; padio            ;
+; |SSP|digitron_cat[3]                       ; |SSP|digitron_cat[3]                          ; padio            ;
 ; |SSP|digitron_cat[4]                       ; |SSP|digitron_cat[4]                          ; padio            ;
 ; |SSP|digitron_cat[5]                       ; |SSP|digitron_cat[5]                          ; padio            ;
 ; |SSP|digitron_show[0]                      ; |SSP|digitron_show[0]                         ; padio            ;
+; |SSP|digitron_show[1]                      ; |SSP|digitron_show[1]                         ; padio            ;
+; |SSP|digitron_show[2]                      ; |SSP|digitron_show[2]                         ; padio            ;
+; |SSP|digitron_show[3]                      ; |SSP|digitron_show[3]                         ; padio            ;
+; |SSP|digitron_show[4]                      ; |SSP|digitron_show[4]                         ; padio            ;
+; |SSP|digitron_show[5]                      ; |SSP|digitron_show[5]                         ; padio            ;
+; |SSP|digitron_show[6]                      ; |SSP|digitron_show[6]                         ; padio            ;
 ; |SSP|row_matrix[2]                         ; |SSP|row_matrix[2]                            ; padio            ;
 ; |SSP|row_matrix[3]                         ; |SSP|row_matrix[3]                            ; padio            ;
 ; |SSP|row_matrix[4]                         ; |SSP|row_matrix[4]                            ; padio            ;
 ; |SSP|row_matrix[5]                         ; |SSP|row_matrix[5]                            ; padio            ;
 ; |SSP|col_matrix[0]                         ; |SSP|col_matrix[0]                            ; padio            ;
+; |SSP|col_matrix[1]                         ; |SSP|col_matrix[1]                            ; padio            ;
 ; |SSP|col_matrix[2]                         ; |SSP|col_matrix[2]                            ; padio            ;
 ; |SSP|col_matrix[5]                         ; |SSP|col_matrix[5]                            ; padio            ;
+; |SSP|col_matrix[6]                         ; |SSP|col_matrix[6]                            ; padio            ;
 ; |SSP|col_matrix[7]                         ; |SSP|col_matrix[7]                            ; padio            ;
 +--------------------------------------------+-----------------------------------------------+------------------+
 
@@ -207,47 +251,24 @@ The following table displays output ports that do not toggle to 1 during simulat
 ; |SSP|control:U2|result_c[1]                ; |SSP|control:U2|result_c[1]                   ; regout           ;
 ; |SSP|control:U2|b_score_out_c[1]           ; |SSP|control:U2|b_score_out_c[1]              ; regout           ;
 ; |SSP|control:U2|a_score_out_c[1]           ; |SSP|control:U2|a_score_out_c[1]              ; regout           ;
-; |SSP|control:U2|b_score_out_c[0]           ; |SSP|control:U2|b_score_out_c[0]              ; regout           ;
 ; |SSP|control:U2|a_score_out_c[0]           ; |SSP|control:U2|a_score_out_c[0]              ; regout           ;
-; |SSP|digitron:U3|digitron_show_d~27        ; |SSP|digitron:U3|digitron_show_d~27           ; combout          ;
-; |SSP|digitron:U3|digitron_show_d~30        ; |SSP|digitron:U3|digitron_show_d~30           ; combout          ;
 ; |SSP|digitron:U3|digitron_show_d~32        ; |SSP|digitron:U3|digitron_show_d~32           ; combout          ;
-; |SSP|prevent_shake:U6|ready_out_p          ; |SSP|prevent_shake:U6|ready_out_p             ; regout           ;
 ; |SSP|control:U2|result_c[0]                ; |SSP|control:U2|result_c[0]                   ; regout           ;
-; |SSP|matrix:U4|col_out_m~72                ; |SSP|matrix:U4|col_out_m~72                   ; combout          ;
 ; |SSP|matrix:U4|Equal2~0                    ; |SSP|matrix:U4|Equal2~0                       ; combout          ;
 ; |SSP|prevent_shake:U6|a_select_out_p[0]    ; |SSP|control:U2|result_c[1]~26                ; combout          ;
 ; |SSP|control:U2|result_c[0]~28             ; |SSP|control:U2|result_c[0]~28                ; combout          ;
 ; |SSP|prevent_shake:U6|b_select_out_p[0]    ; |SSP|prevent_shake:U6|b_select_out_p[0]       ; regout           ;
 ; |SSP|control:U2|result_c[0]~30             ; |SSP|control:U2|result_c[0]~30                ; combout          ;
 ; |SSP|prevent_shake:U6|b_ok_out_p           ; |SSP|control:U2|result_c[0]~31                ; combout          ;
-; |SSP|prevent_shake:U6|b_ok_out_p           ; |SSP|prevent_shake:U6|b_ok_out_p              ; regout           ;
-; |SSP|control:U2|b_score_out_c[1]~2         ; |SSP|control:U2|b_score_out_c[1]~2            ; combout          ;
-; |SSP|prevent_shake:U6|a_select_out_p[1]    ; |SSP|prevent_shake:U6|a_select_out_p[1]       ; regout           ;
 ; |SSP|control:U2|a_score_out_c[1]~3         ; |SSP|control:U2|a_score_out_c[1]~3            ; combout          ;
-; |SSP|prevent_shake:U6|ready_in_p_tmp       ; |SSP|prevent_shake:U6|ready_in_p_tmp          ; regout           ;
 ; |SSP|prevent_shake:U6|counter_p[2]         ; |SSP|prevent_shake:U6|counter_p[2]~17         ; cout0            ;
 ; |SSP|prevent_shake:U6|counter_p[2]         ; |SSP|prevent_shake:U6|counter_p[2]~17COUT1_35 ; cout1            ;
 ; |SSP|prevent_shake:U6|counter_p[3]         ; |SSP|prevent_shake:U6|counter_p[3]~19         ; cout             ;
 ; |SSP|prevent_shake:U6|counter_p[4]         ; |SSP|prevent_shake:U6|counter_p[4]~21         ; cout0            ;
 ; |SSP|prevent_shake:U6|counter_p[4]         ; |SSP|prevent_shake:U6|counter_p[4]~21COUT1_37 ; cout1            ;
 ; |SSP|frequency_division:U5|counter_f[3]    ; |SSP|frequency_division:U5|counter_f[3]       ; regout           ;
-; |SSP|prevent_shake:U6|b_ok_in_p_tmp        ; |SSP|prevent_shake:U6|b_ok_in_p_tmp           ; regout           ;
-; |SSP|control:U2|game_state_c[0]            ; |SSP|control:U2|game_state_c[0]               ; regout           ;
-; |SSP|prevent_shake:U6|a_ok_out_p           ; |SSP|prevent_shake:U6|a_ok_out_p              ; regout           ;
-; |SSP|prevent_shake:U6|a_ok_in_p_tmp        ; |SSP|prevent_shake:U6|a_ok_in_p_tmp           ; regout           ;
-; |SSP|button:U1|a_ok_out_b                  ; |SSP|button:U1|a_ok_out_b                     ; regout           ;
-; |SSP|prevent_shake:U6|b_select_in_p_tmp[0] ; |SSP|prevent_shake:U6|process_0~13            ; combout          ;
 ; |SSP|prevent_shake:U6|b_select_in_p_tmp[0] ; |SSP|prevent_shake:U6|b_select_in_p_tmp[0]    ; regout           ;
-; |SSP|button:U1|b_ok_out_b                  ; |SSP|button:U1|b_ok_out_b                     ; regout           ;
-; |SSP|prevent_shake:U6|a_select_in_p_tmp[1] ; |SSP|prevent_shake:U6|process_0~14            ; combout          ;
-; |SSP|prevent_shake:U6|a_select_in_p_tmp[1] ; |SSP|prevent_shake:U6|a_select_in_p_tmp[1]    ; regout           ;
-; |SSP|prevent_shake:U6|start_out_p          ; |SSP|control:U2|game_state_c[0]~7             ; combout          ;
-; |SSP|button:U1|ready_out_b                 ; |SSP|button:U1|ready_out_b                    ; regout           ;
-; |SSP|button:U1|a_ok_out_b~7                ; |SSP|button:U1|a_ok_out_b~7                   ; combout          ;
 ; |SSP|button:U1|b_select_out_b~11           ; |SSP|button:U1|b_select_out_b~11              ; combout          ;
-; |SSP|button:U1|b_ok_out_b~7                ; |SSP|button:U1|b_ok_out_b~7                   ; combout          ;
-; |SSP|button:U1|a_select_out_b~13           ; |SSP|button:U1|a_select_out_b~13              ; combout          ;
 ; |SSP|row_out[0]                            ; |SSP|row_out[0]                               ; padio            ;
 ; |SSP|row_matrix[0]                         ; |SSP|row_matrix[0]                            ; padio            ;
 ; |SSP|row_matrix[1]                         ; |SSP|row_matrix[1]                            ; padio            ;
@@ -264,79 +285,35 @@ The following table displays output ports that do not toggle to 0 during simulat
 +--------------------------------------------+-----------------------------------------------+------------------+
 ; Node Name                                  ; Output Port Name                              ; Output Port Type ;
 +--------------------------------------------+-----------------------------------------------+------------------+
-; |SSP|digitron:U3|digitron_show_d[1]        ; |SSP|digitron:U3|digitron_show_d[1]           ; regout           ;
-; |SSP|digitron:U3|digitron_show_d[2]        ; |SSP|digitron:U3|digitron_show_d[2]           ; regout           ;
-; |SSP|digitron:U3|digitron_show_d[3]        ; |SSP|digitron:U3|digitron_show_d[3]           ; regout           ;
-; |SSP|digitron:U3|digitron_show_d[4]        ; |SSP|digitron:U3|digitron_show_d[4]           ; regout           ;
 ; |SSP|control:U2|result_c[1]                ; |SSP|control:U2|result_c[1]                   ; regout           ;
 ; |SSP|control:U2|b_score_out_c[1]           ; |SSP|control:U2|b_score_out_c[1]              ; regout           ;
 ; |SSP|control:U2|a_score_out_c[1]           ; |SSP|control:U2|a_score_out_c[1]              ; regout           ;
 ; |SSP|control:U2|b_score_out_c[0]           ; |SSP|control:U2|b_score_out_c[0]              ; regout           ;
 ; |SSP|control:U2|a_score_out_c[0]           ; |SSP|control:U2|a_score_out_c[0]              ; regout           ;
-; |SSP|digitron:U3|digitron_show_d~27        ; |SSP|digitron:U3|digitron_show_d~27           ; combout          ;
-; |SSP|digitron:U3|digitron_show_d~30        ; |SSP|digitron:U3|digitron_show_d~30           ; combout          ;
 ; |SSP|digitron:U3|digitron_show_d~32        ; |SSP|digitron:U3|digitron_show_d~32           ; combout          ;
-; |SSP|prevent_shake:U6|ready_out_p          ; |SSP|prevent_shake:U6|ready_out_p             ; regout           ;
 ; |SSP|control:U2|result_c[0]                ; |SSP|control:U2|result_c[0]                   ; regout           ;
-; |SSP|matrix:U4|col_out_m~69                ; |SSP|matrix:U4|col_out_m~69                   ; combout          ;
-; |SSP|matrix:U4|col_out_m~72                ; |SSP|matrix:U4|col_out_m~72                   ; combout          ;
 ; |SSP|matrix:U4|Equal2~0                    ; |SSP|matrix:U4|Equal2~0                       ; combout          ;
-; |SSP|prevent_shake:U6|show_out_p           ; |SSP|matrix:U4|col_out_m~76                   ; combout          ;
-; |SSP|prevent_shake:U6|show_out_p           ; |SSP|prevent_shake:U6|show_out_p              ; regout           ;
 ; |SSP|prevent_shake:U6|a_select_out_p[0]    ; |SSP|control:U2|result_c[1]~26                ; combout          ;
 ; |SSP|control:U2|result_c[0]~28             ; |SSP|control:U2|result_c[0]~28                ; combout          ;
 ; |SSP|prevent_shake:U6|b_select_out_p[0]    ; |SSP|prevent_shake:U6|b_select_out_p[0]       ; regout           ;
 ; |SSP|control:U2|result_c[0]~30             ; |SSP|control:U2|result_c[0]~30                ; combout          ;
 ; |SSP|prevent_shake:U6|b_ok_out_p           ; |SSP|control:U2|result_c[0]~31                ; combout          ;
-; |SSP|prevent_shake:U6|b_ok_out_p           ; |SSP|prevent_shake:U6|b_ok_out_p              ; regout           ;
-; |SSP|control:U2|b_score_out_c[1]~2         ; |SSP|control:U2|b_score_out_c[1]~2            ; combout          ;
-; |SSP|prevent_shake:U6|a_select_out_p[1]    ; |SSP|prevent_shake:U6|a_select_out_p[1]       ; regout           ;
 ; |SSP|control:U2|a_score_out_c[1]~3         ; |SSP|control:U2|a_score_out_c[1]~3            ; combout          ;
-; |SSP|prevent_shake:U6|ready_in_p_tmp       ; |SSP|prevent_shake:U6|ready_in_p_tmp          ; regout           ;
 ; |SSP|prevent_shake:U6|counter_p[2]         ; |SSP|prevent_shake:U6|counter_p[2]~17         ; cout0            ;
 ; |SSP|prevent_shake:U6|counter_p[2]         ; |SSP|prevent_shake:U6|counter_p[2]~17COUT1_35 ; cout1            ;
 ; |SSP|prevent_shake:U6|counter_p[3]         ; |SSP|prevent_shake:U6|counter_p[3]~19         ; cout             ;
 ; |SSP|prevent_shake:U6|counter_p[4]         ; |SSP|prevent_shake:U6|counter_p[4]~21         ; cout0            ;
 ; |SSP|prevent_shake:U6|counter_p[4]         ; |SSP|prevent_shake:U6|counter_p[4]~21COUT1_37 ; cout1            ;
-; |SSP|prevent_shake:U6|show_in_p_tmp        ; |SSP|prevent_shake:U6|show_in_p_tmp           ; regout           ;
 ; |SSP|frequency_division:U5|counter_f[3]    ; |SSP|frequency_division:U5|counter_f[3]       ; regout           ;
-; |SSP|prevent_shake:U6|b_ok_in_p_tmp        ; |SSP|prevent_shake:U6|b_ok_in_p_tmp           ; regout           ;
-; |SSP|control:U2|game_state_c[0]            ; |SSP|control:U2|game_state_c[0]               ; regout           ;
-; |SSP|prevent_shake:U6|a_ok_out_p           ; |SSP|prevent_shake:U6|a_ok_out_p              ; regout           ;
-; |SSP|button:U1|show_out_b                  ; |SSP|button:U1|show_out_b                     ; regout           ;
-; |SSP|prevent_shake:U6|a_ok_in_p_tmp        ; |SSP|prevent_shake:U6|a_ok_in_p_tmp           ; regout           ;
-; |SSP|button:U1|a_ok_out_b                  ; |SSP|button:U1|a_ok_out_b                     ; regout           ;
-; |SSP|prevent_shake:U6|b_select_in_p_tmp[0] ; |SSP|prevent_shake:U6|process_0~13            ; combout          ;
 ; |SSP|prevent_shake:U6|b_select_in_p_tmp[0] ; |SSP|prevent_shake:U6|b_select_in_p_tmp[0]    ; regout           ;
-; |SSP|button:U1|b_ok_out_b                  ; |SSP|button:U1|b_ok_out_b                     ; regout           ;
-; |SSP|prevent_shake:U6|a_select_in_p_tmp[1] ; |SSP|prevent_shake:U6|process_0~14            ; combout          ;
-; |SSP|prevent_shake:U6|a_select_in_p_tmp[1] ; |SSP|prevent_shake:U6|a_select_in_p_tmp[1]    ; regout           ;
-; |SSP|prevent_shake:U6|start_out_p          ; |SSP|control:U2|game_state_c[0]~7             ; combout          ;
-; |SSP|button:U1|ready_out_b                 ; |SSP|button:U1|ready_out_b                    ; regout           ;
-; |SSP|button:U1|a_ok_out_b~7                ; |SSP|button:U1|a_ok_out_b~7                   ; combout          ;
 ; |SSP|button:U1|b_select_out_b~11           ; |SSP|button:U1|b_select_out_b~11              ; combout          ;
-; |SSP|button:U1|b_ok_out_b~7                ; |SSP|button:U1|b_ok_out_b~7                   ; combout          ;
-; |SSP|button:U1|a_select_out_b~13           ; |SSP|button:U1|a_select_out_b~13              ; combout          ;
-; |SSP|matrix:U4|row_out_m[2]~63             ; |SSP|matrix:U4|row_out_m[2]~63                ; combout          ;
 ; |SSP|row_out[0]                            ; |SSP|row_out[0]                               ; padio            ;
-; |SSP|digitron_cat[0]                       ; |SSP|digitron_cat[0]                          ; padio            ;
-; |SSP|digitron_cat[1]                       ; |SSP|digitron_cat[1]                          ; padio            ;
-; |SSP|digitron_cat[2]                       ; |SSP|digitron_cat[2]                          ; padio            ;
-; |SSP|digitron_cat[3]                       ; |SSP|digitron_cat[3]                          ; padio            ;
-; |SSP|digitron_show[1]                      ; |SSP|digitron_show[1]                         ; padio            ;
-; |SSP|digitron_show[2]                      ; |SSP|digitron_show[2]                         ; padio            ;
-; |SSP|digitron_show[3]                      ; |SSP|digitron_show[3]                         ; padio            ;
-; |SSP|digitron_show[4]                      ; |SSP|digitron_show[4]                         ; padio            ;
-; |SSP|digitron_show[5]                      ; |SSP|digitron_show[5]                         ; padio            ;
-; |SSP|digitron_show[6]                      ; |SSP|digitron_show[6]                         ; padio            ;
 ; |SSP|row_matrix[0]                         ; |SSP|row_matrix[0]                            ; padio            ;
 ; |SSP|row_matrix[1]                         ; |SSP|row_matrix[1]                            ; padio            ;
 ; |SSP|row_matrix[6]                         ; |SSP|row_matrix[6]                            ; padio            ;
 ; |SSP|row_matrix[7]                         ; |SSP|row_matrix[7]                            ; padio            ;
-; |SSP|col_matrix[1]                         ; |SSP|col_matrix[1]                            ; padio            ;
 ; |SSP|col_matrix[3]                         ; |SSP|col_matrix[3]                            ; padio            ;
 ; |SSP|col_matrix[4]                         ; |SSP|col_matrix[4]                            ; padio            ;
-; |SSP|col_matrix[6]                         ; |SSP|col_matrix[6]                            ; padio            ;
 +--------------------------------------------+-----------------------------------------------+------------------+
 
 
@@ -353,17 +330,17 @@ The following table displays output ports that do not toggle to 0 during simulat
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Simulator
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Thu Oct 27 11:20:17 2016
+    Info: Processing started: Thu Oct 27 13:04:13 2016
 Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off SSP -c SSP
 Info: Using vector source file "F:/VDHL preject for Schoolworks/game/SSP.vwf"
 Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
     Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
 Info: Simulation partitioned into 1 sub-simulations
-Info: Simulation coverage is      53.80 %
-Info: Number of transitions in simulation is 2772
+Info: Simulation coverage is      81.65 %
+Info: Number of transitions in simulation is 27933
 Info: Quartus II 64-Bit Simulator was successful. 0 errors, 0 warnings
     Info: Peak virtual memory: 195 megabytes
-    Info: Processing ended: Thu Oct 27 11:20:17 2016
+    Info: Processing ended: Thu Oct 27 13:04:13 2016
     Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
