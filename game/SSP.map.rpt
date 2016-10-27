@@ -1,5 +1,5 @@
 Analysis & Synthesis report for SSP
-Thu Oct 20 21:34:02 2016
+Thu Oct 27 11:08:47 2016
 Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
 
 
@@ -10,7 +10,12 @@ Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Analysis & Synthesis Source Files Read
-  5. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Resource Usage Summary
+  6. Analysis & Synthesis Resource Utilization by Entity
+  7. Registers Removed During Synthesis
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Analysis & Synthesis Messages
 
 
 
@@ -36,11 +41,15 @@ applicable agreement for further details.
 +------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                           ;
 +-----------------------------+------------------------------------------+
-; Analysis & Synthesis Status ; Failed - Thu Oct 20 21:34:02 2016        ;
+; Analysis & Synthesis Status ; Successful - Thu Oct 27 11:08:47 2016    ;
 ; Quartus II 64-Bit Version   ; 9.0 Build 132 02/25/2009 SJ Full Version ;
 ; Revision Name               ; SSP                                      ;
 ; Top-level Entity Name       ; SSP                                      ;
 ; Family                      ; MAX II                                   ;
+; Total logic elements        ; 127                                      ;
+; Total pins                  ; 38                                       ;
+; Total virtual pins          ; 0                                        ;
+; UFM blocks                  ; 0 / 1 ( 0 % )                            ;
 +-----------------------------+------------------------------------------+
 
 
@@ -108,11 +117,125 @@ applicable agreement for further details.
 +----------------------------------------------------------------+--------------------+--------------------+
 
 
-+-----------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                        ;
-+----------------------------------+-----------------+-----------+------------------------------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type ; File Name with Absolute Path ;
-+----------------------------------+-----------------+-----------+------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                             ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+
+; SSP.vhd                          ; yes             ; User VHDL File  ; F:/VDHL preject for Schoolworks/game/SSP.vhd                ;
+; frequency_division.vhd           ; yes             ; User VHDL File  ; F:/VDHL preject for Schoolworks/game/frequency_division.vhd ;
+; control.vhd                      ; yes             ; User VHDL File  ; F:/VDHL preject for Schoolworks/game/control.vhd            ;
+; digitron.vhd                     ; yes             ; User VHDL File  ; F:/VDHL preject for Schoolworks/game/digitron.vhd           ;
+; matrix.vhd                       ; yes             ; User VHDL File  ; F:/VDHL preject for Schoolworks/game/matrix.vhd             ;
+; button.vhd                       ; yes             ; User VHDL File  ; F:/VDHL preject for Schoolworks/game/button.vhd             ;
+; prevent_shake.vhd                ; yes             ; User VHDL File  ; F:/VDHL preject for Schoolworks/game/prevent_shake.vhd      ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                   ;
++---------------------------------------------+---------------------------------+
+; Resource                                    ; Usage                           ;
++---------------------------------------------+---------------------------------+
+; Total logic elements                        ; 127                             ;
+;     -- Combinational with no register       ; 54                              ;
+;     -- Register only                        ; 23                              ;
+;     -- Combinational with a register        ; 50                              ;
+;                                             ;                                 ;
+; Logic element usage by number of LUT inputs ;                                 ;
+;     -- 4 input functions                    ; 51                              ;
+;     -- 3 input functions                    ; 31                              ;
+;     -- 2 input functions                    ; 15                              ;
+;     -- 1 input functions                    ; 7                               ;
+;     -- 0 input functions                    ; 0                               ;
+;                                             ;                                 ;
+; Logic elements by mode                      ;                                 ;
+;     -- normal mode                          ; 122                             ;
+;     -- arithmetic mode                      ; 5                               ;
+;     -- qfbk mode                            ; 0                               ;
+;     -- register cascade mode                ; 0                               ;
+;     -- synchronous clear/load mode          ; 12                              ;
+;     -- asynchronous clear/load mode         ; 0                               ;
+;                                             ;                                 ;
+; Total registers                             ; 73                              ;
+; Total logic cells in carry chains           ; 6                               ;
+; I/O pins                                    ; 38                              ;
+; Maximum fan-out node                        ; frequency_division:U5|clk_out_f ;
+; Maximum fan-out                             ; 43                              ;
+; Total fan-out                               ; 518                             ;
+; Average fan-out                             ; 3.14                            ;
++---------------------------------------------+---------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; LC Registers ; UFM Blocks ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Carry Chain LCs ; Packed LCs ; Full Hierarchy Name        ; Library Name ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+--------------+
+; |SSP                       ; 127 (0)     ; 73           ; 0          ; 38   ; 0            ; 54 (0)       ; 23 (0)            ; 50 (0)           ; 6 (0)           ; 0 (0)      ; |SSP                       ; work         ;
+;    |button:U1|             ; 32 (32)     ; 14           ; 0          ; 0    ; 0            ; 18 (18)      ; 3 (3)             ; 11 (11)          ; 0 (0)           ; 0 (0)      ; |SSP|button:U1             ; work         ;
+;    |control:U2|            ; 18 (18)     ; 8            ; 0          ; 0    ; 0            ; 10 (10)      ; 1 (1)             ; 7 (7)            ; 0 (0)           ; 0 (0)      ; |SSP|control:U2            ; work         ;
+;    |digitron:U3|           ; 14 (14)     ; 9            ; 0          ; 0    ; 0            ; 5 (5)        ; 0 (0)             ; 9 (9)            ; 0 (0)           ; 0 (0)      ; |SSP|digitron:U3           ; work         ;
+;    |frequency_division:U5| ; 7 (7)       ; 6            ; 0          ; 0    ; 0            ; 1 (1)        ; 1 (1)             ; 5 (5)            ; 0 (0)           ; 0 (0)      ; |SSP|frequency_division:U5 ; work         ;
+;    |matrix:U4|             ; 23 (23)     ; 12           ; 0          ; 0    ; 0            ; 11 (11)      ; 0 (0)             ; 12 (12)          ; 0 (0)           ; 0 (0)      ; |SSP|matrix:U4             ; work         ;
+;    |prevent_shake:U6|      ; 33 (33)     ; 24           ; 0          ; 0    ; 0            ; 9 (9)        ; 18 (18)           ; 6 (6)            ; 6 (6)           ; 0 (0)      ; |SSP|prevent_shake:U6      ; work         ;
++----------------------------+-------------+--------------+------------+------+--------------+--------------+-------------------+------------------+-----------------+------------+----------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                  ;
++----------------------------------------+--------------------------------------------+
+; Register name                          ; Reason for Removal                         ;
++----------------------------------------+--------------------------------------------+
+; button:U1|row_out_b[0]                 ; Stuck at VCC due to stuck port data_in     ;
+; digitron:U3|digitron_show_d[6]         ; Merged with digitron:U3|digitron_show_d[3] ;
+; digitron:U3|digitron_cat_d[0..3]       ; Merged with digitron:U3|digitron_show_d[5] ;
+; matrix:U4|col_out_m[4]                 ; Merged with matrix:U4|col_out_m[3]         ;
+; matrix:U4|row_out_m[1,6..7]            ; Merged with matrix:U4|row_out_m[0]         ;
+; control:U2|a_score_c[0]                ; Merged with control:U2|a_score_out_c[0]    ;
+; control:U2|b_score_c[1]                ; Merged with control:U2|b_score_out_c[1]    ;
+; control:U2|b_score_c[0]                ; Merged with control:U2|b_score_out_c[0]    ;
+; control:U2|a_score_c[1]                ; Merged with control:U2|a_score_out_c[1]    ;
+; matrix:U4|row_out_m[0]                 ; Stuck at VCC due to stuck port data_in     ;
+; matrix:U4|col_out_m[3]                 ; Stuck at GND due to stuck port data_in     ;
+; Total Number of Removed Registers = 16 ;                                            ;
++----------------------------------------+--------------------------------------------+
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 73    ;
+; Number of registers using Synchronous Clear  ; 6     ;
+; Number of registers using Synchronous Load   ; 6     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 44    ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
+; 3:1                ; 6 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |SSP|prevent_shake:U6|counter_p[3]  ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |SSP|digitron:U3|digitron_cat_d[4]  ;
+; 5:1                ; 5 bits    ; 15 LEs        ; 10 LEs               ; 5 LEs                  ; Yes        ; |SSP|digitron:U3|digitron_show_d[0] ;
+; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; Yes        ; |SSP|control:U2|game_state_c[1]     ;
+; 6:1                ; 2 bits    ; 8 LEs         ; 2 LEs                ; 6 LEs                  ; Yes        ; |SSP|matrix:U4|counter_m[0]         ;
+; 6:1                ; 3 bits    ; 12 LEs        ; 6 LEs                ; 6 LEs                  ; Yes        ; |SSP|button:U1|start_out_b          ;
+; 5:1                ; 2 bits    ; 6 LEs         ; 2 LEs                ; 4 LEs                  ; Yes        ; |SSP|matrix:U4|row_out_m[0]         ;
+; 6:1                ; 4 bits    ; 16 LEs        ; 4 LEs                ; 12 LEs                 ; Yes        ; |SSP|matrix:U4|row_out_m[2]         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |SSP|matrix:U4|col_out_m[0]         ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 0 LEs                ; 8 LEs                  ; Yes        ; |SSP|control:U2|a_score_out_c[0]    ;
+; 9:1                ; 2 bits    ; 12 LEs        ; 0 LEs                ; 12 LEs                 ; Yes        ; |SSP|control:U2|b_score_out_c[0]    ;
+; 10:1               ; 2 bits    ; 12 LEs        ; 2 LEs                ; 10 LEs                 ; Yes        ; |SSP|control:U2|result_c[1]         ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------------+
 
 
 +-------------------------------+
@@ -121,32 +244,60 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
-    Info: Processing started: Thu Oct 20 21:34:01 2016
+    Info: Processing started: Thu Oct 27 11:08:45 2016
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off SSP -c SSP
-Error (10500): VHDL syntax error at SSP.vhd(172) near text "process";  expecting "begin", or a declaration statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 172
-Error (10500): VHDL syntax error at SSP.vhd(174) near text "range";  expecting ";", or "port", or "generic" File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 174
-Error (10500): VHDL syntax error at SSP.vhd(175) near text "then";  expecting "<=" File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 175
-Error (10500): VHDL syntax error at SSP.vhd(176) near text "=";  expecting "(", or an identifier, or  unary operator File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 176
-Error (10500): VHDL syntax error at SSP.vhd(179) near text "else";  expecting "end", or "(", or an identifier ("else" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 179
-Error (10500): VHDL syntax error at SSP.vhd(181) near text ":=";  expecting "(", or "'", or "." File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 181
-Error (10500): VHDL syntax error at SSP.vhd(182) near text ":=";  expecting "(", or "'", or "." File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 182
-Error (10500): VHDL syntax error at SSP.vhd(186) near text "case";  expecting "end", or "(", or an identifier ("case" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 186
-Error (10500): VHDL syntax error at SSP.vhd(188) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 188
-Error (10500): VHDL syntax error at SSP.vhd(189) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 189
-Error (10500): VHDL syntax error at SSP.vhd(190) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 190
-Error (10500): VHDL syntax error at SSP.vhd(191) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 191
-Error (10500): VHDL syntax error at SSP.vhd(192) near text "case";  expecting ";", or an identifier ("case" is a reserved keyword), or "architecture" File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 192
-Error (10500): VHDL syntax error at SSP.vhd(195) near text "case";  expecting "end", or "(", or an identifier ("case" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 195
-Error (10500): VHDL syntax error at SSP.vhd(197) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 197
-Error (10500): VHDL syntax error at SSP.vhd(198) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 198
-Error (10500): VHDL syntax error at SSP.vhd(199) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 199
-Error (10500): VHDL syntax error at SSP.vhd(200) near text "when";  expecting "end", or "(", or an identifier ("when" is a reserved keyword), or a concurrent statement File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 200
-Error (10500): VHDL syntax error at SSP.vhd(201) near text "case";  expecting ";", or an identifier ("case" is a reserved keyword), or "architecture" File: F:/VDHL preject for Schoolworks/game/SSP.vhd Line: 201
-Info: Found 0 design units, including 0 entities, in source file SSP.vhd
-Error: Quartus II 64-Bit Analysis & Synthesis was unsuccessful. 19 errors, 0 warnings
-    Error: Peak virtual memory: 298 megabytes
-    Error: Processing ended: Thu Oct 20 21:34:02 2016
-    Error: Elapsed time: 00:00:01
-    Error: Total CPU time (on all processors): 00:00:01
+Info: Found 2 design units, including 1 entities, in source file SSP.vhd
+    Info: Found design unit 1: SSP-behave
+    Info: Found entity 1: SSP
+Info: Found 2 design units, including 1 entities, in source file frequency_division.vhd
+    Info: Found design unit 1: frequency_division-behave
+    Info: Found entity 1: frequency_division
+Warning: Can't analyze file -- file F:/VDHL preject for Schoolworks/game/controller.vhd is missing
+Info: Found 2 design units, including 1 entities, in source file control.vhd
+    Info: Found design unit 1: control-behave
+    Info: Found entity 1: control
+Info: Found 2 design units, including 1 entities, in source file digitron.vhd
+    Info: Found design unit 1: digitron-behave
+    Info: Found entity 1: digitron
+Info: Found 2 design units, including 1 entities, in source file matrix.vhd
+    Info: Found design unit 1: matrix-behave
+    Info: Found entity 1: matrix
+Info: Found 2 design units, including 1 entities, in source file button.vhd
+    Info: Found design unit 1: button-behave
+    Info: Found entity 1: button
+Info: Found 2 design units, including 1 entities, in source file prevent_shake.vhd
+    Info: Found design unit 1: prevent_shake-behave
+    Info: Found entity 1: prevent_shake
+Info: Found 2 design units, including 1 entities, in source file frequency_division2.vhd
+    Info: Found design unit 1: frequency_division2-behave
+    Info: Found entity 1: frequency_division2
+Info: Found 2 design units, including 1 entities, in source file frequency_division3.vhd
+    Info: Found design unit 1: frequency_division3-behave
+    Info: Found entity 1: frequency_division3
+Info: Elaborating entity "SSP" for the top level hierarchy
+Info: Elaborating entity "button" for hierarchy "button:U1"
+Info: Elaborating entity "control" for hierarchy "control:U2"
+Info: Elaborating entity "digitron" for hierarchy "digitron:U3"
+Info: Elaborating entity "matrix" for hierarchy "matrix:U4"
+Info: Elaborating entity "frequency_division" for hierarchy "frequency_division:U5"
+Info: Elaborating entity "prevent_shake" for hierarchy "prevent_shake:U6"
+Warning (10541): VHDL Signal Declaration warning at prevent_shake.vhd(20): used implicit default value for signal "start_p" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations.
+Warning: Output pins are stuck at VCC or GND
+    Warning (13410): Pin "row_out[0]" is stuck at VCC
+    Warning (13410): Pin "row_matrix[0]" is stuck at VCC
+    Warning (13410): Pin "row_matrix[1]" is stuck at VCC
+    Warning (13410): Pin "row_matrix[6]" is stuck at VCC
+    Warning (13410): Pin "row_matrix[7]" is stuck at VCC
+    Warning (13410): Pin "col_matrix[3]" is stuck at GND
+    Warning (13410): Pin "col_matrix[4]" is stuck at GND
+Info: Implemented 165 device resources after synthesis - the final resource count might be different
+    Info: Implemented 5 input pins
+    Info: Implemented 33 output pins
+    Info: Implemented 127 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 308 megabytes
+    Info: Processing ended: Thu Oct 27 11:08:47 2016
+    Info: Elapsed time: 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 

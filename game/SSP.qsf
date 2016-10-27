@@ -51,3 +51,12 @@ set_global_assignment -name LL_MEMBER_STATE LOCKED -section_id "Root Region"
 set_global_assignment -name VHDL_FILE SSP.vhd
 set_global_assignment -name VECTOR_WAVEFORM_FILE SSP.vwf
 set_global_assignment -name SIMULATION_MODE TIMING
+set_global_assignment -name VHDL_FILE frequency_division.vhd
+set_global_assignment -name VHDL_FILE controller.vhd
+set_global_assignment -name VHDL_FILE control.vhd
+set_global_assignment -name VHDL_FILE digitron.vhd
+set_global_assignment -name VHDL_FILE matrix.vhd
+set_global_assignment -name VHDL_FILE button.vhd
+set_global_assignment -name VHDL_FILE prevent_shake.vhd
+set_global_assignment -name VHDL_FILE frequency_division2.vhd
+set_global_assignment -name VHDL_FILE frequency_division3.vhd
