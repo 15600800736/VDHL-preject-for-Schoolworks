@@ -47,9 +47,6 @@
     </key_point>
     <key_point id="16" type="register">
       <name>U4/row_out_m[1]</name>
-      <attributes_list>
-        <attribute name="_KPT_INT_ELIM_STAT_">SA1</attribute>
-      </attributes_list>
     </key_point>
     <key_point id="17" type="register">
       <name>U1/a_select_out_b[0]</name>
@@ -119,9 +116,6 @@
     </key_point>
     <key_point id="38" type="register">
       <name>U4/row_out_m[0]</name>
-      <attributes_list>
-        <attribute name="_KPT_INT_ELIM_STAT_">SA1</attribute>
-      </attributes_list>
     </key_point>
     <key_point id="39" type="register">
       <name>U6/a_select_out_p[1]</name>
@@ -140,9 +134,6 @@
     </key_point>
     <key_point id="44" type="register">
       <name>U4/row_out_m[6]</name>
-      <attributes_list>
-        <attribute name="_KPT_INT_ELIM_STAT_">SA1</attribute>
-      </attributes_list>
     </key_point>
     <key_point id="45" type="register">
       <name>U3/digitron_cat_d[2]</name>
@@ -197,9 +188,6 @@
     </key_point>
     <key_point id="62" type="register">
       <name>U4/col_out_m[3]</name>
-      <attributes_list>
-        <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
-      </attributes_list>
     </key_point>
     <key_point id="63" type="register">
       <name>U4/row_out_m[3]</name>
@@ -215,9 +203,6 @@
     </key_point>
     <key_point id="67" type="register">
       <name>U4/row_out_m[7]</name>
-      <attributes_list>
-        <attribute name="_KPT_INT_ELIM_STAT_">SA1</attribute>
-      </attributes_list>
     </key_point>
     <key_point id="68" type="register">
       <name>U2/a_score_out_c[0]</name>
@@ -272,9 +257,6 @@
     </key_point>
     <key_point id="85" type="register">
       <name>U4/col_out_m[4]</name>
-      <attributes_list>
-        <attribute name="_KPT_INT_ELIM_STAT_">SA0</attribute>
-      </attributes_list>
     </key_point>
     <key_point id="86" type="register">
       <name>U3/digitron_show_d[1]</name>
@@ -341,10 +323,10 @@
       <name>digitron:U3|digitron_show_d[1]</name>
     </key_point>
     <key_point id="106" type="register">
-      <name>prevent_shake:U6|a_select_in_p_tmp[1]</name>
+      <name>prevent_shake:U6|show_in_p_tmp</name>
     </key_point>
     <key_point id="107" type="register">
-      <name>prevent_shake:U6|show_in_p_tmp</name>
+      <name>prevent_shake:U6|a_select_in_p_tmp[1]</name>
     </key_point>
     <key_point id="108" type="register">
       <name>digitron:U3|digitron_show_d[4]</name>
@@ -458,57 +440,66 @@
       <name>control:U2|b_score_out_c[1]</name>
     </key_point>
     <key_point id="145" type="register">
-      <name>control:U2|game_state_c[1]</name>
+      <name>matrix:U4|col_out_m[3]</name>
     </key_point>
     <key_point id="146" type="register">
-      <name>control:U2|game_state_c[0]</name>
+      <name>control:U2|game_state_c[1]</name>
     </key_point>
     <key_point id="147" type="register">
-      <name>frequency_division:U5|Q_f</name>
+      <name>control:U2|game_state_c[0]</name>
     </key_point>
     <key_point id="148" type="register">
-      <name>matrix:U4|counter_m[1]</name>
+      <name>frequency_division:U5|Q_f</name>
     </key_point>
     <key_point id="149" type="register">
-      <name>button:U1|b_ok_out_b</name>
+      <name>matrix:U4|counter_m[1]</name>
     </key_point>
     <key_point id="150" type="register">
-      <name>frequency_division:U5|counter_f[2]</name>
+      <name>button:U1|b_ok_out_b</name>
     </key_point>
     <key_point id="151" type="register">
-      <name>digitron:U3|digitron_cat_d[5]</name>
+      <name>frequency_division:U5|counter_f[2]</name>
     </key_point>
     <key_point id="152" type="register">
-      <name>matrix:U4|row_out_m[4]</name>
+      <name>digitron:U3|digitron_cat_d[5]</name>
     </key_point>
     <key_point id="153" type="register">
-      <name>button:U1|start_out_b</name>
+      <name>matrix:U4|row_out_m[4]</name>
     </key_point>
     <key_point id="154" type="register">
-      <name>prevent_shake:U6|a_select_out_p[0]</name>
+      <name>button:U1|start_out_b</name>
     </key_point>
     <key_point id="155" type="register">
-      <name>prevent_shake:U6|start_in_p_tmp</name>
+      <name>prevent_shake:U6|a_select_out_p[0]</name>
     </key_point>
     <key_point id="156" type="register">
-      <name>control:U2|a_score_out_c[1]</name>
+      <name>prevent_shake:U6|start_in_p_tmp</name>
     </key_point>
     <key_point id="157" type="register">
-      <name>digitron:U3|digitron_show_d[5]</name>
+      <name>control:U2|a_score_out_c[1]</name>
     </key_point>
     <key_point id="158" type="register">
-      <name>digitron:U3|digitron_show_d[0]</name>
+      <name>digitron:U3|digitron_show_d[5]</name>
     </key_point>
     <key_point id="159" type="register">
-      <name>control:U2|a_score_out_c[0]</name>
+      <name>digitron:U3|digitron_show_d[0]</name>
     </key_point>
     <key_point id="160" type="register">
-      <name>prevent_shake:U6|ready_out_p</name>
+      <name>matrix:U4|col_out_m[4]</name>
     </key_point>
     <key_point id="161" type="register">
-      <name>prevent_shake:U6|a_ok_out_p</name>
+      <name>matrix:U4|row_out_m[0]</name>
     </key_point>
     <key_point id="162" type="register">
+      <name>control:U2|a_score_out_c[0]</name>
+    </key_point>
+    <key_point id="163" type="register">
+      <name>prevent_shake:U6|ready_out_p</name>
+    </key_point>
+    <key_point id="164" type="register">
+      <name>prevent_shake:U6|a_ok_out_p</name>
+    </key_point>
+    <key_point id="165" type="register">
       <name>control:U2|result_c[0]</name>
     </key_point>
   </key_points_set>
@@ -516,84 +507,12 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="35" type="proxy"></kp>
+          <kp id="71" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="158" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="42" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="122" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="76" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="115" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="21" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="108" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="54" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="90" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="53" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="97" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="13" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="161" type="proxy"></kp>
+          <kp id="147" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
@@ -612,36 +531,76 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="37" type="proxy"></kp>
+          <kp id="5" type="proxy"></kp>
+          <kp id="20" type="equiv"></kp>
+          <kp id="88" type="equiv"></kp>
+          <kp id="45" type="equiv"></kp>
+          <kp id="4" type="equiv"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="133" type="proxy"></kp>
+          <kp id="158" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="19" type="proxy"></kp>
+          <kp id="41" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="140" type="proxy"></kp>
+          <kp id="113" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="79" type="proxy"></kp>
+          <kp id="62" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="114" type="proxy"></kp>
+          <kp id="145" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="53" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="97" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="55" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="99" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="26" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="127" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
@@ -660,96 +619,255 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="81" type="proxy"></kp>
+          <kp id="58" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="155" type="proxy"></kp>
+          <kp id="94" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="25" type="proxy"></kp>
+          <kp id="40" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="118" type="proxy"></kp>
+          <kp id="124" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="34" type="proxy"></kp>
+          <kp id="66" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="129" type="proxy"></kp>
+          <kp id="109" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="9" type="proxy"></kp>
+          <kp id="6" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="106" type="proxy"></kp>
+          <kp id="101" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="23" type="proxy"></kp>
+          <kp id="30" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="138" type="proxy"></kp>
+          <kp id="121" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="10" type="proxy"></kp>
+          <kp id="56" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="102" type="proxy"></kp>
+          <kp id="150" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="87" type="proxy"></kp>
+          <kp id="47" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="110" type="proxy"></kp>
+          <kp id="146" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="22" type="proxy"></kp>
+          <kp id="3" type="proxy"></kp>
+          <kp id="29" type="equiv"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="93" type="proxy"></kp>
+          <kp id="91" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="1" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="96" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="43" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="153" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="64" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="104" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="2" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="165" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="39" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="111" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="60" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="148" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="76" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="115" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="33" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="130" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="7" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="163" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="52" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="131" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="50" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="152" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="48" type="proxy"></kp>
+          <kp id="70" type="equiv"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="157" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="68" type="proxy"></kp>
+          <kp id="89" type="equiv"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="162" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
@@ -768,24 +886,73 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="84" type="proxy"></kp>
+          <kp id="11" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="153" type="proxy"></kp>
+          <kp id="117" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="43" type="proxy"></kp>
+          <kp id="27" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="152" type="proxy"></kp>
+          <kp id="103" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="34" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="129" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="24" type="proxy"></kp>
+          <kp id="8" type="equiv"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="144" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="12" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="125" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="84" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="154" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
@@ -805,19 +972,7 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="40" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="124" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="7" type="proxy"></kp>
+          <kp id="85" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
@@ -829,121 +984,36 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
+          <kp id="28" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="92" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="31" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="123" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
           <kp id="69" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="107" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="55" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="99" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="64" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="104" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="26" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="127" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="50" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="151" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="47" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="145" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="18" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="135" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="52" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="131" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="30" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="121" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="48" type="proxy"></kp>
-          <kp id="70" type="equiv"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="156" type="proxy"></kp>
+          <kp id="106" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
@@ -974,391 +1044,12 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="14" type="proxy"></kp>
+          <kp id="13" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="116" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="59" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="143" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="41" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="113" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="28" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="92" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="3" type="proxy"></kp>
-          <kp id="29" type="equiv"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="91" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="80" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="150" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="83" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="100" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="58" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="94" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="12" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="125" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="66" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="109" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="51" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="128" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="2" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="162" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="31" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="123" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="27" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="103" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="65" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="136" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="56" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="149" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="71" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="146" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="39" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="111" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="77" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="134" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="17" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="119" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="75" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="148" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="33" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="130" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="1" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="96" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="78" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="112" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="11" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="117" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="63" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="137" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="24" type="proxy"></kp>
-          <kp id="8" type="equiv"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="144" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="60" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="147" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="5" type="proxy"></kp>
-          <kp id="20" type="equiv"></kp>
-          <kp id="45" type="equiv"></kp>
-          <kp id="4" type="equiv"></kp>
-          <kp id="88" type="equiv"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="157" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="68" type="proxy"></kp>
-          <kp id="89" type="equiv"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="159" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="15" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="154" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-    </transformation>
-    <transformation>
-      <kp_set type="reference">
-        <kp_state index="0">
-          <kp id="61" type="proxy"></kp>
-        </kp_state>
-      </kp_set>
-      <kp_set type="transformed">
-        <kp_state index="0">
-          <kp id="126" type="proxy"></kp>
+          <kp id="164" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
@@ -1377,12 +1068,84 @@
     <transformation>
       <kp_set type="reference">
         <kp_state index="0">
-          <kp id="6" type="proxy"></kp>
+          <kp id="9" type="proxy"></kp>
         </kp_state>
       </kp_set>
       <kp_set type="transformed">
         <kp_state index="0">
-          <kp id="101" type="proxy"></kp>
+          <kp id="107" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="79" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="114" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="37" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="133" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="17" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="119" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="10" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="102" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="19" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="140" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="80" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="151" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>
@@ -1395,6 +1158,273 @@
       <kp_set type="transformed">
         <kp_state index="0">
           <kp id="132" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="65" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="136" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="78" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="112" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="23" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="138" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="77" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="134" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="42" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="122" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="15" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="155" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="75" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="149" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="38" type="proxy"></kp>
+          <kp id="44" type="equiv"></kp>
+          <kp id="67" type="equiv"></kp>
+          <kp id="16" type="equiv"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="161" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="35" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="159" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="14" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="116" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="63" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="137" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="83" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="100" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="22" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="93" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="25" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="118" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="61" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="126" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="51" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="128" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="21" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="108" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="54" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="90" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="18" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="135" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="87" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="110" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="81" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="156" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+    </transformation>
+    <transformation>
+      <kp_set type="reference">
+        <kp_state index="0">
+          <kp id="59" type="proxy"></kp>
+        </kp_state>
+      </kp_set>
+      <kp_set type="transformed">
+        <kp_state index="0">
+          <kp id="143" type="proxy"></kp>
         </kp_state>
       </kp_set>
     </transformation>

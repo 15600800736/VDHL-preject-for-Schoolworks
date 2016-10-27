@@ -5,9 +5,9 @@ Timing Analyzer Summary
 Type           : Worst-case tsu
 Slack          : N/A
 Required Time  : None
-Actual Time    : 1.734 ns
-From           : col_in[3]
-To             : button:U1|b_select_out_b[0]
+Actual Time    : 2.096 ns
+From           : col_in[2]
+To             : button:U1|a_select_out_b[1]
 From Clock     : --
 To Clock       : clk_in
 Failed Paths   : 0
@@ -15,9 +15,9 @@ Failed Paths   : 0
 Type           : Worst-case tco
 Slack          : N/A
 Required Time  : None
-Actual Time    : 13.578 ns
-From           : digitron:U3|digitron_show_d[2]
-To             : digitron_show[2]
+Actual Time    : 15.692 ns
+From           : digitron:U3|digitron_show_d[5]
+To             : digitron_cat[1]
 From Clock     : clk_in
 To Clock       : --
 Failed Paths   : 0
@@ -25,8 +25,8 @@ Failed Paths   : 0
 Type           : Worst-case th
 Slack          : N/A
 Required Time  : None
-Actual Time    : 3.452 ns
-From           : col_in[2]
+Actual Time    : 4.344 ns
+From           : col_in[0]
 To             : button:U1|ready_out_b
 From Clock     : --
 To Clock       : clk_in
@@ -35,8 +35,8 @@ Failed Paths   : 0
 Type           : Clock Setup: 'clk_in'
 Slack          : N/A
 Required Time  : None
-Actual Time    : 74.97 MHz ( period = 13.338 ns )
-From           : button:U1|b_select_out_b[0]
+Actual Time    : 68.76 MHz ( period = 14.544 ns )
+From           : button:U1|b_ok_out_b
 To             : prevent_shake:U6|counter_p[3]
 From Clock     : clk_in
 To Clock       : clk_in
@@ -46,11 +46,11 @@ Type           : Clock Hold: 'clk_in'
 Slack          : Not operational: Clock Skew > Data Delay
 Required Time  : None
 Actual Time    : N/A
-From           : prevent_shake:U6|show_out_p
-To             : matrix:U4|col_out_m[6]
+From           : prevent_shake:U6|a_select_out_p[1]
+To             : matrix:U4|col_out_m[0]
 From Clock     : clk_in
 To Clock       : clk_in
-Failed Paths   : 24
+Failed Paths   : 65
 
 Type           : Total number of failed paths
 Slack          : 
@@ -60,7 +60,7 @@ From           :
 To             : 
 From Clock     : 
 To Clock       : 
-Failed Paths   : 24
+Failed Paths   : 65
 
 --------------------------------------------------------------------------------------
 

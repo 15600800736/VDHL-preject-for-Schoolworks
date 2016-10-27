@@ -79,49 +79,6 @@ e:|quatrus9.0|quartus|lmf|maxplus2.lmf
 
 # end
 # entity
-matrix
-# storage
-db|SSP.(5).cnf
-db|SSP.(5).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-matrix.vhd
-d22192f7908776486450dad8183e2319
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(col_out_m)
-7 downto 0
-PARAMETER_STRING
-USR
- constraint(row_out_m)
-7 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-matrix:U4
-}
-# lmf
-e:|quatrus9.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
 digitron
 # storage
 db|SSP.(6).cnf
@@ -332,6 +289,49 @@ ON
 }
 # hierarchies {
 |
+}
+# lmf
+e:|quatrus9.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+matrix
+# storage
+db|SSP.(5).cnf
+db|SSP.(5).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+matrix.vhd
+3f1322a96b229a4f8c26bdfc0c43d2f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(col_out_m)
+7 downto 0
+PARAMETER_STRING
+USR
+ constraint(row_out_m)
+7 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+matrix:U4
 }
 # lmf
 e:|quatrus9.0|quartus|lmf|maxplus2.lmf

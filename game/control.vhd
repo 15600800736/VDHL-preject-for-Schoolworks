@@ -93,6 +93,7 @@ architecture behave of control is
 						end if;
 						a_score_out_c <= a_score_c;
 						b_score_out_c <= b_score_c;
+						game_state <= 0;
 					end if;
 				when others =>
 					--do nothing;

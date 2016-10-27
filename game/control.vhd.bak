@@ -36,7 +36,7 @@ architecture behave of control is
 		--A and B score to tell the digitron to show
 		--intialize
 		begin
-		process(clk_in_c,start_c)
+		process(clk_in_c)
 		variable a_score_c,b_score_c:integer range 0 to 3;
 		begin
 			if(clk_in_c'event and clk_in_c = '1')then 
