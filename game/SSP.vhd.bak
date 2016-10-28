@@ -1,31 +1,45 @@
 
-
-							
-			
 library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_unsigned.all;
+
 entity SSP is
-		port
-		(
+		port(
 		clk_in:in std_logic;
 		col_in:in std_logic_vector(3 downto 0);
 		row_out:out std_logic_vector(3 downto 0);
-		digitron_cat:out std_logic_vector(5 downto 0);
-		digitron_show:out std_logic_vector(6 downto 0);
-		row_matrix:out std_logic_vector(7 downto 0);
-		col_matrix:out std_logic_vector(7 downto 0)
+		a_score,b_score:out integer range 0 to 3;
+		result:out integer range 0 to 2;
+		g_s:out integer range 0 to 5;
+		a_s:out integer range 0 to 3;
+		b_s:out integer range 0 to 3
 		);
 end SSP;
 
-architecture behave of SSP is
-component button is
+
+architecture top of SSP is
+component frequency_division is
+port(
+	clk_in_f:in std_logic;
+	clk_out_f:out std_logic
+	);
+end component;
+component translate is
 		port(
-		clk_in_b:in std_logic;
-		col_in_b:in std_logic_vector(3 downto 0);
-		start_out_b,ready_out_b,show_out_b,a_ok_out_b,b_ok_out_b:out std_logic;
-		a_select_out_b,b_select_out_b:out integer range 0 to 2;
-		row_out_b:out std_logic_vector(3 downto 0)
+		clk_in_t:in std_logic;
+		col_in_t:in std_logic_vector(3 downto 0);
+		row_out_t:out std_logic_vector(3 downto 0);
+		start_out_t,ready_out_t,show_out_t,a_ok_out_t,b_ok_out_t:out std_logic;
+		a_select_out_t,b_select_out_t:out integer range 0 to 3
+		);
+end component;
+component prevent_shake is
+		port(
+		clk_in_p:in std_logic;
+		start_in_p,ready_in_p,show_in_p,a_ok_in_p,b_ok_in_p:in std_logic;
+		a_select_in_p,b_select_in_p:in integer range 0 to 2;
+		start_out_p,ready_out_p,show_out_p,a_ok_out_p,b_ok_out_p:out std_logic;
+		a_select_out_p,b_select_out_p:out integer range 0 to 3
 		);
 end component;
 component control is
@@ -36,73 +50,43 @@ component control is
 		start_c:in std_logic;
 		--game ready signal
 		ready_c:in std_logic;
+		show_c:in std_logic;
 		--A and B select signal
-		-- 0 for stone
-		-- 1 for scissors
-		-- 2 for paper
-		a_select_in_c,b_select_in_c:in integer range 0 to 2;
+		-- 0 for none
+		-- 1 for stone
+		-- 2 for scissors
+		-- 3 for paper
+		a_select_in_c,b_select_in_c:in integer range 0 to 3;
 		--A and B ok signal
 		a_ok_c,b_ok_c:in std_logic;
-		--Game's result:one of A and B win or no result
-		--0 no result
-		--1 A win
-		--2 B win
-		a_score_out_c,b_score_out_c:out integer range 0 to 2;
-		result_c:out integer range 0 to 2
+		game_state_out_c:out integer range 0 to 5
 		);
 end component;
-component digitron is
+component judge is
 		port
 		(
-		clk_in_d:in std_logic;
-		start_in_d:in std_logic;
-		show_in_d:in std_logic;
-		result_in_d:in integer range 0 to 2;
-		a_score_d:in integer range 0 to 3;
-		b_score_d:in integer range 0 to 3;
-		digitron_cat_d:out std_logic_vector(5 downto 0);
-		digitron_show_d:out std_logic_vector(6 downto 0)
-		);
-end component;
-component matrix is
-		port(
-		clk_in_m:in std_logic;
-		start_in_m:in std_logic;
-		ready_in_m:in std_logic;
-		show_in_m:in std_logic;
-		result_in_m:in integer range 0 to 2;
-		a_select_in_m,b_select_in_m:in integer range 0 to 2;
-		col_out_m,row_out_m:out std_logic_vector(7 downto 0)
-		);
-end component;
-component frequency_division is
-	port(
-		clk_in_f:in std_logic;
-		clk_out_f:out std_logic
-		);
-end component;
-component prevent_shake is
-		port(
-		clk_in_p:in std_logic;
-		start_in_p,ready_in_p,show_in_p,a_ok_in_p,b_ok_in_p:in std_logic;
-		a_select_in_p,b_select_in_p:in integer range 0 to 2;
-		start_out_p,ready_out_p,show_out_p,a_ok_out_p,b_ok_out_p:out std_logic;
-		a_select_out_p,b_select_out_p:out integer range 0 to 2
+		clk_in_j:in std_logic;
+		start_in_j:in std_logic;
+		b_ok_in_j,show_in_j:in std_logic;
+		a_select_j,b_select_j:in integer range 0 to 3;
+		a_score_j,b_score_j:out integer range 0 to 3;
+		result_j:out integer range 0 to 2
 		);
 end component;
 	signal clk_out:std_logic;
-	signal row_out_tmp:std_logic_vector(3 downto 0);
-	signal start_out_tmp,ready_out_tmp,show_out_tmp,a_ok_out_tmp,b_ok_out_tmp:std_logic;
-	signal a_select_out_tmp,b_select_out_tmp,a_score_out_tmp,b_score_out_tmp:integer range 0 to 2;
-	signal result_tmp:integer range 0 to 3;
-	signal start_out_ps,ready_out_ps,show_out_ps,a_ok_out_ps,b_ok_out_ps:std_logic;
-	signal a_select_out_ps,b_select_out_ps:integer range 0 to 2;
+	signal start,ready,show,a_ok,b_ok:std_logic;
+	signal a_select,b_select:integer range 0 to 3;
+	signal start2,ready2,show2,a_ok2,b_ok2:std_logic;
+	signal a_select2,b_select2,a_select_out,b_select_out:integer range 0 to 3;
+	signal game_state:integer range 0 to 5;
+	---
+	signal a,b,c,d,e:std_logic;
 	begin
-	U1:button port map(clk_out,col_in,start_out_ps,ready_out_ps,show_out_ps,a_ok_out_ps,b_ok_out_ps,a_select_out_ps,b_select_out_ps,row_out);
-	U2:control port map(clk_out,start_out_ps,ready_out_ps,a_select_out_ps,b_select_out_ps,a_ok_out_ps,b_ok_out_ps,a_score_out_tmp,b_score_out_tmp,result_tmp);
-	U3:digitron port map(clk_out,start_out_tmp,show_out_tmp,result_tmp,a_score_out_tmp,b_score_out_tmp,digitron_cat,digitron_show);
-	U4:matrix port map(clk_out,start_out_ps,ready_out_ps,show_out_ps,result_tmp,a_select_out_ps,b_select_out_ps,col_matrix,row_matrix);
-	U5:frequency_division port map(clk_in,clk_out);
-	U6:prevent_shake port map(clk_in,start_out_tmp,ready_out_tmp,show_out_tmp,a_ok_out_tmp,b_ok_out_tmp,a_select_out_tmp,b_select_out_tmp,
-								start_out_ps,ready_out_ps,show_out_ps,a_ok_out_ps,b_ok_out_ps,a_select_out_ps,b_select_out_ps);
-end behave;
+	U1:frequency_division port map(clk_in,clk_out);
+	U2:translate port map(clk_out,col_in,row_out,start,ready,show,a_ok,b_ok,a_select,b_select);
+	U3:prevent_shake port map(clk_in,start,ready,show,a_ok,b_ok,a_select,b_select,start2,ready2,show2,a_ok2,b_ok2,a_select2,b_select2);
+	----
+	--U4:control port map(clk_in,start2,ready2,show2,a_select2,b_select2,a_ok2,b_ok2,g_s);
+	U6:judge port map(start2,b_ok2,show2,a_select2,b_select2,a_score,b_score,result);
+	U7:prevent_shake port map(clk_in,start,ready,show,a_ok,b_ok,a_select,b_select,a,b,c,d,e,a_s,b_s);
+end top;	

@@ -14,13 +14,13 @@ end frequency_division;
 
 
 architecture behave of frequency_division is
-	signal counter_f:integer range 0 to 10;
+	signal counter_f:integer range 0 to 20;
 	signal Q_f:std_logic;
 begin
 	process(clk_in_f)
 	begin
 		if(clk_in_f'event and clk_in_f = '1')then
-				if(counter_f = 6)then
+				if(counter_f = 20)then
 					counter_f <= 0;
 					Q_f <= not Q_f;
 				else

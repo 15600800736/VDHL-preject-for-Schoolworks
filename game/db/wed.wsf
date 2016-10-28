@@ -109,13 +109,13 @@ VECTOR("F:/VDHL preject-delete/game/SSP.vwf")
 	}
 }
 
-VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
+VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 {
 	ZOOM{
-		ZBEGIN = 570000000;
-		ZEND = 670000000;
-		NUMERATOR = 1365;
-		DENOMINATOR = 100000000;
+		ZBEGIN = 5072730;
+		ZEND = 5853154;
+		NUMERATOR = 1570;
+		DENOMINATOR = 780424;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
@@ -215,7 +215,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat";
+		SIGNAL = "a_score";
 		INDEX = 11;
 		FORMAT = T;
 		SCALE = 1;
@@ -223,7 +223,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[5]";
+		SIGNAL = "a_score[1]";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -231,7 +231,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[4]";
+		SIGNAL = "a_score[0]";
 		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
@@ -239,15 +239,15 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[3]";
+		SIGNAL = "b_score";
 		INDEX = 14;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[2]";
+		SIGNAL = "b_score[1]";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -255,7 +255,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[1]";
+		SIGNAL = "b_score[0]";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -263,23 +263,23 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[0]";
+		SIGNAL = "result";
 		INDEX = 17;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "digitron_show";
-		INDEX = 18;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[6]";
+		SIGNAL = "result[1]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result[0]";
 		INDEX = 19;
 		FORMAT = E;
 		SCALE = 1;
@@ -287,15 +287,15 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[5]";
+		SIGNAL = "g_s";
 		INDEX = 20;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[4]";
+		SIGNAL = "g_s[2]";
 		INDEX = 21;
 		FORMAT = E;
 		SCALE = 1;
@@ -303,7 +303,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[3]";
+		SIGNAL = "g_s[1]";
 		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
@@ -311,7 +311,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[2]";
+		SIGNAL = "g_s[0]";
 		INDEX = 23;
 		FORMAT = E;
 		SCALE = 1;
@@ -319,15 +319,15 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[1]";
+		SIGNAL = "a_s";
 		INDEX = 24;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[0]";
+		SIGNAL = "a_s[1]";
 		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
@@ -335,23 +335,23 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "col_matrix";
+		SIGNAL = "a_s[0]";
 		INDEX = 26;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[7]";
-		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "col_matrix[6]";
+		SIGNAL = "b_s";
+		INDEX = 27;
+		FORMAT = T;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "b_s[1]";
 		INDEX = 28;
 		FORMAT = E;
 		SCALE = 1;
@@ -359,120 +359,8 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "col_matrix[5]";
+		SIGNAL = "b_s[0]";
 		INDEX = 29;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[4]";
-		INDEX = 30;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[3]";
-		INDEX = 31;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[2]";
-		INDEX = 32;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[1]";
-		INDEX = 33;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[0]";
-		INDEX = 34;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix";
-		INDEX = 35;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[7]";
-		INDEX = 36;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[6]";
-		INDEX = 37;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[5]";
-		INDEX = 38;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[4]";
-		INDEX = 39;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[3]";
-		INDEX = 40;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[2]";
-		INDEX = 41;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[1]";
-		INDEX = 42;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[0]";
-		INDEX = 43;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
@@ -480,17 +368,17 @@ VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 	}
 }
 
-VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
+VECTOR("F:/VDHL preject for Schoolworks/game/db/SSP.sim.cvwf")
 {
 	ZOOM{
-		ZBEGIN = 14452639;
-		ZEND = 114411423;
-		NUMERATOR = 1570;
-		DENOMINATOR = 99958784;
+		ZBEGIN = 15601875;
+		ZEND = 17682131;
+		NUMERATOR = 1365;
+		DENOMINATOR = 2080256;
 		TOP_INDEX = 0;
 	}
 	CLOCK{
-		PERIOD = 500000;
+		PERIOD = 10000;
 		OFFSET = 0;
 		DUTY_CYCLE = 50;
 	}
@@ -586,7 +474,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat";
+		SIGNAL = "a_score";
 		INDEX = 11;
 		FORMAT = T;
 		SCALE = 1;
@@ -594,7 +482,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[5]";
+		SIGNAL = "a_score[1]";
 		INDEX = 12;
 		FORMAT = E;
 		SCALE = 1;
@@ -602,7 +490,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[4]";
+		SIGNAL = "a_score[0]";
 		INDEX = 13;
 		FORMAT = E;
 		SCALE = 1;
@@ -610,15 +498,15 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[3]";
+		SIGNAL = "b_score";
 		INDEX = 14;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[2]";
+		SIGNAL = "b_score[1]";
 		INDEX = 15;
 		FORMAT = E;
 		SCALE = 1;
@@ -626,7 +514,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[1]";
+		SIGNAL = "b_score[0]";
 		INDEX = 16;
 		FORMAT = E;
 		SCALE = 1;
@@ -634,23 +522,23 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_cat[0]";
+		SIGNAL = "result";
 		INDEX = 17;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "digitron_show";
-		INDEX = 18;
 		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[6]";
+		SIGNAL = "result[1]";
+		INDEX = 18;
+		FORMAT = E;
+		SCALE = 1;
+		VISIBLE = Y;
+		FLAG = N;
+	}
+	LINE{
+		SIGNAL = "result[0]";
 		INDEX = 19;
 		FORMAT = E;
 		SCALE = 1;
@@ -658,15 +546,15 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[5]";
+		SIGNAL = "a_s";
 		INDEX = 20;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[4]";
+		SIGNAL = "a_s[1]";
 		INDEX = 21;
 		FORMAT = E;
 		SCALE = 1;
@@ -674,7 +562,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[3]";
+		SIGNAL = "a_s[0]";
 		INDEX = 22;
 		FORMAT = E;
 		SCALE = 1;
@@ -682,15 +570,15 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[2]";
+		SIGNAL = "b_s";
 		INDEX = 23;
-		FORMAT = E;
+		FORMAT = T;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[1]";
+		SIGNAL = "b_s[1]";
 		INDEX = 24;
 		FORMAT = E;
 		SCALE = 1;
@@ -698,7 +586,7 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "digitron_show[0]";
+		SIGNAL = "b_s[0]";
 		INDEX = 25;
 		FORMAT = E;
 		SCALE = 1;
@@ -706,15 +594,15 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "col_matrix";
+		SIGNAL = "g_s[0]";
 		INDEX = 26;
-		FORMAT = T;
+		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "col_matrix[7]";
+		SIGNAL = "g_s[1]";
 		INDEX = 27;
 		FORMAT = E;
 		SCALE = 1;
@@ -722,128 +610,8 @@ VECTOR("F:/VDHL preject for Schoolworks/game/SSP.vwf")
 		FLAG = N;
 	}
 	LINE{
-		SIGNAL = "col_matrix[6]";
+		SIGNAL = "g_s[2]";
 		INDEX = 28;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[5]";
-		INDEX = 29;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[4]";
-		INDEX = 30;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[3]";
-		INDEX = 31;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[2]";
-		INDEX = 32;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[1]";
-		INDEX = 33;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "col_matrix[0]";
-		INDEX = 34;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix";
-		INDEX = 35;
-		FORMAT = T;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[7]";
-		INDEX = 36;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[6]";
-		INDEX = 37;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[5]";
-		INDEX = 38;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[4]";
-		INDEX = 39;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[3]";
-		INDEX = 40;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[2]";
-		INDEX = 41;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[1]";
-		INDEX = 42;
-		FORMAT = E;
-		SCALE = 1;
-		VISIBLE = Y;
-		FLAG = N;
-	}
-	LINE{
-		SIGNAL = "row_matrix[0]";
-		INDEX = 43;
 		FORMAT = E;
 		SCALE = 1;
 		VISIBLE = Y;

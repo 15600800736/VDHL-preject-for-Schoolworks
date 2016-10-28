@@ -1,6 +1,6 @@
 Version 9.0 Build 132 02/25/2009 SJ Full Version
 42
-3064
+3112
 OFF
 OFF
 OFF
@@ -112,184 +112,6 @@ USR
 PARAMETER_STRING
 USR
 }
-# hierarchies {
-digitron:U3
-}
-# lmf
-e:|quatrus9.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-button
-# storage
-db|SSP.(2).cnf
-db|SSP.(2).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-button.vhd
-1349c03355bdd840ac8cbfd780d6d4b0
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# user_parameter {
- constraint(col_in_b)
-3 downto 0
-PARAMETER_STRING
-USR
- constraint(row_out_b)
-3 downto 0
-PARAMETER_STRING
-USR
-}
-# hierarchies {
-button:U1
-}
-# lmf
-e:|quatrus9.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-frequency_division
-# storage
-db|SSP.(1).cnf
-db|SSP.(1).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-frequency_division.vhd
-74e1adc48982b58343f8d22ce3b986f2
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-frequency_division:U5
-}
-# lmf
-e:|quatrus9.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-prevent_shake
-# storage
-db|SSP.(3).cnf
-db|SSP.(3).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-prevent_shake.vhd
-61d4ba3f42cfe36cd77fe9ac7721940
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-prevent_shake:U6
-}
-# lmf
-e:|quatrus9.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-control
-# storage
-db|SSP.(4).cnf
-db|SSP.(4).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-control.vhd
-6871a3a8f82b549bcce37be345caf0e9
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-control:U2
-}
-# lmf
-e:|quatrus9.0|quartus|lmf|maxplus2.lmf
-9a59d39b0706640b4b2718e8a1ff1f
-# macro_sequence
-
-# end
-# entity
-SSP
-# storage
-db|SSP.(0).cnf
-db|SSP.(0).cnf
-# logic_option {
-AUTO_RAM_RECOGNITION
-ON
-}
-# case_insensitive
-# source_file
-SSP.vhd
-e4933a1d816b2f8d2f8880173a5eddcd
-5
-# internal_option {
-HDL_INITIAL_FANOUT_LIMIT
-OFF
-AUTO_RESOURCE_SHARING
-OFF
-AUTO_RAM_RECOGNITION
-ON
-AUTO_ROM_RECOGNITION
-ON
-}
-# hierarchies {
-|
-}
 # lmf
 e:|quatrus9.0|quartus|lmf|maxplus2.lmf
 9a59d39b0706640b4b2718e8a1ff1f
@@ -330,8 +152,211 @@ USR
 PARAMETER_STRING
 USR
 }
+# lmf
+e:|quatrus9.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+prevent_shake
+# storage
+db|SSP.(3).cnf
+db|SSP.(3).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+prevent_shake.vhd
+c6980b74652385898606ea383a537
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
 # hierarchies {
-matrix:U4
+prevent_shake:U3
+prevent_shake:U7
+}
+# lmf
+e:|quatrus9.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+frequency_division
+# storage
+db|SSP.(1).cnf
+db|SSP.(1).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+frequency_division.vhd
+1bb6caf2562b5c1f4d6cd1813f346fe2
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+frequency_division:U1
+}
+# lmf
+e:|quatrus9.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+translate
+# storage
+db|SSP.(2).cnf
+db|SSP.(2).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+translate.vhd
+02dd86adaaacd73b7b6ca9c5c5d647
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# user_parameter {
+ constraint(col_in_t)
+3 downto 0
+PARAMETER_STRING
+USR
+ constraint(row_out_t)
+3 downto 0
+PARAMETER_STRING
+USR
+}
+# hierarchies {
+translate:U2
+}
+# lmf
+e:|quatrus9.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+control
+# storage
+db|SSP.(4).cnf
+db|SSP.(4).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+control.vhd
+a6a8f1228b930d765163931faea3f
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# lmf
+e:|quatrus9.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+SSP
+# storage
+db|SSP.(0).cnf
+db|SSP.(0).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+SSP.vhd
+4abcb551cba0bb84c84217cd3832b86
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+|
+}
+# lmf
+e:|quatrus9.0|quartus|lmf|maxplus2.lmf
+9a59d39b0706640b4b2718e8a1ff1f
+# macro_sequence
+
+# end
+# entity
+judge
+# storage
+db|SSP.(9).cnf
+db|SSP.(9).cnf
+# logic_option {
+AUTO_RAM_RECOGNITION
+ON
+}
+# case_insensitive
+# source_file
+judge.vhd
+fde6f78279b14c214d303735139a65c
+5
+# internal_option {
+HDL_INITIAL_FANOUT_LIMIT
+OFF
+AUTO_RESOURCE_SHARING
+OFF
+AUTO_RAM_RECOGNITION
+ON
+AUTO_ROM_RECOGNITION
+ON
+}
+# hierarchies {
+judge:U6
 }
 # lmf
 e:|quatrus9.0|quartus|lmf|maxplus2.lmf

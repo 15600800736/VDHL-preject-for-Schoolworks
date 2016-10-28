@@ -14,30 +14,27 @@ entity control is
 		start_c:in std_logic;
 		--game ready signal
 		ready_c:in std_logic;
+		show_c:in std_logic;
 		--A and B select signal
-		-- 0 for stone
-		-- 1 for scissors
-		-- 2 for paper
-		a_select_in_c,b_select_in_c:in integer range 0 to 2;
+		-- 0 for none
+		-- 1 for stone
+		-- 2 for scissors
+		-- 3 for paper
+		a_select_in_c,b_select_in_c:in integer range 0 to 3;
 		--A and B ok signal
 		a_ok_c,b_ok_c:in std_logic;
-		--Game's result:one of A and B win or no result
-		--0 no result
-		--1 A win
-		--2 B win
-		a_score_out_c,b_score_out_c:out integer range 0 to 2;
-		result_c:out integer range 0 to 2
+		game_state_out_c:out integer range 0 to 5;
 		);
 end control;
 
 
 architecture behave of control is
-		signal game_state_c:integer range 0 to 2;
+		signal game_state_c:integer range 0 to 5;
 		--A and B score to tell the digitron to show
 		--intialize
 		begin
 		process(clk_in_c)
-		variable a_score_c,b_score_c:integer range 0 to 3;
+
 		begin
 			if(clk_in_c'event and clk_in_c = '1')then 
 				if(start_c = '1')then
@@ -49,54 +46,29 @@ architecture behave of control is
 						game_state_c <= 1;
 					end if;
 				when 1=>
-					if(a_ok_c = '1')then
+					if(a_select_in_c = 1 or a_select_in_c = 2 or a_select_in_c = 3)then
 						game_state_c <= 2;
 					end if;
 				when 2=>
+					if(a_ok_c = '1')then
+						game_state_c <= 3;
+					end if;
+				when 3=>
+					if(b_select_in_c = 1 or b_select_in_c = 2 or b_select_in_c = 3)then
+						game_state_c <= 4;
+					end if;
+				when 4=>
 					if(b_ok_c = '1')then
-						if(a_select_in_c = 0)then
-							if(b_select_in_c = 1)then
-								a_score_c := a_score_c + 1;
-								if(a_score_c = 3)then
-									result_c <= 1;
-								end if;
-							elsif(b_select_in_c = 2)then
-								b_score_c := b_score_c +1;
-								if(b_score_c = 3)then
-									result_c <= 2;
-								end if;
-							end if;
-						elsif(a_select_in_c = 1)then
-							if(b_select_in_c = 2)then
-								a_score_c := a_score_c + 1;
-								if(a_score_c = 3)then
-									result_c <= 2;
-								end if;
-							elsif(b_select_in_c = 0)then
-								b_score_c := b_score_c +1;
-								if(b_score_c = 3)then
-									result_c <= 2;
-								end if;
-							end if;
-						elsif(a_select_in_c = 2)then
-							if(b_select_in_c = 0)then
-								a_score_c := a_score_c + 1;
-								if(a_score_c = 3)then
-									result_c <= 2;
-								end if;
-							elsif(b_select_in_c = 1)then
-								b_score_c := b_score_c +1;
-								if(b_score_c = 3)then
-									result_c <= 2;
-								end if;
-							end if;
-						end if;
-						a_score_out_c <= a_score_c;
-						b_score_out_c <= b_score_c;
+						game_state_c <= 5;
+					end if;
+				when 5=>
+					if(ready_c = '1')then
+						game_state_c <= 1;
 					end if;
 				when others =>
 					--do nothing;
 				end case;
+				game_state_out_c <= game_state_c;
 			end if;
 		end process;
 end behave;

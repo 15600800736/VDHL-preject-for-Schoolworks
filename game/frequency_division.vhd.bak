@@ -20,7 +20,7 @@ begin
 	process(clk_in_f)
 	begin
 		if(clk_in_f'event and clk_in_f = '1')then
-				if(counter_f = 2)then
+				if(counter_f = 10)then
 					counter_f <= 0;
 					Q_f <= not Q_f;
 				else
