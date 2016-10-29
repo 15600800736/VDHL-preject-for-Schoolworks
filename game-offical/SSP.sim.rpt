@@ -1,0 +1,390 @@
+Simulator report for SSP
+Fri Oct 28 17:34:54 2016
+Quartus II 64-Bit Version 9.0 Build 132 02/25/2009 SJ Full Version
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Simulator Summary
+  3. Simulator Settings
+  4. Simulation Waveforms
+  5. Coverage Summary
+  6. Complete 1/0-Value Coverage
+  7. Missing 1-Value Coverage
+  8. Missing 0-Value Coverage
+  9. Simulator INI Usage
+ 10. Simulator Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2009 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------+
+; Simulator Summary                           ;
++-----------------------------+---------------+
+; Type                        ; Value         ;
++-----------------------------+---------------+
+; Simulation Start Time       ; 0 ps          ;
+; Simulation End Time         ; 1.0 ms        ;
+; Simulation Netlist Size     ; 180 nodes     ;
+; Simulation Coverage         ;      90.59 %  ;
+; Total Number of Transitions ; 1980349       ;
+; Simulation Breakpoints      ; 0             ;
+; Family                      ; MAX II        ;
+; Device                      ; EPM1270T144C5 ;
++-----------------------------+---------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------+
+; Simulator Settings                                                                                                      ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Option                                                                                     ; Setting    ; Default Value ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+; Simulation mode                                                                            ; Timing     ; Timing        ;
+; Start time                                                                                 ; 0 ns       ; 0 ns          ;
+; Simulation results format                                                                  ; CVWF       ;               ;
+; Add pins automatically to simulation output waveforms                                      ; On         ; On            ;
+; Check outputs                                                                              ; Off        ; Off           ;
+; Report simulation coverage                                                                 ; On         ; On            ;
+; Display complete 1/0 value coverage report                                                 ; On         ; On            ;
+; Display missing 1-value coverage report                                                    ; On         ; On            ;
+; Display missing 0-value coverage report                                                    ; On         ; On            ;
+; Detect setup and hold time violations                                                      ; Off        ; Off           ;
+; Detect glitches                                                                            ; Off        ; Off           ;
+; Disable timing delays in Timing Simulation                                                 ; Off        ; Off           ;
+; Generate Signal Activity File                                                              ; Off        ; Off           ;
+; Generate VCD File for PowerPlay Power Analyzer                                             ; Off        ; Off           ;
+; Group bus channels in simulation results                                                   ; Off        ; Off           ;
+; Preserve fewer signal transitions to reduce memory requirements                            ; On         ; On            ;
+; Trigger vector comparison with the specified mode                                          ; INPUT_EDGE ; INPUT_EDGE    ;
+; Disable setup and hold time violations detection in input registers of bi-directional pins ; Off        ; Off           ;
+; Overwrite Waveform Inputs With Simulation Outputs                                          ; Off        ;               ;
+; Perform Glitch Filtering in Timing Simulation                                              ; Auto       ; Auto          ;
++--------------------------------------------------------------------------------------------+------------+---------------+
+
+
++----------------------+
+; Simulation Waveforms ;
++----------------------+
+Waveform report data cannot be output to ASCII.
+Please use Quartus II 64-Bit to view the waveform report data.
+
+
++--------------------------------------------------------------------+
+; Coverage Summary                                                   ;
++-----------------------------------------------------+--------------+
+; Type                                                ; Value        ;
++-----------------------------------------------------+--------------+
+; Total coverage as a percentage                      ;      90.59 % ;
+; Total nodes checked                                 ; 180          ;
+; Total output ports checked                          ; 202          ;
+; Total output ports with complete 1/0-value coverage ; 183          ;
+; Total output ports with no 1/0-value coverage       ; 17           ;
+; Total output ports with no 1-value coverage         ; 17           ;
+; Total output ports with no 0-value coverage         ; 19           ;
++-----------------------------------------------------+--------------+
+
+
+The following table displays output ports that toggle between 1 and 0 during simulation.
++---------------------------------------------------------------------------------------------------------------+
+; Complete 1/0-Value Coverage                                                                                   ;
++--------------------------------------------+-----------------------------------------------+------------------+
+; Node Name                                  ; Output Port Name                              ; Output Port Type ;
++--------------------------------------------+-----------------------------------------------+------------------+
+; |SSP|translate:U2|row_out_t[1]             ; |SSP|translate:U2|row_out_t[1]                ; regout           ;
+; |SSP|translate:U2|row_out_t[2]             ; |SSP|translate:U2|row_out_t[2]                ; regout           ;
+; |SSP|matrix:U8|col_out_m[0]                ; |SSP|matrix:U8|col_out_m[0]                   ; regout           ;
+; |SSP|matrix:U8|col_out_m[1]                ; |SSP|matrix:U8|col_out_m[1]                   ; regout           ;
+; |SSP|matrix:U8|col_out_m[2]                ; |SSP|matrix:U8|col_out_m[2]                   ; regout           ;
+; |SSP|matrix:U8|col_out_m[3]                ; |SSP|matrix:U8|col_out_m[3]                   ; regout           ;
+; |SSP|matrix:U8|col_out_m[4]                ; |SSP|matrix:U8|col_out_m[4]                   ; regout           ;
+; |SSP|matrix:U8|col_out_m[5]                ; |SSP|matrix:U8|col_out_m[5]                   ; regout           ;
+; |SSP|matrix:U8|col_out_m[6]                ; |SSP|matrix:U8|col_out_m[6]                   ; regout           ;
+; |SSP|matrix:U8|col_out_m[7]                ; |SSP|matrix:U8|col_out_m[7]                   ; regout           ;
+; |SSP|matrix:U8|row_out_m[2]                ; |SSP|matrix:U8|row_out_m[2]                   ; regout           ;
+; |SSP|matrix:U8|row_out_m[3]                ; |SSP|matrix:U8|row_out_m[3]                   ; regout           ;
+; |SSP|matrix:U8|row_out_m[4]                ; |SSP|matrix:U8|row_out_m[4]                   ; regout           ;
+; |SSP|matrix:U8|row_out_m[5]                ; |SSP|matrix:U8|row_out_m[5]                   ; regout           ;
+; |SSP|digitron:U9|digitron_cat_d[4]         ; |SSP|digitron:U9|digitron_cat_d[4]            ; regout           ;
+; |SSP|digitron:U9|digitron_cat_d[5]         ; |SSP|digitron:U9|digitron_cat_d[5]            ; regout           ;
+; |SSP|digitron:U9|digitron_show_d[0]        ; |SSP|digitron:U9|digitron_show_d[0]           ; regout           ;
+; |SSP|digitron:U9|digitron_show_d[1]        ; |SSP|digitron:U9|digitron_show_d[1]           ; regout           ;
+; |SSP|digitron:U9|digitron_show_d[2]        ; |SSP|digitron:U9|digitron_show_d[2]           ; regout           ;
+; |SSP|digitron:U9|digitron_show_d[3]        ; |SSP|digitron:U9|digitron_show_d[3]           ; regout           ;
+; |SSP|digitron:U9|digitron_show_d[4]        ; |SSP|digitron:U9|digitron_show_d[4]           ; regout           ;
+; |SSP|translate:U2|counter[1]               ; |SSP|translate:U2|counter[1]                  ; regout           ;
+; |SSP|frequency_division:U1|clk_out_f       ; |SSP|frequency_division:U1|clk_out_f          ; regout           ;
+; |SSP|translate:U2|counter[0]               ; |SSP|translate:U2|counter[0]                  ; regout           ;
+; |SSP|translate:U2|row_out_t[3]             ; |SSP|translate:U2|Mux0~0                      ; combout          ;
+; |SSP|translate:U2|row_out_t[3]             ; |SSP|translate:U2|row_out_t[3]                ; regout           ;
+; |SSP|prevent_shake:U3|a_select_out_p[1]    ; |SSP|matrix:U8|Mux15~0                        ; combout          ;
+; |SSP|prevent_shake:U3|a_select_out_p[1]    ; |SSP|prevent_shake:U3|a_select_out_p[1]       ; regout           ;
+; |SSP|judge:U6|result_j[1]                  ; |SSP|judge:U6|result_j[1]                     ; regout           ;
+; |SSP|prevent_shake:U3|ready_out_p          ; |SSP|matrix:U8|col_out_m~57                   ; combout          ;
+; |SSP|prevent_shake:U3|ready_out_p          ; |SSP|prevent_shake:U3|ready_out_p             ; regout           ;
+; |SSP|matrix:U8|counter_m[0]                ; |SSP|matrix:U8|counter_m[0]                   ; regout           ;
+; |SSP|matrix:U8|counter_m[1]                ; |SSP|matrix:U8|counter_m[1]                   ; regout           ;
+; |SSP|matrix:U8|Mux3~0                      ; |SSP|matrix:U8|Mux3~0                         ; combout          ;
+; |SSP|prevent_shake:U3|show_out_p           ; |SSP|matrix:U8|col_out_m[0]~59                ; combout          ;
+; |SSP|prevent_shake:U3|show_out_p           ; |SSP|prevent_shake:U3|show_out_p              ; regout           ;
+; |SSP|matrix:U8|col_out_m~61                ; |SSP|matrix:U8|col_out_m~61                   ; combout          ;
+; |SSP|prevent_shake:U3|b_select_out_p[1]    ; |SSP|matrix:U8|col_out_m~62                   ; combout          ;
+; |SSP|prevent_shake:U3|b_select_out_p[1]    ; |SSP|prevent_shake:U3|b_select_out_p[1]       ; regout           ;
+; |SSP|matrix:U8|col_out_m~63                ; |SSP|matrix:U8|col_out_m~63                   ; combout          ;
+; |SSP|matrix:U8|col_out_m~64                ; |SSP|matrix:U8|col_out_m~64                   ; combout          ;
+; |SSP|matrix:U8|col_out_m~65                ; |SSP|matrix:U8|col_out_m~65                   ; combout          ;
+; |SSP|matrix:U8|row_out_m~48                ; |SSP|matrix:U8|row_out_m~48                   ; combout          ;
+; |SSP|matrix:U8|col_out_m~68                ; |SSP|matrix:U8|col_out_m~68                   ; combout          ;
+; |SSP|matrix:U8|col_out_m~69                ; |SSP|matrix:U8|col_out_m~69                   ; combout          ;
+; |SSP|prevent_shake:U3|b_select_out_p[0]    ; |SSP|matrix:U8|Equal4~0                       ; combout          ;
+; |SSP|prevent_shake:U3|b_select_out_p[0]    ; |SSP|prevent_shake:U3|b_select_out_p[0]       ; regout           ;
+; |SSP|matrix:U8|col_out_m~70                ; |SSP|matrix:U8|col_out_m~70                   ; combout          ;
+; |SSP|matrix:U8|col_out_m~71                ; |SSP|matrix:U8|col_out_m~71                   ; combout          ;
+; |SSP|matrix:U8|col_out_m~73                ; |SSP|matrix:U8|col_out_m~73                   ; combout          ;
+; |SSP|matrix:U8|row_out_m~49                ; |SSP|matrix:U8|row_out_m~49                   ; combout          ;
+; |SSP|digitron:U9|counter_d                 ; |SSP|digitron:U9|counter_d                    ; regout           ;
+; |SSP|prevent_shake:U3|start_out_p          ; |SSP|matrix:U8|col_out_m~75                   ; combout          ;
+; |SSP|prevent_shake:U3|start_out_p          ; |SSP|prevent_shake:U3|start_out_p             ; regout           ;
+; |SSP|judge:U6|b_score_j[1]                 ; |SSP|judge:U6|b_score_j[1]                    ; regout           ;
+; |SSP|judge:U6|b_score_j[0]                 ; |SSP|judge:U6|b_score_j[0]                    ; regout           ;
+; |SSP|digitron:U9|Mux5~0                    ; |SSP|digitron:U9|Mux5~0                       ; combout          ;
+; |SSP|digitron:U9|Mux3~0                    ; |SSP|digitron:U9|Mux3~0                       ; combout          ;
+; |SSP|digitron:U9|Mux4~0                    ; |SSP|digitron:U9|Mux4~0                       ; combout          ;
+; |SSP|frequency_division:U1|Q_f             ; |SSP|frequency_division:U1|Q_f                ; regout           ;
+; |SSP|prevent_shake:U3|counter_p[1]         ; |SSP|prevent_shake:U3|counter_p[1]~13         ; cout0            ;
+; |SSP|prevent_shake:U3|counter_p[1]         ; |SSP|prevent_shake:U3|counter_p[1]~13COUT1_33 ; cout1            ;
+; |SSP|prevent_shake:U3|counter_p[0]         ; |SSP|prevent_shake:U3|counter_p[0]~15         ; cout0            ;
+; |SSP|prevent_shake:U3|counter_p[0]         ; |SSP|prevent_shake:U3|counter_p[0]~15COUT1_31 ; cout1            ;
+; |SSP|prevent_shake:U3|Equal0~0             ; |SSP|prevent_shake:U3|Equal0~0                ; combout          ;
+; |SSP|prevent_shake:U3|Equal0~1             ; |SSP|prevent_shake:U3|Equal0~1                ; combout          ;
+; |SSP|prevent_shake:U3|start_in_p_tmp       ; |SSP|prevent_shake:U3|start_in_p_tmp          ; regout           ;
+; |SSP|prevent_shake:U3|b_select_in_p_tmp[0] ; |SSP|prevent_shake:U3|b_select_in_p_tmp[0]    ; regout           ;
+; |SSP|prevent_shake:U3|show_in_p_tmp        ; |SSP|prevent_shake:U3|show_in_p_tmp           ; regout           ;
+; |SSP|judge:U6|b_score_tmp[0]               ; |SSP|judge:U6|b_score_tmp[0]                  ; regout           ;
+; |SSP|frequency_division:U1|counter_f[4]    ; |SSP|frequency_division:U1|counter_f[4]       ; regout           ;
+; |SSP|frequency_division:U1|counter_f[2]    ; |SSP|frequency_division:U1|counter_f[2]       ; regout           ;
+; |SSP|frequency_division:U1|counter_f[0]    ; |SSP|frequency_division:U1|counter_f[0]       ; regout           ;
+; |SSP|frequency_division:U1|counter_f[3]    ; |SSP|frequency_division:U1|counter_f[3]       ; regout           ;
+; |SSP|frequency_division:U1|counter_f[1]    ; |SSP|frequency_division:U1|Equal0~0           ; combout          ;
+; |SSP|frequency_division:U1|counter_f[1]    ; |SSP|frequency_division:U1|counter_f[1]       ; regout           ;
+; |SSP|translate:U2|a_select_out_t[1]        ; |SSP|translate:U2|a_select_out_t[1]           ; regout           ;
+; |SSP|translate:U2|show_out_t               ; |SSP|translate:U2|show_out_t                  ; regout           ;
+; |SSP|prevent_shake:U3|ready_in_p_tmp       ; |SSP|prevent_shake:U3|process_0~11            ; combout          ;
+; |SSP|prevent_shake:U3|ready_in_p_tmp       ; |SSP|prevent_shake:U3|ready_in_p_tmp          ; regout           ;
+; |SSP|translate:U2|start_out_t              ; |SSP|translate:U2|start_out_t                 ; regout           ;
+; |SSP|translate:U2|a_select_out_t[0]        ; |SSP|translate:U2|a_select_out_t[0]           ; regout           ;
+; |SSP|prevent_shake:U3|a_select_in_p_tmp[0] ; |SSP|prevent_shake:U3|process_0~12            ; combout          ;
+; |SSP|prevent_shake:U3|a_select_in_p_tmp[0] ; |SSP|prevent_shake:U3|a_select_in_p_tmp[0]    ; regout           ;
+; |SSP|translate:U2|b_select_out_t[0]        ; |SSP|translate:U2|b_select_out_t[0]           ; regout           ;
+; |SSP|prevent_shake:U3|a_ok_in_p_tmp        ; |SSP|prevent_shake:U3|process_0~13            ; combout          ;
+; |SSP|prevent_shake:U3|b_ok_in_p_tmp        ; |SSP|prevent_shake:U3|b_ok_in_p_tmp           ; regout           ;
+; |SSP|translate:U2|b_ok_out_t               ; |SSP|translate:U2|b_ok_out_t                  ; regout           ;
+; |SSP|prevent_shake:U3|a_select_in_p_tmp[1] ; |SSP|prevent_shake:U3|process_0~14            ; combout          ;
+; |SSP|prevent_shake:U3|a_select_in_p_tmp[1] ; |SSP|prevent_shake:U3|a_select_in_p_tmp[1]    ; regout           ;
+; |SSP|prevent_shake:U3|process_0~15         ; |SSP|prevent_shake:U3|process_0~15            ; combout          ;
+; |SSP|translate:U2|b_select_out_t[1]        ; |SSP|translate:U2|b_select_out_t[1]           ; regout           ;
+; |SSP|prevent_shake:U3|b_select_in_p_tmp[1] ; |SSP|prevent_shake:U3|b_select_in_p_tmp[0]~2  ; combout          ;
+; |SSP|prevent_shake:U3|b_select_in_p_tmp[1] ; |SSP|prevent_shake:U3|b_select_in_p_tmp[1]    ; regout           ;
+; |SSP|prevent_shake:U3|counter_p[5]~24      ; |SSP|prevent_shake:U3|counter_p[5]~24         ; combout          ;
+; |SSP|judge:U6|result_tmp[0]                ; |SSP|judge:U6|result_tmp[1]~0                 ; combout          ;
+; |SSP|prevent_shake:U3|b_ok_out_p           ; |SSP|prevent_shake:U3|b_ok_out_p              ; regout           ;
+; |SSP|prevent_shake:U3|a_select_out_p[0]    ; |SSP|judge:U6|result_tmp[1]~1                 ; combout          ;
+; |SSP|prevent_shake:U3|a_select_out_p[0]    ; |SSP|prevent_shake:U3|a_select_out_p[0]       ; regout           ;
+; |SSP|judge:U6|result_tmp[1]~2              ; |SSP|judge:U6|result_tmp[1]~2                 ; combout          ;
+; |SSP|judge:U6|result_tmp[1]~3              ; |SSP|judge:U6|result_tmp[1]~3                 ; combout          ;
+; |SSP|judge:U6|result_tmp[1]~5              ; |SSP|judge:U6|result_tmp[1]~5                 ; combout          ;
+; |SSP|judge:U6|b_score_tmp[1]~0             ; |SSP|judge:U6|b_score_tmp[1]~0                ; combout          ;
+; |SSP|judge:U6|a_score_tmp[1]~0             ; |SSP|judge:U6|a_score_tmp[1]~0                ; combout          ;
+; |SSP|judge:U6|Mux31~0                      ; |SSP|judge:U6|Mux31~0                         ; combout          ;
+; |SSP|judge:U6|Mux27~0                      ; |SSP|judge:U6|Mux27~0                         ; combout          ;
+; |SSP|frequency_division:U1|Add0~12         ; |SSP|frequency_division:U1|Add0~12            ; combout          ;
+; |SSP|frequency_division:U1|Add0~14         ; |SSP|frequency_division:U1|Add0~14            ; combout          ;
+; |SSP|frequency_division:U1|Add0~14         ; |SSP|frequency_division:U1|Add0~15            ; cout0            ;
+; |SSP|frequency_division:U1|Add0~14         ; |SSP|frequency_division:U1|Add0~15COUT1_32    ; cout1            ;
+; |SSP|frequency_division:U1|Add0~16         ; |SSP|frequency_division:U1|Add0~16            ; combout          ;
+; |SSP|frequency_division:U1|Add0~16         ; |SSP|frequency_division:U1|Add0~17            ; cout0            ;
+; |SSP|frequency_division:U1|Add0~16         ; |SSP|frequency_division:U1|Add0~17COUT1_28    ; cout1            ;
+; |SSP|frequency_division:U1|Add0~18         ; |SSP|frequency_division:U1|Add0~18            ; combout          ;
+; |SSP|frequency_division:U1|Add0~18         ; |SSP|frequency_division:U1|Add0~19            ; cout0            ;
+; |SSP|frequency_division:U1|Add0~18         ; |SSP|frequency_division:U1|Add0~19COUT1_30    ; cout1            ;
+; |SSP|frequency_division:U1|Add0~20         ; |SSP|frequency_division:U1|Add0~20            ; combout          ;
+; |SSP|frequency_division:U1|Add0~20         ; |SSP|frequency_division:U1|Add0~21            ; cout0            ;
+; |SSP|frequency_division:U1|Add0~20         ; |SSP|frequency_division:U1|Add0~21COUT1_34    ; cout1            ;
+; |SSP|translate:U2|Mux6~0                   ; |SSP|translate:U2|Mux6~0                      ; combout          ;
+; |SSP|translate:U2|Mux11~0                  ; |SSP|translate:U2|Mux11~0                     ; combout          ;
+; |SSP|translate:U2|Mux9~0                   ; |SSP|translate:U2|Mux9~0                      ; combout          ;
+; |SSP|translate:U2|Mux25~1                  ; |SSP|translate:U2|Mux25~1                     ; combout          ;
+; |SSP|translate:U2|Mux18~0                  ; |SSP|translate:U2|Mux18~0                     ; combout          ;
+; |SSP|translate:U2|Mux15~0                  ; |SSP|translate:U2|Mux15~0                     ; combout          ;
+; |SSP|translate:U2|Mux16~0                  ; |SSP|translate:U2|Mux16~0                     ; combout          ;
+; |SSP|translate:U2|Mux15~1                  ; |SSP|translate:U2|Mux15~1                     ; combout          ;
+; |SSP|translate:U2|Mux15~2                  ; |SSP|translate:U2|Mux15~2                     ; combout          ;
+; |SSP|translate:U2|ready_out_t~0            ; |SSP|translate:U2|ready_out_t~0               ; combout          ;
+; |SSP|translate:U2|ready_out_t~1            ; |SSP|translate:U2|ready_out_t~1               ; combout          ;
+; |SSP|translate:U2|ready_out_t~2            ; |SSP|translate:U2|ready_out_t~2               ; combout          ;
+; |SSP|translate:U2|Mux15~4                  ; |SSP|translate:U2|Mux15~4                     ; combout          ;
+; |SSP|translate:U2|ready_out_t~3            ; |SSP|translate:U2|ready_out_t~3               ; combout          ;
+; |SSP|translate:U2|Mux7~0                   ; |SSP|translate:U2|Mux7~0                      ; combout          ;
+; |SSP|translate:U2|Mux12~0                  ; |SSP|translate:U2|Mux12~0                     ; combout          ;
+; |SSP|translate:U2|Mux26~1                  ; |SSP|translate:U2|Mux26~1                     ; combout          ;
+; |SSP|translate:U2|Mux19~0                  ; |SSP|translate:U2|Mux19~0                     ; combout          ;
+; |SSP|translate:U2|Mux10~0                  ; |SSP|translate:U2|Mux10~0                     ; combout          ;
+; |SSP|translate:U2|Mux10~1                  ; |SSP|translate:U2|Mux10~1                     ; combout          ;
+; |SSP|translate:U2|Mux23~1                  ; |SSP|translate:U2|Mux23~1                     ; combout          ;
+; |SSP|translate:U2|Mux9~1                   ; |SSP|translate:U2|Mux9~1                      ; combout          ;
+; |SSP|translate:U2|Mux19~1                  ; |SSP|translate:U2|Mux19~1                     ; combout          ;
+; |SSP|translate:U2|Mux9~2                   ; |SSP|translate:U2|Mux9~2                      ; combout          ;
+; |SSP|translate:U2|Mux5~0                   ; |SSP|translate:U2|Mux5~0                      ; combout          ;
+; |SSP|translate:U2|Mux5~1                   ; |SSP|translate:U2|Mux5~1                      ; combout          ;
+; |SSP|translate:U2|Mux8~0                   ; |SSP|translate:U2|Mux8~0                      ; combout          ;
+; |SSP|translate:U2|Mux18~1                  ; |SSP|translate:U2|Mux18~1                     ; combout          ;
+; |SSP|translate:U2|Mux8~1                   ; |SSP|translate:U2|Mux8~1                      ; combout          ;
+; |SSP|matrix:U8|col_out_m~76                ; |SSP|matrix:U8|col_out_m~76                   ; combout          ;
+; |SSP|matrix:U8|col_out_m~78                ; |SSP|matrix:U8|col_out_m~78                   ; combout          ;
+; |SSP|clk_in                                ; |SSP|clk_in~corein                            ; combout          ;
+; |SSP|col_in[3]                             ; |SSP|col_in[3]~corein                         ; combout          ;
+; |SSP|col_in[0]                             ; |SSP|col_in[0]~corein                         ; combout          ;
+; |SSP|col_in[2]                             ; |SSP|col_in[2]~corein                         ; combout          ;
+; |SSP|col_in[1]                             ; |SSP|col_in[1]~corein                         ; combout          ;
+; |SSP|row_out[1]                            ; |SSP|row_out[1]                               ; padio            ;
+; |SSP|row_out[2]                            ; |SSP|row_out[2]                               ; padio            ;
+; |SSP|row_out[3]                            ; |SSP|row_out[3]                               ; padio            ;
+; |SSP|col_m[0]                              ; |SSP|col_m[0]                                 ; padio            ;
+; |SSP|col_m[1]                              ; |SSP|col_m[1]                                 ; padio            ;
+; |SSP|col_m[2]                              ; |SSP|col_m[2]                                 ; padio            ;
+; |SSP|col_m[3]                              ; |SSP|col_m[3]                                 ; padio            ;
+; |SSP|col_m[4]                              ; |SSP|col_m[4]                                 ; padio            ;
+; |SSP|col_m[5]                              ; |SSP|col_m[5]                                 ; padio            ;
+; |SSP|col_m[6]                              ; |SSP|col_m[6]                                 ; padio            ;
+; |SSP|col_m[7]                              ; |SSP|col_m[7]                                 ; padio            ;
+; |SSP|row_m[2]                              ; |SSP|row_m[2]                                 ; padio            ;
+; |SSP|row_m[3]                              ; |SSP|row_m[3]                                 ; padio            ;
+; |SSP|row_m[4]                              ; |SSP|row_m[4]                                 ; padio            ;
+; |SSP|row_m[5]                              ; |SSP|row_m[5]                                 ; padio            ;
+; |SSP|digitron_cat[0]                       ; |SSP|digitron_cat[0]                          ; padio            ;
+; |SSP|digitron_cat[1]                       ; |SSP|digitron_cat[1]                          ; padio            ;
+; |SSP|digitron_cat[2]                       ; |SSP|digitron_cat[2]                          ; padio            ;
+; |SSP|digitron_cat[3]                       ; |SSP|digitron_cat[3]                          ; padio            ;
+; |SSP|digitron_cat[4]                       ; |SSP|digitron_cat[4]                          ; padio            ;
+; |SSP|digitron_cat[5]                       ; |SSP|digitron_cat[5]                          ; padio            ;
+; |SSP|digitron_show[0]                      ; |SSP|digitron_show[0]                         ; padio            ;
+; |SSP|digitron_show[1]                      ; |SSP|digitron_show[1]                         ; padio            ;
+; |SSP|digitron_show[2]                      ; |SSP|digitron_show[2]                         ; padio            ;
+; |SSP|digitron_show[3]                      ; |SSP|digitron_show[3]                         ; padio            ;
+; |SSP|digitron_show[4]                      ; |SSP|digitron_show[4]                         ; padio            ;
+; |SSP|digitron_show[5]                      ; |SSP|digitron_show[5]                         ; padio            ;
+; |SSP|digitron_show[6]                      ; |SSP|digitron_show[6]                         ; padio            ;
++--------------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 1 during simulation.
++-------------------------------------------------------------------------------------------------------+
+; Missing 1-Value Coverage                                                                              ;
++------------------------------------+-----------------------------------------------+------------------+
+; Node Name                          ; Output Port Name                              ; Output Port Type ;
++------------------------------------+-----------------------------------------------+------------------+
+; |SSP|judge:U6|result_j[0]          ; |SSP|judge:U6|result_j[0]                     ; regout           ;
+; |SSP|judge:U6|a_score_j[1]         ; |SSP|judge:U6|a_score_j[1]                    ; regout           ;
+; |SSP|judge:U6|a_score_j[0]         ; |SSP|judge:U6|a_score_j[0]                    ; regout           ;
+; |SSP|prevent_shake:U3|counter_p[2] ; |SSP|prevent_shake:U3|counter_p[2]~17         ; cout0            ;
+; |SSP|prevent_shake:U3|counter_p[2] ; |SSP|prevent_shake:U3|counter_p[2]~17COUT1_35 ; cout1            ;
+; |SSP|prevent_shake:U3|counter_p[3] ; |SSP|prevent_shake:U3|counter_p[3]~19         ; cout             ;
+; |SSP|prevent_shake:U3|counter_p[4] ; |SSP|prevent_shake:U3|counter_p[4]~21         ; cout0            ;
+; |SSP|prevent_shake:U3|counter_p[4] ; |SSP|prevent_shake:U3|counter_p[4]~21COUT1_37 ; cout1            ;
+; |SSP|judge:U6|a_score_tmp[1]       ; |SSP|judge:U6|a_score_tmp[1]                  ; regout           ;
+; |SSP|judge:U6|a_score_tmp[0]       ; |SSP|judge:U6|a_score_tmp[0]                  ; regout           ;
+; |SSP|judge:U6|result_tmp[0]        ; |SSP|judge:U6|result_tmp[0]                   ; regout           ;
+; |SSP|judge:U6|result_tmp[1]~4      ; |SSP|judge:U6|result_tmp[1]~4                 ; combout          ;
+; |SSP|row_out[0]                    ; |SSP|row_out[0]                               ; padio            ;
+; |SSP|row_m[0]                      ; |SSP|row_m[0]                                 ; padio            ;
+; |SSP|row_m[1]                      ; |SSP|row_m[1]                                 ; padio            ;
+; |SSP|row_m[6]                      ; |SSP|row_m[6]                                 ; padio            ;
+; |SSP|row_m[7]                      ; |SSP|row_m[7]                                 ; padio            ;
++------------------------------------+-----------------------------------------------+------------------+
+
+
+The following table displays output ports that do not toggle to 0 during simulation.
++-------------------------------------------------------------------------------------------------------+
+; Missing 0-Value Coverage                                                                              ;
++------------------------------------+-----------------------------------------------+------------------+
+; Node Name                          ; Output Port Name                              ; Output Port Type ;
++------------------------------------+-----------------------------------------------+------------------+
+; |SSP|judge:U6|result_j[0]          ; |SSP|judge:U6|result_j[0]                     ; regout           ;
+; |SSP|judge:U6|a_score_j[1]         ; |SSP|judge:U6|a_score_j[1]                    ; regout           ;
+; |SSP|judge:U6|a_score_j[0]         ; |SSP|judge:U6|a_score_j[0]                    ; regout           ;
+; |SSP|prevent_shake:U3|counter_p[2] ; |SSP|prevent_shake:U3|counter_p[2]~17         ; cout0            ;
+; |SSP|prevent_shake:U3|counter_p[2] ; |SSP|prevent_shake:U3|counter_p[2]~17COUT1_35 ; cout1            ;
+; |SSP|prevent_shake:U3|counter_p[3] ; |SSP|prevent_shake:U3|counter_p[3]~19         ; cout             ;
+; |SSP|prevent_shake:U3|counter_p[4] ; |SSP|prevent_shake:U3|counter_p[4]~21         ; cout0            ;
+; |SSP|prevent_shake:U3|counter_p[4] ; |SSP|prevent_shake:U3|counter_p[4]~21COUT1_37 ; cout1            ;
+; |SSP|judge:U6|result_tmp[1]        ; |SSP|judge:U6|result_tmp[1]                   ; regout           ;
+; |SSP|judge:U6|b_score_tmp[1]       ; |SSP|judge:U6|b_score_tmp[1]                  ; regout           ;
+; |SSP|judge:U6|a_score_tmp[1]       ; |SSP|judge:U6|a_score_tmp[1]                  ; regout           ;
+; |SSP|judge:U6|a_score_tmp[0]       ; |SSP|judge:U6|a_score_tmp[0]                  ; regout           ;
+; |SSP|judge:U6|result_tmp[0]        ; |SSP|judge:U6|result_tmp[0]                   ; regout           ;
+; |SSP|judge:U6|result_tmp[1]~4      ; |SSP|judge:U6|result_tmp[1]~4                 ; combout          ;
+; |SSP|row_out[0]                    ; |SSP|row_out[0]                               ; padio            ;
+; |SSP|row_m[0]                      ; |SSP|row_m[0]                                 ; padio            ;
+; |SSP|row_m[1]                      ; |SSP|row_m[1]                                 ; padio            ;
+; |SSP|row_m[6]                      ; |SSP|row_m[6]                                 ; padio            ;
+; |SSP|row_m[7]                      ; |SSP|row_m[7]                                 ; padio            ;
++------------------------------------+-----------------------------------------------+------------------+
+
+
++---------------------+
+; Simulator INI Usage ;
++--------+------------+
+; Option ; Usage      ;
++--------+------------+
+
+
++--------------------+
+; Simulator Messages ;
++--------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Simulator
+    Info: Version 9.0 Build 132 02/25/2009 SJ Full Version
+    Info: Processing started: Fri Oct 28 17:34:47 2016
+Info: Command: quartus_sim --read_settings_files=on --write_settings_files=off SSP -c SSP
+Info: Using vector source file "F:/VDHL preject for Schoolworks/game/SSP.vwf"
+Warning: Ignored node in vector source file. Can't find corresponding node name "a_score[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "a_score[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "b_score[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "b_score[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "result[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "result[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "a_s[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "a_s[0]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "b_s[1]" in design.
+Warning: Ignored node in vector source file. Can't find corresponding node name "b_s[0]" in design.
+Info: Option to preserve fewer signal transitions to reduce memory requirements is enabled
+    Info: Simulation has been partitioned into sub-simulations according to the maximum transition count determined by the engine. Transitions from memory will be flushed out to disk at the end of each sub-simulation to reduce memory requirements.
+Info: Simulation partitioned into 1 sub-simulations
+Info: Simulation coverage is      90.59 %
+Info: Number of transitions in simulation is 1980349
+Info: Quartus II 64-Bit Simulator was successful. 0 errors, 10 warnings
+    Info: Peak virtual memory: 195 megabytes
+    Info: Processing ended: Fri Oct 28 17:34:54 2016
+    Info: Elapsed time: 00:00:07
+    Info: Total CPU time (on all processors): 00:00:07
+
+
