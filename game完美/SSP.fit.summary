@@ -1,0 +1,11 @@
+Fitter Status : Successful - Tue Nov 01 20:48:33 2016
+Quartus II Version : 9.1 Build 222 10/21/2009 SJ Full Version
+Revision Name : SSP
+Top-level Entity Name : SSP
+Family : MAX II
+Device : EPM1270T144C5
+Timing Models : Final
+Total logic elements : 158 / 1,270 ( 12 % )
+Total pins : 40 / 116 ( 34 % )
+Total virtual pins : 0
+UFM blocks : 0 / 1 ( 0 % )
