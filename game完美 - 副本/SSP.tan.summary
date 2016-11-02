@@ -1,0 +1,66 @@
+--------------------------------------------------------------------------------------
+Timing Analyzer Summary
+--------------------------------------------------------------------------------------
+
+Type           : Worst-case tsu
+Slack          : N/A
+Required Time  : None
+Actual Time    : 6.513 ns
+From           : row_in[3]
+To             : translate:U2|b_select_out_t[0]
+From Clock     : --
+To Clock       : clk_in
+Failed Paths   : 0
+
+Type           : Worst-case tco
+Slack          : N/A
+Required Time  : None
+Actual Time    : 20.875 ns
+From           : matrix:U8|col_out_m[2]
+To             : col_m[2]
+From Clock     : clk_in
+To Clock       : --
+Failed Paths   : 0
+
+Type           : Worst-case th
+Slack          : N/A
+Required Time  : None
+Actual Time    : 2.284 ns
+From           : row_in[0]
+To             : translate:U2|a_select_out_t[1]
+From Clock     : --
+To Clock       : clk_in
+Failed Paths   : 0
+
+Type           : Clock Setup: 'clk_in'
+Slack          : 4.562 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : 91.95 MHz ( period = 10.876 ns )
+From           : judge:U6|result_j[0]
+To             : matrix:U8|col_out_m[5]
+From Clock     : clk_in
+To Clock       : clk_in
+Failed Paths   : 0
+
+Type           : Clock Hold: 'clk_in'
+Slack          : -2.417 ns
+Required Time  : 50.00 MHz ( period = 20.000 ns )
+Actual Time    : N/A
+From           : get_select:U10|a_select_out_g[1]
+To             : judge:U6|result_tmp[0]
+From Clock     : clk_in
+To Clock       : clk_in
+Failed Paths   : 15
+
+Type           : Total number of failed paths
+Slack          : 
+Required Time  : 
+Actual Time    : 
+From           : 
+To             : 
+From Clock     : 
+To Clock       : 
+Failed Paths   : 15
+
+--------------------------------------------------------------------------------------
+
